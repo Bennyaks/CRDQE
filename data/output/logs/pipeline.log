@@ -1,0 +1,4 @@
+2026-07-10 10:22:11,231 | INFO | ============================================================
+2026-07-10 10:22:11,231 | INFO | Civil Registration Data Quality Engine Started
+2026-07-10 10:22:11,232 | INFO | Configuration Loaded Successfully
+2026-07-10 10:22:11,233 | INFO | {'project': {'name': 'CRDQE', 'version': '1.0'}, 'input': {'workbook': 'Birth_Data.xlsx', 'worksheet': 'Sheet1'}, 'output': {'folder': 'data/output', 'cleaned_file': 'cleaned_data.xlsx', 'flag_report': 'flag_report.xlsx', 'summary_report': 'summary_report.xlsx', 'log_file': 'pipeline.log'}, 'processing': {'dataset_detection': 'auto'}, 'logging': {'level': 'INFO'}, 'developer': {'debug': True}}

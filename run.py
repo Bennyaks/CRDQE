@@ -10,21 +10,23 @@ Benard Mandera
 """
 
 from crdqe.core.config_manager import ConfigManager
+from crdqe.core.logger import Logger
 
 
 def main():
 
-    print("=" * 60)
-    print("Civil Registration Data Quality Engine")
-    print("=" * 60)
+    logger = Logger.setup()
+
+    logger.info("=" * 60)
+    logger.info("Civil Registration Data Quality Engine Started")
 
     config = ConfigManager()
 
     settings = config.load()
 
-    print("\nConfiguration Loaded Successfully\n")
+    logger.info("Configuration Loaded Successfully")
 
-    print(settings)
+    logger.info(settings)
 
 
 if __name__ == "__main__":
