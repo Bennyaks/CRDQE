@@ -1,0 +1,29 @@
+# ============================================================
+# Civil Registration Data Quality Engine (CRDQE)
+# User Settings
+# ============================================================
+
+project:
+  name: CRDQE
+  version: "1.0"
+
+input:
+  workbook: "Birth_Data.xlsx"
+  worksheet: "Sheet1"
+
+output:
+  folder: "data/output"
+
+  cleaned_file: "cleaned_data.xlsx"
+  flag_report: "flag_report.xlsx"
+  summary_report: "summary_report.xlsx"
+  log_file: "pipeline.log"
+
+processing:
+  dataset_detection: auto
+
+logging:
+  level: INFO
+
+developer:
+  debug: true
