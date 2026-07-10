@@ -1,0 +1,114 @@
+dataset: Birth
+
+source_columns:
+
+  date_of_birth:
+    aliases:
+      - "Date of Birth (dd-mm-yy)"
+    datatype: date
+    required: true
+    output: true
+
+  sex:
+    aliases:
+      - "Sex (Indicate whether male or female)"
+    datatype: string
+    required: true
+    output: true
+    valid_values:
+      male: Male
+      m: Male
+      female: Female
+      f: Female
+
+  nature_of_birth:
+    aliases:
+      - "Nature of birth (Indicate whether born alive or dead)"
+    datatype: string
+    required: true
+    output: true
+    valid_values:
+      alive: "Born Alive"
+      born alive: "Born Alive"
+      dead: "Born Dead"
+      born dead: "Born Dead"
+
+  birth_weight:
+   aliases:
+     - "Weight of birth(Kgs)"
+   datatype: numeric
+   required: true
+   minimum: 0.3
+   maximum: 8.0
+   output: true
+
+  place_of_birth:
+    aliases:
+      - "Place of birth (Indicate the name of facility or Sublocation of birth)"
+    datatype: string
+    required: true
+    output: true
+  
+  place_type:
+    aliases:
+      - "Type of place (Indicate whether Home or Health Facility)"
+
+  mother_age:
+   aliases:
+     - "Age of the mother(indicate the age of the mother at the birth of the child)"
+   datatype: numeric
+   required: true
+   minimum: 13
+   maximum: 55
+   output: true
+
+  marital_status:
+    aliases:
+      - "Marital status"
+
+  nationality:
+    aliases:
+      - "Nationality of the mother"
+
+  occupation:
+    aliases:
+      - "Ocupation of the mother"
+
+  education:
+    aliases:
+      - "Mother's level of Education"
+
+  residence:
+    aliases:
+      - "Place of Residence (indicate the sub county where the mother residence)"
+
+  registration_date:
+    aliases:
+      - "Date of Registration (dd-mm-yy)"
+
+  entry_number:
+    aliases:
+      - "Entry Number"
+
+derived_columns:
+
+  status:
+    description: "Current or Late registration"
+
+output_columns:
+
+  - date_of_birth
+  - sex
+  - nature_of_birth
+  - birth_weight
+  - place_of_birth
+  - place_type
+  - mother_age
+  - marital_status
+  - nationality
+  - occupation
+  - education
+  - residence
+  - registration_date
+  - entry_number
+  - status

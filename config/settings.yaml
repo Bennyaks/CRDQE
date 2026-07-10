@@ -8,16 +8,16 @@ project:
   version: "1.0"
 
 input:
+  folder: "data/input"
   workbook: "Birth_Data.xlsx"
-  worksheet: "Sheet1"
+  worksheet: "April"
 
 output:
   folder: "data/output"
-
-  cleaned_file: "cleaned_data.xlsx"
-  flag_report: "flag_report.xlsx"
-  summary_report: "summary_report.xlsx"
-  log_file: "pipeline.log"
+  cleaned_folder: "cleaned"
+  flags_folder: "flags"
+  summaries_folder: "summaries"
+  logs_folder: "logs"
 
 processing:
   dataset_detection: auto

@@ -18,23 +18,12 @@ import yaml
 
 
 class ConfigManager:
-    """
-    Loads configuration from YAML.
-    """
 
     def __init__(self, config_path="config/settings.yaml"):
         self.config_path = Path(config_path)
         self.settings = None
 
     def load(self):
-        """
-        Load configuration file.
-
-        Returns
-        -------
-        dict
-            Configuration dictionary.
-        """
 
         if not self.config_path.exists():
             raise FileNotFoundError(

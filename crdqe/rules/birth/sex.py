@@ -1,0 +1,12 @@
+"""
+Birth Rule
+
+Sex
+"""
+
+from crdqe.rules.generic.categorical_rule import CategoricalRule
+
+
+class SexRule(CategoricalRule):
+
+    FIELD = "sex"
