@@ -77,12 +77,14 @@ def main():
 
     mapper = SchemaMapper("config/birth_schema.yaml")
     df = mapper.map_columns(df)
-
+    
     logger.info("Mapped Columns:")
     logger.info(df.columns.tolist())
     logger.info(f"Rows: {len(df)}")
     logger.info(f"Columns: {len(df.columns)}")
     logger.info(f"Column Names: {list(df.columns)}")
+   
+
 
     validator = SchemaValidator()
     result = validator.validate(df, mapper.get_schema())

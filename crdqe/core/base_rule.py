@@ -22,18 +22,19 @@ class BaseRule:
         self.schema = schema
         self.issues = []
 
-    def add_issue(self, row, field, issue, value=None, suggestion=None, severity=None):
+    def add_issue(self, row, field, issue, value=None, expected=None, severity=None, recommendation=None):
 
         entry_number = row + 1
         self.issues.append({
-            "entry_number": entry_number,
-            "row": row,
-            "field": field,
-            "value": value,
-            "rule": self.__class__.__name__,
-            "issue": issue,
-            "suggestion": suggestion,
-            "severity": severity
+           "entry_number": entry_number,
+           "row": row + 2,           # Excel row number
+           "field": field,
+           "rule": self.__class__.__name__,
+           "issue": issue,
+           "current_value": value,
+           "expected": expected,
+           "severity": severity,
+           "recommendation": recommendation
         })
 
     def is_missing(self, value):

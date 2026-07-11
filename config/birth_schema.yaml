@@ -34,13 +34,14 @@ source_columns:
       born dead: "Born Dead"
 
   birth_weight:
-   aliases:
-     - "Weight of birth(Kgs)"
-   datatype: numeric
-   required: true
-   minimum: 0.3
-   maximum: 8.0
-   output: true
+    datatype: numeric
+    required: true
+
+    aliases:
+      - "Weight of birth(Kgs)"
+    minimum: 0.3
+    maximum: 8.0
+    output: true
 
   place_of_birth:
     aliases:
@@ -50,8 +51,16 @@ source_columns:
     output: true
   
   place_type:
+    datatype: string
+    required: true
+
     aliases:
-      - "Type of place (Indicate whether Home or Health Facility)"
+      - "Type of place"
+      - "Type of place(Indicate whether Home or Health Facility)"
+
+    valid_values:
+      home: Home
+      health facility: Health Facility
 
   mother_age:
    aliases:
@@ -63,37 +72,83 @@ source_columns:
    output: true
 
   marital_status:
+    datatype: string
+    required: true
+
     aliases:
       - "Marital status"
 
+    valid_values:
+      single: Single
+      married: Married
+      divorced: Divorced
+      widowed: Widowed
+
   nationality:
+    datatype: string
+    required: true
+
     aliases:
       - "Nationality of the mother"
 
   occupation:
+    datatype: string
+    required: true
+
     aliases:
       - "Ocupation of the mother"
+      - "Occupation of the mother"
 
   education:
+    datatype: string
+    required: true
+
     aliases:
       - "Mother's level of Education"
+      - "Education level of the mother"
+
+    valid_values:
+      primary: Primary
+      secondary: Secondary
+      tertiary: Tertiary
+      university: University
+      not stated: Not stated
+
 
   residence:
+    datatype: string
+    required: true
+
     aliases:
+      - "Place of Residence"
       - "Place of Residence (indicate the sub county where the mother residence)"
+      - "Place of Residence(indicate the sub county where the mother residence)"
+
 
   registration_date:
+    datatype: date
+    required: true
+
     aliases:
+      - "Date of Registration"
       - "Date of Registration (dd-mm-yy)"
+      - "Date of Registration(dd-mm-yy)"
 
   entry_number:
+    datatype: string
+    required: true
+
     aliases:
       - "Entry Number"
 
 derived_columns:
 
   status:
-    description: "Current or Late registration"
+    datatype: string
+    required: true
+  Valid values:
+      current: Current
+      Late: Late
 
 output_columns:
 

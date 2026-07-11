@@ -7,8 +7,12 @@ Contains all rules executed for Birth datasets.
 """
 
 from crdqe.rules.birth.date_of_birth import DateOfBirthRule
+from crdqe.rules.birth.education import EducationRule
+from crdqe.rules.birth.marital_status import MaritalStatusRule
+from crdqe.rules.birth.nationality import NationalityRule
 from crdqe.rules.birth.occupation import OccupationRule
 from crdqe.rules.birth.place_of_birth import PlaceOfBirthRule
+from crdqe.rules.birth.place_type import PlaceTypeRule
 from crdqe.rules.birth.registration_date import RegistrationDateRule
 from crdqe.rules.birth.residence import ResidenceRule
 from crdqe.rules.birth.status import StatusRule
@@ -33,5 +37,9 @@ RULES = [
     PlaceOfBirthRule,
     OccupationRule,
     ResidenceRule,
+    PlaceTypeRule,
+    MaritalStatusRule,
+    NationalityRule,
+    EducationRule,
 
 ]

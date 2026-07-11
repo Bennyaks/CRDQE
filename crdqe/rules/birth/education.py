@@ -1,9 +1,9 @@
 from crdqe.rules.generic.text_rule import TextRule
 
 
-class ResidenceRule(TextRule):
+class EducationRule(TextRule):
 
-    FIELD = "residence"
+    FIELD = "education"
 
     def __init__(self, schema=None):
         super().__init__(schema)
