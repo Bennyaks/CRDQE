@@ -24,7 +24,7 @@ from crdqe.core.rule_engine import RuleEngine
 from crdqe.core.issue_collector import IssueCollector
 from crdqe.core.summary_builder import SummaryBuilder
 from crdqe.core.excel_writer import ExcelWriter
-
+from pathlib import Path
 
 def main():
 
@@ -83,10 +83,27 @@ def main():
     logger.info(df.columns.tolist())
 
     # -------------------------------------------------------
+    # Detect dataset
+    # -------------------------------------------------------
+
+    dataset = DatasetDetector.detect(df.columns)
+
+    logger.info(f"Detected Dataset: {dataset}")
+
+    # -------------------------------------------------------
     # Map schema
     # -------------------------------------------------------
 
-    mapper = SchemaMapper("config/birth_schema.yaml")
+    BASE_DIR = Path(__file__).parent
+
+    if dataset == "Birth":
+        schema_file = BASE_DIR / "config" / "birth_schema.yaml"
+    elif dataset == "Death":
+        schema_file = BASE_DIR / "config" / "death_schema.yaml"
+    else:
+        raise ValueError(f"Unknown dataset: {dataset}")
+
+    mapper = SchemaMapper(schema_file)
 
     df = mapper.map_columns(df)
 

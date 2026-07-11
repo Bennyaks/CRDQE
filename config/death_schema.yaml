@@ -1,0 +1,117 @@
+dataset: death
+
+source_columns:
+
+  deceased_name:
+    datatype: string
+    required: true
+    aliases:
+      - "Name of Deceased(Indicate full names of the deceased)"
+
+  id_number:
+    datatype: string
+    required: true
+    aliases:
+      - "ID Number(Indicate the ID number where applicable and available)"
+
+  date_of_death:
+    datatype: date
+    required: true
+    aliases:
+      - "Date of Death(dd-mm-yy)"
+
+  sex:
+    datatype: string
+    required: true
+    aliases:
+      - "sex(indicate whether male or female)"
+    valid_values:
+      - male: "male"
+      - female: "female"
+
+  age:
+    datatype: integer
+    required: true
+    minimum: 0
+    maximum: 130
+    aliases:
+      - "Age(indicate number eg 1,2,3,)"
+    valid_values:
+      - days: Days
+      - months: Months
+      - years: Years
+
+  age_unit:
+    datatype: string
+    required: true
+    aliases:
+      - "unit of age(days,months or years)"
+
+  place_of_death:
+    datatype: string
+    required: true
+    aliases:
+      - "Place of death(Indicate the name of exact place of death)"
+
+  marital_status:
+    datatype: string
+    required: true
+    aliases:
+      - "MARITAL STATUS"
+    valid_values:
+      - single: "Single"
+      - married: "Married"
+      - divorced: "Divorced"
+      - widowed: "Widowed"
+      - not stated: "Not Stated"
+
+  place_type:
+    datatype: string
+    required: true
+    aliases:
+      - "Type of place(Indicate whether Home or Health Institution)"
+    valid_values:
+      - home: "Home"
+      - health_institution: "Health Institution"
+
+  residence:
+    datatype: string
+    required: true
+    aliases:
+      - "Place of usual residence"
+
+  cause_of_death:
+    datatype: string
+    required: true
+    aliases:
+      - "Cause of death(Indicate the underlying cause of death)"
+
+  death_certification:
+    datatype: string
+    required: true
+    aliases:
+      - "CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)"
+    valid_values:
+      - medically certified: "Medically Certified"
+      - lay reporting: "Lay Reporting"
+
+  registration_date:
+    datatype: date
+    required: true
+    aliases:
+      - "Date of Registration(dd-mm-yy)"
+
+  entry_number:
+    datatype: string
+    required: true
+    aliases:
+      - "Entry Number"
+
+  status:
+    datatype: string
+    required: true
+    aliases:
+      - "Status"
+    valid_values:
+      - current: "Current"
+      - late: "late"
