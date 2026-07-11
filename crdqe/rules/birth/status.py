@@ -26,25 +26,19 @@ class StatusRule(BaseRule):
         df["status"] = None
 
         for index, row in df.iterrows():
-
-            dob = row["date_of_birth"]
-            reg = row["registration_date"]
-
+            dob = pd.to_datetime(
+                row["date_of_birth"],
+                errors="coerce",
+                dayfirst=True
+            )
+            reg = pd.to_datetime(
+                row["registration_date"],
+                errors="coerce",
+                dayfirst=True
+            )
             if pd.isna(dob) or pd.isna(reg):
-
-                df.at[index, "status"] = None
-
-                issues.append({
-                    "row": index + 2,
-                    "field": "status",
-                    "issue": "Cannot determine status due to missing date(s)",
-                    "value": None
-                })
-
                 continue
-
             days = (reg - dob).days
-
             if days <= 180:
                 df.at[index, "status"] = "Current"
             else:

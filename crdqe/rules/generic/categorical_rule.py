@@ -26,7 +26,9 @@ class CategoricalRule(BaseRule):
 
         df = dataframe.copy()
 
-        valid_values = self.schema.valid_values(self.FIELD)
+        field_schema = self.schema["source_columns"][self.FIELD]
+
+        valid_values = field_schema.get("valid_values", {})
 
         for index, value in df[self.FIELD].items():
 

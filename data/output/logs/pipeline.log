@@ -1788,3 +1788,661 @@
 2026-07-11 10:03:47,338 | INFO | NationalityRule: 8 issue(s)
 2026-07-11 10:03:47,338 | INFO | Running EducationRule
 2026-07-11 10:03:47,355 | INFO | EducationRule: 9 issue(s)
+2026-07-11 10:07:55,348 | INFO | ============================================================
+2026-07-11 10:07:55,349 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 10:07:55,350 | INFO | Workbook found.
+2026-07-11 10:07:55,350 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 10:07:55,407 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 10:07:55,470 | INFO | Detected Header Row: 1
+2026-07-11 10:07:55,631 | INFO | Standardized Columns:
+2026-07-11 10:07:55,632 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 10:07:55,650 | INFO | Mapped Columns:
+2026-07-11 10:07:55,651 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:07:55,651 | INFO | Rows: 414
+2026-07-11 10:07:55,651 | INFO | Columns: 15
+2026-07-11 10:07:55,652 | INFO | Column Names: ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:07:55,652 | INFO | Schema Valid: True
+2026-07-11 10:07:55,652 | INFO | Extra Columns: ['Serial No.']
+2026-07-11 10:07:55,653 | INFO | Workbook loaded successfully.
+2026-07-11 10:07:55,653 | INFO | Detected Dataset: Birth
+2026-07-11 10:07:55,653 | INFO | <class 'crdqe.core.schema_manager.SchemaManager'>
+2026-07-11 10:07:55,654 | INFO | <class 'dict'>
+2026-07-11 10:07:55,654 | INFO | dict_keys(['dataset', 'source_columns', 'derived_columns', 'output_columns'])
+2026-07-11 10:07:55,677 | INFO | Running DateOfBirthRule
+2026-07-11 10:07:55,683 | INFO | DateOfBirthRule: 14 issue(s)
+2026-07-11 10:07:55,683 | INFO | Running RegistrationDateRule
+2026-07-11 10:07:55,689 | INFO | RegistrationDateRule: 9 issue(s)
+2026-07-11 10:07:55,689 | INFO | Running DuplicateEntryNumberRule
+2026-07-11 10:07:55,697 | INFO | DuplicateEntryNumberRule: 0 issue(s)
+2026-07-11 10:07:55,698 | INFO | Running DateConsistencyRule
+2026-07-11 10:07:55,739 | INFO | DateConsistencyRule: 4 issue(s)
+2026-07-11 10:07:55,739 | INFO | Running StatusRule
+2026-07-11 10:07:55,799 | INFO | StatusRule: 10 issue(s)
+2026-07-11 10:07:55,800 | INFO | Running SexRule
+2026-07-11 10:07:55,855 | INFO | SexRule: 10 issue(s)
+2026-07-11 10:07:55,877 | INFO | Running NatureOfBirthRule
+2026-07-11 10:07:55,889 | INFO | NatureOfBirthRule: 9 issue(s)
+2026-07-11 10:07:55,890 | INFO | Running BirthWeightRule
+2026-07-11 10:07:55,907 | INFO | BirthWeightRule: 9 issue(s)
+2026-07-11 10:07:55,907 | INFO | Running MotherAgeRule
+2026-07-11 10:07:55,921 | INFO | MotherAgeRule: 9 issue(s)
+2026-07-11 10:07:55,921 | INFO | Running PlaceOfBirthRule
+2026-07-11 10:07:55,934 | INFO | PlaceOfBirthRule: 9 issue(s)
+2026-07-11 10:07:55,935 | INFO | Running OccupationRule
+2026-07-11 10:07:55,948 | INFO | OccupationRule: 9 issue(s)
+2026-07-11 10:07:55,949 | INFO | Running ResidenceRule
+2026-07-11 10:07:55,963 | INFO | ResidenceRule: 9 issue(s)
+2026-07-11 10:07:55,964 | INFO | Running PlaceTypeRule
+2026-07-11 10:07:55,974 | INFO | PlaceTypeRule: 9 issue(s)
+2026-07-11 10:07:55,975 | INFO | Running MaritalStatusRule
+2026-07-11 10:07:55,987 | INFO | MaritalStatusRule: 9 issue(s)
+2026-07-11 10:07:55,988 | INFO | Running NationalityRule
+2026-07-11 10:07:55,997 | INFO | NationalityRule: 8 issue(s)
+2026-07-11 10:07:55,997 | INFO | Running EducationRule
+2026-07-11 10:07:56,009 | INFO | EducationRule: 9 issue(s)
+2026-07-11 10:07:56,018 | INFO | Rule Engine completed.
+2026-07-11 10:07:56,018 | INFO | Records processed: 414
+2026-07-11 10:07:56,019 | INFO | Issues found: 136
+2026-07-11 10:07:56,019 | INFO | Running DateOfBirthRule
+2026-07-11 10:07:56,023 | INFO | DateOfBirthRule: 14 issue(s)
+2026-07-11 10:07:56,024 | INFO | Running RegistrationDateRule
+2026-07-11 10:07:56,030 | INFO | RegistrationDateRule: 9 issue(s)
+2026-07-11 10:07:56,031 | INFO | Running DuplicateEntryNumberRule
+2026-07-11 10:07:56,037 | INFO | DuplicateEntryNumberRule: 0 issue(s)
+2026-07-11 10:07:56,038 | INFO | Running DateConsistencyRule
+2026-07-11 10:07:56,081 | INFO | DateConsistencyRule: 4 issue(s)
+2026-07-11 10:07:56,081 | INFO | Running StatusRule
+2026-07-11 10:07:56,136 | INFO | StatusRule: 10 issue(s)
+2026-07-11 10:07:56,136 | INFO | Running SexRule
+2026-07-11 10:07:56,146 | INFO | SexRule: 10 issue(s)
+2026-07-11 10:07:56,146 | INFO | Running NatureOfBirthRule
+2026-07-11 10:07:56,157 | INFO | NatureOfBirthRule: 9 issue(s)
+2026-07-11 10:07:56,158 | INFO | Running BirthWeightRule
+2026-07-11 10:07:56,173 | INFO | BirthWeightRule: 9 issue(s)
+2026-07-11 10:07:56,174 | INFO | Running MotherAgeRule
+2026-07-11 10:07:56,188 | INFO | MotherAgeRule: 9 issue(s)
+2026-07-11 10:07:56,190 | INFO | Running PlaceOfBirthRule
+2026-07-11 10:07:56,220 | INFO | PlaceOfBirthRule: 9 issue(s)
+2026-07-11 10:07:56,220 | INFO | Running OccupationRule
+2026-07-11 10:07:56,232 | INFO | OccupationRule: 9 issue(s)
+2026-07-11 10:07:56,232 | INFO | Running ResidenceRule
+2026-07-11 10:07:56,243 | INFO | ResidenceRule: 9 issue(s)
+2026-07-11 10:07:56,244 | INFO | Running PlaceTypeRule
+2026-07-11 10:07:56,257 | INFO | PlaceTypeRule: 9 issue(s)
+2026-07-11 10:07:56,258 | INFO | Running MaritalStatusRule
+2026-07-11 10:07:56,273 | INFO | MaritalStatusRule: 9 issue(s)
+2026-07-11 10:07:56,273 | INFO | Running NationalityRule
+2026-07-11 10:07:56,284 | INFO | NationalityRule: 8 issue(s)
+2026-07-11 10:07:56,285 | INFO | Running EducationRule
+2026-07-11 10:07:56,298 | INFO | EducationRule: 9 issue(s)
+2026-07-11 10:20:44,644 | INFO | ============================================================
+2026-07-11 10:20:44,644 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 10:20:44,645 | INFO | Workbook found.
+2026-07-11 10:20:44,646 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 10:20:44,694 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 10:20:44,750 | INFO | Detected Header Row: 1
+2026-07-11 10:20:44,891 | INFO | Standardized Columns:
+2026-07-11 10:20:44,891 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 10:20:44,909 | INFO | Mapped Columns:
+2026-07-11 10:20:44,909 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:20:44,909 | INFO | Rows: 414
+2026-07-11 10:20:44,910 | INFO | Columns: 15
+2026-07-11 10:20:44,910 | INFO | Column Names: ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:20:44,911 | INFO | Schema Valid: True
+2026-07-11 10:20:44,911 | INFO | Extra Columns: ['Serial No.']
+2026-07-11 10:20:44,911 | INFO | Workbook loaded successfully.
+2026-07-11 10:20:44,911 | INFO | Detected Dataset: Birth
+2026-07-11 10:20:44,912 | INFO | <class 'crdqe.core.schema_manager.SchemaManager'>
+2026-07-11 10:20:44,912 | INFO | <class 'dict'>
+2026-07-11 10:20:44,912 | INFO | dict_keys(['dataset', 'source_columns', 'derived_columns', 'output_columns'])
+2026-07-11 10:23:18,460 | INFO | ============================================================
+2026-07-11 10:23:18,461 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 10:23:18,462 | INFO | Workbook found.
+2026-07-11 10:23:18,462 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 10:23:18,512 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 10:23:18,568 | INFO | Detected Header Row: 1
+2026-07-11 10:23:18,717 | INFO | Standardized Columns:
+2026-07-11 10:23:18,718 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 10:23:18,737 | INFO | Mapped Columns:
+2026-07-11 10:23:18,737 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:23:18,738 | INFO | Rows: 414
+2026-07-11 10:23:18,738 | INFO | Columns: 15
+2026-07-11 10:23:18,738 | INFO | Column Names: ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:23:18,739 | INFO | Schema Valid: True
+2026-07-11 10:23:18,739 | INFO | Extra Columns: ['Serial No.']
+2026-07-11 10:23:18,740 | INFO | Workbook loaded successfully.
+2026-07-11 10:23:18,741 | INFO | Detected Dataset: Birth
+2026-07-11 10:23:18,741 | INFO | <class 'crdqe.core.schema_manager.SchemaManager'>
+2026-07-11 10:23:18,742 | INFO | <class 'dict'>
+2026-07-11 10:23:18,742 | INFO | dict_keys(['dataset', 'source_columns', 'derived_columns', 'output_columns'])
+2026-07-11 10:23:19,000 | INFO | Running DateOfBirthRule
+2026-07-11 10:23:19,005 | INFO | DateOfBirthRule: 14 issue(s)
+2026-07-11 10:23:19,005 | INFO | Running RegistrationDateRule
+2026-07-11 10:23:19,009 | INFO | RegistrationDateRule: 9 issue(s)
+2026-07-11 10:23:19,009 | INFO | Running DateConsistencyRule
+2026-07-11 10:23:19,037 | INFO | DateConsistencyRule: 4 issue(s)
+2026-07-11 10:23:19,038 | INFO | Running StatusRule
+2026-07-11 10:23:19,086 | INFO | StatusRule: 10 issue(s)
+2026-07-11 10:23:19,086 | INFO | Running SexRule
+2026-07-11 10:23:19,099 | INFO | SexRule: 10 issue(s)
+2026-07-11 10:23:19,099 | INFO | Running NatureOfBirthRule
+2026-07-11 10:23:19,114 | INFO | NatureOfBirthRule: 9 issue(s)
+2026-07-11 10:23:19,115 | INFO | Running BirthWeightRule
+2026-07-11 10:23:19,131 | INFO | BirthWeightRule: 9 issue(s)
+2026-07-11 10:23:19,131 | INFO | Running MotherAgeRule
+2026-07-11 10:23:19,147 | INFO | MotherAgeRule: 9 issue(s)
+2026-07-11 10:23:19,148 | INFO | Running PlaceOfBirthRule
+2026-07-11 10:23:19,161 | INFO | PlaceOfBirthRule: 9 issue(s)
+2026-07-11 10:23:19,162 | INFO | Running PlaceTypeRule
+2026-07-11 10:23:19,176 | INFO | PlaceTypeRule: 9 issue(s)
+2026-07-11 10:23:19,176 | INFO | Running OccupationRule
+2026-07-11 10:23:19,190 | INFO | OccupationRule: 9 issue(s)
+2026-07-11 10:23:19,190 | INFO | Running EducationRule
+2026-07-11 10:23:19,204 | INFO | EducationRule: 9 issue(s)
+2026-07-11 10:23:19,205 | INFO | Running NationalityRule
+2026-07-11 10:23:19,215 | INFO | NationalityRule: 8 issue(s)
+2026-07-11 10:23:19,216 | INFO | Running ResidenceRule
+2026-07-11 10:23:19,229 | INFO | ResidenceRule: 9 issue(s)
+2026-07-11 10:23:19,230 | INFO | Running MaritalStatusRule
+2026-07-11 10:23:19,243 | INFO | MaritalStatusRule: 9 issue(s)
+2026-07-11 10:23:19,244 | INFO | Running DuplicateEntryNumberRule
+2026-07-11 10:23:19,247 | INFO | DuplicateEntryNumberRule: 0 issue(s)
+2026-07-11 10:23:19,254 | INFO | Rule Engine completed.
+2026-07-11 10:23:19,255 | INFO | Records processed: 414
+2026-07-11 10:23:19,255 | INFO | Issues found: 136
+2026-07-11 10:23:19,256 | INFO | Running DateOfBirthRule
+2026-07-11 10:23:19,261 | INFO | DateOfBirthRule: 14 issue(s)
+2026-07-11 10:23:19,261 | INFO | Running RegistrationDateRule
+2026-07-11 10:23:19,266 | INFO | RegistrationDateRule: 9 issue(s)
+2026-07-11 10:23:19,267 | INFO | Running DateConsistencyRule
+2026-07-11 10:23:19,305 | INFO | DateConsistencyRule: 4 issue(s)
+2026-07-11 10:23:19,305 | INFO | Running StatusRule
+2026-07-11 10:23:19,363 | INFO | StatusRule: 10 issue(s)
+2026-07-11 10:23:19,364 | INFO | Running SexRule
+2026-07-11 10:23:19,376 | INFO | SexRule: 10 issue(s)
+2026-07-11 10:23:19,376 | INFO | Running NatureOfBirthRule
+2026-07-11 10:23:19,388 | INFO | NatureOfBirthRule: 9 issue(s)
+2026-07-11 10:23:19,389 | INFO | Running BirthWeightRule
+2026-07-11 10:23:19,403 | INFO | BirthWeightRule: 9 issue(s)
+2026-07-11 10:23:19,403 | INFO | Running MotherAgeRule
+2026-07-11 10:23:19,415 | INFO | MotherAgeRule: 9 issue(s)
+2026-07-11 10:23:19,416 | INFO | Running PlaceOfBirthRule
+2026-07-11 10:23:19,425 | INFO | PlaceOfBirthRule: 9 issue(s)
+2026-07-11 10:23:19,425 | INFO | Running PlaceTypeRule
+2026-07-11 10:23:19,437 | INFO | PlaceTypeRule: 9 issue(s)
+2026-07-11 10:23:19,437 | INFO | Running OccupationRule
+2026-07-11 10:23:19,450 | INFO | OccupationRule: 9 issue(s)
+2026-07-11 10:23:19,491 | INFO | Running EducationRule
+2026-07-11 10:23:19,513 | INFO | EducationRule: 9 issue(s)
+2026-07-11 10:23:19,514 | INFO | Running NationalityRule
+2026-07-11 10:23:19,530 | INFO | NationalityRule: 8 issue(s)
+2026-07-11 10:23:19,531 | INFO | Running ResidenceRule
+2026-07-11 10:23:19,544 | INFO | ResidenceRule: 9 issue(s)
+2026-07-11 10:23:19,545 | INFO | Running MaritalStatusRule
+2026-07-11 10:23:19,557 | INFO | MaritalStatusRule: 9 issue(s)
+2026-07-11 10:23:19,558 | INFO | Running DuplicateEntryNumberRule
+2026-07-11 10:23:19,561 | INFO | DuplicateEntryNumberRule: 0 issue(s)
+2026-07-11 10:27:18,794 | INFO | ============================================================
+2026-07-11 10:27:18,794 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 10:27:18,795 | INFO | Workbook found.
+2026-07-11 10:27:18,796 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 10:27:18,847 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 10:27:18,909 | INFO | Detected Header Row: 1
+2026-07-11 10:27:19,046 | INFO | Standardized Columns:
+2026-07-11 10:27:19,047 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 10:27:19,071 | INFO | Mapped Columns:
+2026-07-11 10:27:19,072 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:27:19,072 | INFO | Rows: 414
+2026-07-11 10:27:19,072 | INFO | Columns: 15
+2026-07-11 10:27:19,073 | INFO | Column Names: ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:27:19,073 | INFO | Schema Valid: True
+2026-07-11 10:27:19,073 | INFO | Extra Columns: ['Serial No.']
+2026-07-11 10:27:19,074 | INFO | Workbook loaded successfully.
+2026-07-11 10:27:19,074 | INFO | Detected Dataset: Birth
+2026-07-11 10:27:19,074 | INFO | <class 'crdqe.core.schema_manager.SchemaManager'>
+2026-07-11 10:27:19,074 | INFO | <class 'dict'>
+2026-07-11 10:27:19,075 | INFO | dict_keys(['dataset', 'source_columns', 'derived_columns', 'output_columns'])
+2026-07-11 10:27:19,254 | INFO | Running DateOfBirthRule
+2026-07-11 10:27:19,263 | INFO | DateOfBirthRule: 14 issue(s)
+2026-07-11 10:27:19,264 | INFO | Running RegistrationDateRule
+2026-07-11 10:27:19,268 | INFO | RegistrationDateRule: 9 issue(s)
+2026-07-11 10:27:19,269 | INFO | Running DateConsistencyRule
+2026-07-11 10:27:19,300 | INFO | DateConsistencyRule: 4 issue(s)
+2026-07-11 10:27:19,300 | INFO | Running StatusRule
+2026-07-11 10:27:19,348 | INFO | StatusRule: 10 issue(s)
+2026-07-11 10:27:19,349 | INFO | Running SexRule
+2026-07-11 10:27:19,358 | INFO | SexRule: 10 issue(s)
+2026-07-11 10:27:19,359 | INFO | Running NatureOfBirthRule
+2026-07-11 10:27:19,370 | INFO | NatureOfBirthRule: 9 issue(s)
+2026-07-11 10:27:19,371 | INFO | Running BirthWeightRule
+2026-07-11 10:27:19,384 | INFO | BirthWeightRule: 9 issue(s)
+2026-07-11 10:27:19,384 | INFO | Running MotherAgeRule
+2026-07-11 10:27:19,397 | INFO | MotherAgeRule: 9 issue(s)
+2026-07-11 10:27:19,398 | INFO | Running PlaceOfBirthRule
+2026-07-11 10:27:19,409 | INFO | PlaceOfBirthRule: 9 issue(s)
+2026-07-11 10:27:19,410 | INFO | Running PlaceTypeRule
+2026-07-11 10:27:19,421 | INFO | PlaceTypeRule: 9 issue(s)
+2026-07-11 10:27:19,422 | INFO | Running OccupationRule
+2026-07-11 10:27:19,433 | INFO | OccupationRule: 9 issue(s)
+2026-07-11 10:27:19,433 | INFO | Running EducationRule
+2026-07-11 10:27:19,444 | INFO | EducationRule: 9 issue(s)
+2026-07-11 10:27:19,445 | INFO | Running NationalityRule
+2026-07-11 10:27:19,453 | INFO | NationalityRule: 8 issue(s)
+2026-07-11 10:27:19,453 | INFO | Running ResidenceRule
+2026-07-11 10:27:19,465 | INFO | ResidenceRule: 9 issue(s)
+2026-07-11 10:27:19,466 | INFO | Running MaritalStatusRule
+2026-07-11 10:27:19,476 | INFO | MaritalStatusRule: 9 issue(s)
+2026-07-11 10:27:19,477 | INFO | Running DuplicateEntryNumberRule
+2026-07-11 10:27:19,479 | INFO | DuplicateEntryNumberRule: 0 issue(s)
+2026-07-11 10:27:19,484 | INFO | Rule Engine completed.
+2026-07-11 10:27:19,485 | INFO | Records processed: 414
+2026-07-11 10:27:19,485 | INFO | Issues found: 136
+2026-07-11 10:27:19,486 | INFO | Running DateOfBirthRule
+2026-07-11 10:27:19,492 | INFO | DateOfBirthRule: 14 issue(s)
+2026-07-11 10:27:19,492 | INFO | Running RegistrationDateRule
+2026-07-11 10:27:19,497 | INFO | RegistrationDateRule: 9 issue(s)
+2026-07-11 10:27:19,498 | INFO | Running DateConsistencyRule
+2026-07-11 10:27:19,532 | INFO | DateConsistencyRule: 4 issue(s)
+2026-07-11 10:27:19,532 | INFO | Running StatusRule
+2026-07-11 10:27:19,582 | INFO | StatusRule: 10 issue(s)
+2026-07-11 10:27:19,582 | INFO | Running SexRule
+2026-07-11 10:27:19,592 | INFO | SexRule: 10 issue(s)
+2026-07-11 10:27:19,593 | INFO | Running NatureOfBirthRule
+2026-07-11 10:27:19,602 | INFO | NatureOfBirthRule: 9 issue(s)
+2026-07-11 10:27:19,603 | INFO | Running BirthWeightRule
+2026-07-11 10:27:19,615 | INFO | BirthWeightRule: 9 issue(s)
+2026-07-11 10:27:19,616 | INFO | Running MotherAgeRule
+2026-07-11 10:27:19,627 | INFO | MotherAgeRule: 9 issue(s)
+2026-07-11 10:27:19,628 | INFO | Running PlaceOfBirthRule
+2026-07-11 10:27:19,639 | INFO | PlaceOfBirthRule: 9 issue(s)
+2026-07-11 10:27:19,640 | INFO | Running PlaceTypeRule
+2026-07-11 10:27:19,650 | INFO | PlaceTypeRule: 9 issue(s)
+2026-07-11 10:27:19,650 | INFO | Running OccupationRule
+2026-07-11 10:27:19,662 | INFO | OccupationRule: 9 issue(s)
+2026-07-11 10:27:19,663 | INFO | Running EducationRule
+2026-07-11 10:27:19,675 | INFO | EducationRule: 9 issue(s)
+2026-07-11 10:27:19,675 | INFO | Running NationalityRule
+2026-07-11 10:27:19,683 | INFO | NationalityRule: 8 issue(s)
+2026-07-11 10:27:19,683 | INFO | Running ResidenceRule
+2026-07-11 10:27:19,697 | INFO | ResidenceRule: 9 issue(s)
+2026-07-11 10:27:19,697 | INFO | Running MaritalStatusRule
+2026-07-11 10:27:19,708 | INFO | MaritalStatusRule: 9 issue(s)
+2026-07-11 10:27:19,708 | INFO | Running DuplicateEntryNumberRule
+2026-07-11 10:27:19,710 | INFO | DuplicateEntryNumberRule: 0 issue(s)
+2026-07-11 10:41:49,829 | INFO | ============================================================
+2026-07-11 10:41:49,830 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 10:41:49,831 | INFO | Workbook found.
+2026-07-11 10:41:49,831 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 10:41:49,890 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 10:41:49,955 | INFO | Detected Header Row: 1
+2026-07-11 10:41:50,138 | INFO | Standardized Columns:
+2026-07-11 10:41:50,139 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 10:41:50,161 | INFO | Mapped Columns:
+2026-07-11 10:41:50,161 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:41:50,162 | INFO | Rows: 414
+2026-07-11 10:41:50,162 | INFO | Columns: 15
+2026-07-11 10:41:50,163 | INFO | Column Names: ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:41:50,163 | INFO | Schema Valid: True
+2026-07-11 10:41:50,163 | INFO | Extra Columns: ['Serial No.']
+2026-07-11 10:41:50,164 | INFO | Workbook loaded successfully.
+2026-07-11 10:41:50,164 | INFO | Detected Dataset: Birth
+2026-07-11 10:41:50,165 | INFO | <class 'crdqe.core.schema_manager.SchemaManager'>
+2026-07-11 10:41:50,165 | INFO | <class 'dict'>
+2026-07-11 10:41:50,165 | INFO | dict_keys(['dataset', 'source_columns', 'derived_columns', 'output_columns'])
+2026-07-11 10:46:27,436 | INFO | ============================================================
+2026-07-11 10:46:27,436 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 10:46:27,437 | INFO | Workbook found.
+2026-07-11 10:46:27,438 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 10:46:27,513 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 10:46:27,589 | INFO | Detected Header Row: 1
+2026-07-11 10:46:27,821 | INFO | Standardized Columns:
+2026-07-11 10:46:27,822 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 10:46:27,840 | INFO | Mapped Columns:
+2026-07-11 10:46:27,840 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:46:27,841 | INFO | Rows: 414
+2026-07-11 10:46:27,841 | INFO | Columns: 15
+2026-07-11 10:46:27,841 | INFO | Column Names: ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:46:27,842 | INFO | Schema Valid: True
+2026-07-11 10:46:27,842 | INFO | Extra Columns: ['Serial No.']
+2026-07-11 10:46:27,843 | INFO | Workbook loaded successfully.
+2026-07-11 10:46:27,843 | INFO | Detected Dataset: Birth
+2026-07-11 10:46:27,843 | INFO | <class 'crdqe.core.schema_manager.SchemaManager'>
+2026-07-11 10:46:27,843 | INFO | <class 'dict'>
+2026-07-11 10:46:27,844 | INFO | dict_keys(['dataset', 'source_columns', 'derived_columns', 'output_columns'])
+2026-07-11 10:46:28,105 | INFO | Running DateOfBirthRule
+2026-07-11 10:50:33,429 | INFO | ============================================================
+2026-07-11 10:50:33,430 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 10:50:33,431 | INFO | Workbook found.
+2026-07-11 10:50:33,432 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 10:50:33,503 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 10:50:33,595 | INFO | Detected Header Row: 1
+2026-07-11 10:50:33,818 | INFO | Standardized Columns:
+2026-07-11 10:50:33,819 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 10:50:33,852 | INFO | Mapped Columns:
+2026-07-11 10:50:33,853 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:50:33,854 | INFO | Rows: 414
+2026-07-11 10:50:33,854 | INFO | Columns: 15
+2026-07-11 10:50:33,855 | INFO | Column Names: ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:50:33,856 | INFO | Schema Valid: True
+2026-07-11 10:50:33,856 | INFO | Extra Columns: ['Serial No.']
+2026-07-11 10:50:33,857 | INFO | Workbook loaded successfully.
+2026-07-11 10:50:33,857 | INFO | Detected Dataset: Birth
+2026-07-11 10:50:33,858 | INFO | <class 'crdqe.core.schema_manager.SchemaManager'>
+2026-07-11 10:50:33,858 | INFO | <class 'dict'>
+2026-07-11 10:50:33,859 | INFO | dict_keys(['dataset', 'source_columns', 'derived_columns', 'output_columns'])
+2026-07-11 10:50:34,165 | INFO | Running DateOfBirthRule
+2026-07-11 10:50:34,321 | INFO | DateOfBirthRule: 14 issue(s)
+2026-07-11 10:50:34,322 | INFO | Running RegistrationDateRule
+2026-07-11 10:52:23,524 | INFO | ============================================================
+2026-07-11 10:52:23,525 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 10:52:23,526 | INFO | Workbook found.
+2026-07-11 10:52:23,526 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 10:52:23,598 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 10:52:23,689 | INFO | Detected Header Row: 1
+2026-07-11 10:52:23,888 | INFO | Standardized Columns:
+2026-07-11 10:52:23,889 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 10:52:23,908 | INFO | Mapped Columns:
+2026-07-11 10:52:23,909 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:52:23,909 | INFO | Rows: 414
+2026-07-11 10:52:23,909 | INFO | Columns: 15
+2026-07-11 10:52:23,910 | INFO | Column Names: ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:52:23,910 | INFO | Schema Valid: True
+2026-07-11 10:52:23,911 | INFO | Extra Columns: ['Serial No.']
+2026-07-11 10:52:23,911 | INFO | Workbook loaded successfully.
+2026-07-11 10:52:23,911 | INFO | Detected Dataset: Birth
+2026-07-11 10:52:23,912 | INFO | <class 'crdqe.core.schema_manager.SchemaManager'>
+2026-07-11 10:52:23,912 | INFO | <class 'dict'>
+2026-07-11 10:52:23,912 | INFO | dict_keys(['dataset', 'source_columns', 'derived_columns', 'output_columns'])
+2026-07-11 10:52:24,206 | INFO | Running DateOfBirthRule
+2026-07-11 10:52:24,301 | INFO | DateOfBirthRule: 14 issue(s)
+2026-07-11 10:52:24,302 | INFO | Running RegistrationDateRule
+2026-07-11 10:52:24,371 | INFO | RegistrationDateRule: 9 issue(s)
+2026-07-11 10:52:24,372 | INFO | Running DateConsistencyRule
+2026-07-11 10:55:00,917 | INFO | ============================================================
+2026-07-11 10:55:00,917 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 10:55:00,918 | INFO | Workbook found.
+2026-07-11 10:55:00,919 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 10:55:00,994 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 10:55:01,074 | INFO | Detected Header Row: 1
+2026-07-11 10:55:01,311 | INFO | Standardized Columns:
+2026-07-11 10:55:01,312 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 10:55:01,334 | INFO | Mapped Columns:
+2026-07-11 10:55:01,335 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:55:01,335 | INFO | Rows: 414
+2026-07-11 10:55:01,336 | INFO | Columns: 15
+2026-07-11 10:55:01,336 | INFO | Column Names: ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:55:01,336 | INFO | Schema Valid: True
+2026-07-11 10:55:01,337 | INFO | Extra Columns: ['Serial No.']
+2026-07-11 10:55:01,337 | INFO | Workbook loaded successfully.
+2026-07-11 10:55:01,338 | INFO | Detected Dataset: Birth
+2026-07-11 10:55:01,338 | INFO | <class 'crdqe.core.schema_manager.SchemaManager'>
+2026-07-11 10:55:01,338 | INFO | <class 'dict'>
+2026-07-11 10:55:01,339 | INFO | dict_keys(['dataset', 'source_columns', 'derived_columns', 'output_columns'])
+2026-07-11 10:55:01,558 | INFO | Running DateOfBirthRule
+2026-07-11 10:55:01,644 | INFO | DateOfBirthRule: 14 issue(s)
+2026-07-11 10:55:01,644 | INFO | Running RegistrationDateRule
+2026-07-11 10:55:01,702 | INFO | RegistrationDateRule: 9 issue(s)
+2026-07-11 10:55:01,702 | INFO | Running DateConsistencyRule
+2026-07-11 10:55:01,979 | INFO | DateConsistencyRule: 4 issue(s)
+2026-07-11 10:55:01,979 | INFO | Running StatusRule
+2026-07-11 10:57:08,207 | INFO | ============================================================
+2026-07-11 10:57:08,208 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 10:57:08,209 | INFO | Workbook found.
+2026-07-11 10:57:08,209 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 10:57:08,292 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 10:57:08,398 | INFO | Detected Header Row: 1
+2026-07-11 10:57:08,555 | INFO | Standardized Columns:
+2026-07-11 10:57:08,556 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 10:57:08,574 | INFO | Mapped Columns:
+2026-07-11 10:57:08,575 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:57:08,575 | INFO | Rows: 414
+2026-07-11 10:57:08,575 | INFO | Columns: 15
+2026-07-11 10:57:08,576 | INFO | Column Names: ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 10:57:08,576 | INFO | Schema Valid: True
+2026-07-11 10:57:08,576 | INFO | Extra Columns: ['Serial No.']
+2026-07-11 10:57:08,577 | INFO | Workbook loaded successfully.
+2026-07-11 10:57:08,577 | INFO | Detected Dataset: Birth
+2026-07-11 10:57:08,577 | INFO | <class 'crdqe.core.schema_manager.SchemaManager'>
+2026-07-11 10:57:08,578 | INFO | <class 'dict'>
+2026-07-11 10:57:08,578 | INFO | dict_keys(['dataset', 'source_columns', 'derived_columns', 'output_columns'])
+2026-07-11 10:57:08,790 | INFO | Running DateOfBirthRule
+2026-07-11 10:57:08,874 | INFO | DateOfBirthRule: 14 issue(s)
+2026-07-11 10:57:08,874 | INFO | Running RegistrationDateRule
+2026-07-11 10:57:08,920 | INFO | RegistrationDateRule: 9 issue(s)
+2026-07-11 10:57:08,920 | INFO | Running DateConsistencyRule
+2026-07-11 10:57:09,237 | INFO | DateConsistencyRule: 4 issue(s)
+2026-07-11 10:57:09,237 | INFO | Running StatusRule
+2026-07-11 10:57:09,533 | INFO | StatusRule: 0 issue(s)
+2026-07-11 10:57:09,533 | INFO | Running SexRule
+2026-07-11 10:57:09,543 | INFO | SexRule: 10 issue(s)
+2026-07-11 10:57:09,544 | INFO | Running NatureOfBirthRule
+2026-07-11 10:57:09,556 | INFO | NatureOfBirthRule: 9 issue(s)
+2026-07-11 10:57:09,557 | INFO | Running BirthWeightRule
+2026-07-11 10:57:09,572 | INFO | BirthWeightRule: 9 issue(s)
+2026-07-11 10:57:09,573 | INFO | Running MotherAgeRule
+2026-07-11 10:57:09,589 | INFO | MotherAgeRule: 9 issue(s)
+2026-07-11 10:57:09,589 | INFO | Running PlaceOfBirthRule
+2026-07-11 11:00:25,649 | INFO | ============================================================
+2026-07-11 11:00:25,650 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 11:00:25,651 | INFO | Workbook found.
+2026-07-11 11:00:25,652 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 11:00:25,720 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 11:00:25,827 | INFO | Detected Header Row: 1
+2026-07-11 11:00:26,086 | INFO | Standardized Columns:
+2026-07-11 11:00:26,086 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 11:00:26,108 | INFO | Mapped Columns:
+2026-07-11 11:00:26,108 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 11:00:26,109 | INFO | Rows: 414
+2026-07-11 11:00:26,109 | INFO | Columns: 15
+2026-07-11 11:00:26,110 | INFO | Column Names: ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 11:00:26,110 | INFO | Schema Valid: True
+2026-07-11 11:00:26,111 | INFO | Extra Columns: ['Serial No.']
+2026-07-11 11:00:26,111 | INFO | Workbook loaded successfully.
+2026-07-11 11:00:26,111 | INFO | Detected Dataset: Birth
+2026-07-11 11:00:26,112 | INFO | <class 'crdqe.core.schema_manager.SchemaManager'>
+2026-07-11 11:00:26,112 | INFO | <class 'dict'>
+2026-07-11 11:00:26,112 | INFO | dict_keys(['dataset', 'source_columns', 'derived_columns', 'output_columns'])
+2026-07-11 11:00:26,425 | INFO | Running DateOfBirthRule
+2026-07-11 11:00:26,525 | INFO | DateOfBirthRule: 14 issue(s)
+2026-07-11 11:00:26,525 | INFO | Running RegistrationDateRule
+2026-07-11 11:00:26,587 | INFO | RegistrationDateRule: 9 issue(s)
+2026-07-11 11:00:26,588 | INFO | Running DateConsistencyRule
+2026-07-11 11:00:26,985 | INFO | DateConsistencyRule: 4 issue(s)
+2026-07-11 11:00:26,985 | INFO | Running StatusRule
+2026-07-11 11:00:27,274 | INFO | StatusRule: 0 issue(s)
+2026-07-11 11:00:27,274 | INFO | Running SexRule
+2026-07-11 11:00:27,283 | INFO | SexRule: 10 issue(s)
+2026-07-11 11:00:27,283 | INFO | Running NatureOfBirthRule
+2026-07-11 11:00:27,295 | INFO | NatureOfBirthRule: 9 issue(s)
+2026-07-11 11:00:27,296 | INFO | Running BirthWeightRule
+2026-07-11 11:00:27,309 | INFO | BirthWeightRule: 9 issue(s)
+2026-07-11 11:00:27,310 | INFO | Running MotherAgeRule
+2026-07-11 11:00:27,325 | INFO | MotherAgeRule: 9 issue(s)
+2026-07-11 11:00:27,326 | INFO | Running PlaceOfBirthRule
+2026-07-11 11:00:27,341 | INFO | PlaceOfBirthRule: 9 issue(s)
+2026-07-11 11:00:27,341 | INFO | Running PlaceTypeRule
+2026-07-11 11:00:27,359 | INFO | PlaceTypeRule: 9 issue(s)
+2026-07-11 11:00:27,360 | INFO | Running PlaceConsistencyRule
+2026-07-11 11:00:27,429 | INFO | PlaceConsistencyRule: 411 issue(s)
+2026-07-11 11:00:27,430 | INFO | Running OccupationRule
+2026-07-11 11:01:06,933 | INFO | ============================================================
+2026-07-11 11:01:06,934 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 11:01:06,936 | INFO | Workbook found.
+2026-07-11 11:01:06,936 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 11:01:07,050 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 11:01:07,160 | INFO | Detected Header Row: 1
+2026-07-11 11:01:07,601 | INFO | Standardized Columns:
+2026-07-11 11:01:07,603 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 11:01:07,692 | INFO | Mapped Columns:
+2026-07-11 11:01:07,693 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 11:01:07,695 | INFO | Rows: 414
+2026-07-11 11:01:07,697 | INFO | Columns: 15
+2026-07-11 11:01:07,699 | INFO | Column Names: ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 11:01:07,702 | INFO | Schema Valid: True
+2026-07-11 11:01:07,703 | INFO | Extra Columns: ['Serial No.']
+2026-07-11 11:01:07,704 | INFO | Workbook loaded successfully.
+2026-07-11 11:01:07,706 | INFO | Detected Dataset: Birth
+2026-07-11 11:01:07,707 | INFO | <class 'crdqe.core.schema_manager.SchemaManager'>
+2026-07-11 11:01:07,708 | INFO | <class 'dict'>
+2026-07-11 11:01:07,709 | INFO | dict_keys(['dataset', 'source_columns', 'derived_columns', 'output_columns'])
+2026-07-11 11:01:08,244 | INFO | Running DateOfBirthRule
+2026-07-11 11:01:08,395 | INFO | DateOfBirthRule: 14 issue(s)
+2026-07-11 11:01:08,396 | INFO | Running RegistrationDateRule
+2026-07-11 11:01:08,484 | INFO | RegistrationDateRule: 9 issue(s)
+2026-07-11 11:01:08,485 | INFO | Running DateConsistencyRule
+2026-07-11 11:01:08,935 | INFO | DateConsistencyRule: 4 issue(s)
+2026-07-11 11:01:08,935 | INFO | Running StatusRule
+2026-07-11 11:01:09,471 | INFO | StatusRule: 0 issue(s)
+2026-07-11 11:01:09,472 | INFO | Running SexRule
+2026-07-11 11:01:09,501 | INFO | SexRule: 10 issue(s)
+2026-07-11 11:01:09,501 | INFO | Running NatureOfBirthRule
+2026-07-11 11:01:09,529 | INFO | NatureOfBirthRule: 9 issue(s)
+2026-07-11 11:01:09,530 | INFO | Running BirthWeightRule
+2026-07-11 11:01:09,567 | INFO | BirthWeightRule: 9 issue(s)
+2026-07-11 11:01:09,568 | INFO | Running MotherAgeRule
+2026-07-11 11:01:09,600 | INFO | MotherAgeRule: 9 issue(s)
+2026-07-11 11:01:09,601 | INFO | Running PlaceOfBirthRule
+2026-07-11 11:01:09,626 | INFO | PlaceOfBirthRule: 9 issue(s)
+2026-07-11 11:01:09,627 | INFO | Running PlaceTypeRule
+2026-07-11 11:01:09,655 | INFO | PlaceTypeRule: 9 issue(s)
+2026-07-11 11:01:09,655 | INFO | Running PlaceConsistencyRule
+2026-07-11 11:01:09,708 | INFO | PlaceConsistencyRule: 411 issue(s)
+2026-07-11 11:01:09,708 | INFO | Running OccupationRule
+2026-07-11 11:01:09,727 | INFO | OccupationRule: 9 issue(s)
+2026-07-11 11:01:09,727 | INFO | Running EducationRule
+2026-07-11 11:01:09,749 | INFO | EducationRule: 9 issue(s)
+2026-07-11 11:01:09,749 | INFO | Running NationalityRule
+2026-07-11 11:01:09,768 | INFO | NationalityRule: 8 issue(s)
+2026-07-11 11:01:09,769 | INFO | Running ResidenceRule
+2026-07-11 11:01:09,793 | INFO | ResidenceRule: 9 issue(s)
+2026-07-11 11:01:09,794 | INFO | Running MaritalStatusRule
+2026-07-11 11:01:09,825 | INFO | MaritalStatusRule: 9 issue(s)
+2026-07-11 11:01:09,825 | INFO | Running EntryNumberRule
+2026-07-11 11:10:44,848 | INFO | ============================================================
+2026-07-11 11:10:44,848 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 11:10:44,849 | INFO | Workbook found.
+2026-07-11 11:10:44,849 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 11:10:44,910 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 11:10:45,004 | INFO | Detected Header Row: 1
+2026-07-11 11:10:45,180 | INFO | Standardized Columns:
+2026-07-11 11:10:45,180 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 11:19:54,697 | INFO | ============================================================
+2026-07-11 11:19:54,698 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 11:19:54,699 | INFO | Workbook found.
+2026-07-11 11:19:54,699 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 11:19:54,773 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 11:19:54,876 | INFO | Detected Header Row: 1
+2026-07-11 11:19:55,063 | INFO | Standardized Columns:
+2026-07-11 11:19:55,063 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 11:19:55,081 | INFO | Detected Dataset: Birth
+2026-07-11 11:19:55,082 | INFO | <class 'crdqe.core.schema_manager.SchemaManager'>
+2026-07-11 11:19:55,082 | INFO | <class 'dict'>
+2026-07-11 11:19:55,082 | INFO | dict_keys(['dataset', 'source_columns', 'derived_columns', 'output_columns'])
+2026-07-11 11:28:49,067 | INFO | ============================================================
+2026-07-11 11:28:49,068 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 11:28:49,069 | INFO | Workbook found.
+2026-07-11 11:28:49,069 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 11:28:49,136 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 11:28:49,244 | INFO | Detected Header Row: 1
+2026-07-11 11:28:49,567 | INFO | Standardized Columns:
+2026-07-11 11:28:49,568 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 11:28:49,595 | INFO | Detected Dataset: Birth
+2026-07-11 11:28:49,629 | INFO | Schema Valid: True
+2026-07-11 11:28:49,629 | INFO | Extra Columns: ['Serial No.']
+2026-07-11 11:28:49,629 | INFO | Workbook loaded successfully.
+2026-07-11 11:28:49,630 | INFO | Rows: 414
+2026-07-11 11:28:49,630 | INFO | Columns: 15
+2026-07-11 11:28:49,631 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 11:28:49,883 | INFO | Running DateOfBirthRule
+2026-07-11 11:28:49,959 | INFO | DateOfBirthRule: 14 issue(s)
+2026-07-11 11:28:49,960 | INFO | Running RegistrationDateRule
+2026-07-11 11:28:50,055 | INFO | RegistrationDateRule: 9 issue(s)
+2026-07-11 11:28:50,055 | INFO | Running DateConsistencyRule
+2026-07-11 11:28:50,136 | INFO | DateConsistencyRule: 129 issue(s)
+2026-07-11 11:28:50,136 | INFO | Running StatusRule
+2026-07-11 11:28:50,246 | INFO | StatusRule: 0 issue(s)
+2026-07-11 11:28:50,246 | INFO | Running SexRule
+2026-07-11 11:44:48,787 | INFO | ============================================================
+2026-07-11 11:44:48,788 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 11:44:48,789 | INFO | Workbook found.
+2026-07-11 11:44:48,790 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 11:44:48,888 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 11:44:48,999 | INFO | Detected Header Row: 1
+2026-07-11 11:44:49,254 | INFO | Standardized Columns:
+2026-07-11 11:44:49,254 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 11:44:49,283 | INFO | Detected Dataset: Birth
+2026-07-11 11:44:49,306 | INFO | Schema Valid: True
+2026-07-11 11:44:49,307 | INFO | Extra Columns: ['Serial No.']
+2026-07-11 11:44:49,307 | INFO | Workbook loaded successfully.
+2026-07-11 11:44:49,308 | INFO | Rows: 414
+2026-07-11 11:44:49,308 | INFO | Columns: 15
+2026-07-11 11:44:49,308 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 11:44:49,572 | INFO | Running DateOfBirthRule
+2026-07-11 11:44:49,646 | INFO | DateOfBirthRule: 14 issue(s)
+2026-07-11 11:44:49,646 | INFO | Running RegistrationDateRule
+2026-07-11 11:44:49,724 | INFO | RegistrationDateRule: 9 issue(s)
+2026-07-11 11:44:49,724 | INFO | Running DateConsistencyRule
+2026-07-11 11:44:49,789 | INFO | DateConsistencyRule: 129 issue(s)
+2026-07-11 11:44:49,790 | INFO | Running StatusRule
+2026-07-11 11:44:49,901 | INFO | StatusRule: 0 issue(s)
+2026-07-11 11:44:49,902 | INFO | Running SexRule
+2026-07-11 11:44:49,920 | INFO | SexRule: 10 issue(s)
+2026-07-11 11:44:49,920 | INFO | Running NatureOfBirthRule
+2026-07-11 11:44:49,942 | INFO | NatureOfBirthRule: 9 issue(s)
+2026-07-11 11:44:49,943 | INFO | Running BirthWeightRule
+2026-07-11 12:21:21,941 | INFO | ============================================================
+2026-07-11 12:21:21,941 | INFO | Civil Registration Data Quality Engine Started
+2026-07-11 12:21:21,942 | INFO | Workbook found.
+2026-07-11 12:21:21,943 | INFO | data\input\Birth_Data.xlsx
+2026-07-11 12:21:22,031 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-11 12:21:22,126 | INFO | Detected Header Row: 1
+2026-07-11 12:21:22,372 | INFO | Standardized Columns:
+2026-07-11 12:21:22,372 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-11 12:21:22,404 | INFO | Detected Dataset: Birth
+2026-07-11 12:21:22,433 | INFO | Schema Valid: True
+2026-07-11 12:21:22,434 | INFO | Extra Columns: ['Serial No.']
+2026-07-11 12:21:22,435 | INFO | Workbook loaded successfully.
+2026-07-11 12:21:22,435 | INFO | Rows: 414
+2026-07-11 12:21:22,435 | INFO | Columns: 15
+2026-07-11 12:21:22,436 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-11 12:21:22,723 | INFO | Running DateOfBirthRule
+2026-07-11 12:21:22,785 | INFO | DateOfBirthRule: 14 issue(s)
+2026-07-11 12:21:22,786 | INFO | Running RegistrationDateRule
+2026-07-11 12:21:22,861 | INFO | RegistrationDateRule: 9 issue(s)
+2026-07-11 12:21:22,861 | INFO | Running DateConsistencyRule
+2026-07-11 12:21:22,910 | INFO | DateConsistencyRule: 129 issue(s)
+2026-07-11 12:21:22,910 | INFO | Running StatusRule
+2026-07-11 12:21:22,996 | INFO | StatusRule: 0 issue(s)
+2026-07-11 12:21:22,996 | INFO | Running SexRule
+2026-07-11 12:21:23,021 | INFO | SexRule: 10 issue(s)
+2026-07-11 12:21:23,022 | INFO | Running NatureOfBirthRule
+2026-07-11 12:21:23,040 | INFO | NatureOfBirthRule: 9 issue(s)
+2026-07-11 12:21:23,041 | INFO | Running BirthWeightRule
+2026-07-11 12:21:23,060 | INFO | BirthWeightRule: 9 issue(s)
+2026-07-11 12:21:23,060 | INFO | Running MotherAgeRule
+2026-07-11 12:21:23,076 | INFO | MotherAgeRule: 9 issue(s)
+2026-07-11 12:21:23,077 | INFO | Running PlaceOfBirthRule
+2026-07-11 12:21:23,093 | INFO | PlaceOfBirthRule: 9 issue(s)
+2026-07-11 12:21:23,093 | INFO | Running PlaceTypeRule
+2026-07-11 12:21:23,111 | INFO | PlaceTypeRule: 9 issue(s)
+2026-07-11 12:21:23,111 | INFO | Running PlaceConsistencyRule
+2026-07-11 12:21:23,184 | INFO | PlaceConsistencyRule: 411 issue(s)
+2026-07-11 12:21:23,185 | INFO | Running OccupationRule
+2026-07-11 12:21:23,204 | INFO | OccupationRule: 9 issue(s)
+2026-07-11 12:21:23,204 | INFO | Running EducationRule
+2026-07-11 12:21:23,229 | INFO | EducationRule: 9 issue(s)
+2026-07-11 12:21:23,230 | INFO | Running NationalityRule
+2026-07-11 12:21:23,247 | INFO | NationalityRule: 8 issue(s)
+2026-07-11 12:21:23,250 | INFO | Running ResidenceRule
+2026-07-11 12:21:23,268 | INFO | ResidenceRule: 9 issue(s)
+2026-07-11 12:21:23,268 | INFO | Running MaritalStatusRule
+2026-07-11 12:21:23,285 | INFO | MaritalStatusRule: 9 issue(s)
+2026-07-11 12:21:23,325 | INFO | Running EntryNumberRule
+2026-07-11 12:21:23,349 | INFO | EntryNumberRule: 9 issue(s)
+2026-07-11 12:21:23,349 | INFO | Running DuplicateEntryNumberRule
+2026-07-11 12:21:23,354 | INFO | DuplicateEntryNumberRule: 0 issue(s)
+2026-07-11 12:21:23,368 | INFO | Rule Engine completed.
+2026-07-11 12:21:23,368 | INFO | Records processed: 414
+2026-07-11 12:21:23,369 | INFO | Issues found: 671
+2026-07-11 12:21:24,380 | INFO | ============================================================
+2026-07-11 12:21:24,381 | INFO | CRDQE Finished Successfully

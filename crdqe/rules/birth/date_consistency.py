@@ -15,16 +15,25 @@ class DateConsistencyRule(CrossFieldRule):
 
     def validate(self, index, row):
 
-        birth = row["date_of_birth"]
-        registration = row["registration_date"]
+        birth = pd.to_datetime(
+    row["date_of_birth"],
+    errors="coerce",
+    dayfirst=True
+)
+
+        registration = pd.to_datetime(
+            row["registration_date"],
+            errors="coerce",
+            dayfirst=True
+        )
 
         if pd.isna(birth) or pd.isna(registration):
             return
 
         if registration < birth:
-
             self.add_issue(
-                index,
-                "registration_date",
-                "Registration date is before Date of Birth"
+                row=index,
+                field="registration_date",
+                issue="Registration before Birth",
+                value=row["registration_date"]
             )

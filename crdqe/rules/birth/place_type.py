@@ -5,5 +5,6 @@ class PlaceTypeRule(TextRule):
 
     FIELD = "place_type"
 
-    def __init__(self, schema=None):
-        super().__init__(schema)
+    TITLE = "Place Type"
+
+    REQUIRED = True

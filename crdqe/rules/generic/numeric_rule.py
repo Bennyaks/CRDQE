@@ -7,6 +7,8 @@ in the schema.
 ===========================================================
 """
 
+from dataclasses import field
+
 import pandas as pd
 
 from crdqe.core.base_rule import BaseRule
@@ -22,8 +24,10 @@ class NumericRule(BaseRule):
 
         df = dataframe.copy()
 
-        minimum = self.schema.minimum(self.FIELD)
-        maximum = self.schema.maximum(self.FIELD)
+        field = self.field_schema()
+
+        minimum = field.get("minimum")
+        maximum = field.get("maximum")
 
         for index, value in df[self.FIELD].items():
 

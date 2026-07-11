@@ -46,6 +46,8 @@ class BaseRule:
             return True
 
         return False
+    def field_schema(self):
+        return self.schema["source_columns"].get(self.FIELD, {})
 
     def get_issues(self):
 

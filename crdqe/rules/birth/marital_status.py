@@ -5,5 +5,6 @@ class MaritalStatusRule(TextRule):
 
     FIELD = "marital_status"
 
-    def __init__(self, schema=None):
-        super().__init__(schema)
+    TITLE = "Marital Status"
+
+    REQUIRED = True

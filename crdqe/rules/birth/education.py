@@ -5,5 +5,6 @@ class EducationRule(TextRule):
 
     FIELD = "education"
 
-    def __init__(self, schema=None):
-        super().__init__(schema)
+    TITLE = "Education"
+
+    REQUIRED = True

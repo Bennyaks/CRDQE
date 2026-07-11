@@ -11,48 +11,28 @@ class TextRule(BaseRule):
 
     FIELD = None
 
-    def validate(self, value):
-        """
-        Override in child classes if needed.
-        """
-        return True
-
     def run(self, dataframe):
 
-        df = self.start(dataframe)
+        self.issues = []
+
+        df = dataframe.copy()
 
         for index, value in df[self.FIELD].items():
 
             if self.is_missing(value):
 
                 self.add_issue(
-                    index,
-                    self.FIELD,
-                    f"Missing {self.FIELD}"
+                    row=index,
+                    field=self.FIELD,
+                    issue=f"Missing {self.TITLE}"
                 )
                 continue
 
-            cleaned = str(value).strip()
+            # Clean the text
+            value = str(value).strip()
+            value = " ".join(value.split())
+            value = value.title()
 
-            if cleaned == "":
-
-                self.add_issue(
-                    index,
-                    self.FIELD,
-                    f"Blank {self.FIELD}"
-                )
-                continue
-
-            if not self.validate(cleaned):
-
-                self.add_issue(
-                    index,
-                    self.FIELD,
-                    f"Invalid {self.FIELD}",
-                    cleaned
-                )
-                continue
-
-            df.at[index, self.FIELD] = cleaned
+            df.at[index, self.FIELD] = value
 
         return df, self.get_issues()
