@@ -10,3 +10,4 @@ from crdqe.rules.generic.categorical_rule import CategoricalRule
 class NatureOfBirthRule(CategoricalRule):
 
     FIELD = "nature_of_birth"
+    TITLE = "Nature of Birth"

@@ -24,10 +24,10 @@ class NumericRule(BaseRule):
 
         df = dataframe.copy()
 
-        field = self.field_schema()
+        self.field_schema = self.field_schema()
 
-        minimum = field.get("minimum")
-        maximum = field.get("maximum")
+        minimum = self.field_schema.get("minimum")
+        maximum = self.field_schema.get("maximum")
 
         for index, value in df[self.FIELD].items():
 
@@ -36,7 +36,7 @@ class NumericRule(BaseRule):
                 self.add_issue(
                     index,
                     self.FIELD,
-                    f"Missing {self.FIELD}"
+                    f"Missing {self.TITLE}"
                 )
                 continue
 
@@ -49,7 +49,7 @@ class NumericRule(BaseRule):
                 self.add_issue(
                     index,
                     self.FIELD,
-                    f"Invalid {self.FIELD}",
+                    f"Invalid {self.TITLE}",
                     value
                 )
                 continue
@@ -59,7 +59,7 @@ class NumericRule(BaseRule):
                 self.add_issue(
                     index,
                     self.FIELD,
-                    f"{self.FIELD} below minimum",
+                    f"{self.TITLE} below minimum",
                     value
                 )
 

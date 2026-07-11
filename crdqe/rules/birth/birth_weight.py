@@ -10,3 +10,4 @@ from crdqe.rules.generic.numeric_rule import NumericRule
 class BirthWeightRule(NumericRule):
 
     FIELD = "birth_weight"
+    TITLE = "Birth Weight"

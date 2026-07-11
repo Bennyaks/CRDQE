@@ -37,7 +37,7 @@ class CategoricalRule(BaseRule):
                 self.add_issue(
                     index,
                     self.FIELD,
-                    f"Missing {self.FIELD}"
+                    f"Missing {self.TITLE}"
                 )
 
                 continue
@@ -53,7 +53,7 @@ class CategoricalRule(BaseRule):
                 self.add_issue(
                     index,
                     self.FIELD,
-                    f"Invalid {self.FIELD}",
+                    f"Invalid {self.TITLE}",
                     value
                 )
 

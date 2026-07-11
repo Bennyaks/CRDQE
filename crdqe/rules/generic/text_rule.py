@@ -31,7 +31,7 @@ class TextRule(BaseRule):
             # Clean the text
             value = str(value).strip()
             value = " ".join(value.split())
-            value = value.title()
+            
 
             df.at[index, self.FIELD] = value
 
