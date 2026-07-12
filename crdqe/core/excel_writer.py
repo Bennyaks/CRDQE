@@ -9,6 +9,7 @@ from pathlib import Path
 from openpyxl import load_workbook
 from openpyxl.styles import Font, PatternFill, Border, Side, Alignment
 from openpyxl.utils import get_column_letter
+import pandas as pd
 
 
 class ExcelWriter:
@@ -53,12 +54,55 @@ class ExcelWriter:
 
         self._format(self.flags_path)
 
-    def summary(self, dataframe):
+    def summary(self, report):
 
-        dataframe.to_excel(
-            self.summary_path,
-            index=False
+        metrics_df = pd.DataFrame({
+            "Metric": [
+                "Rows",
+                "Columns",
+                "Issues Found",
+                "Quality Score (%)"
+            ],
+            "Value": [
+                report["rows"],
+                report["columns"],
+                report["issues"],
+                report["quality_score"]
+            ]
+        })
+
+        field_df = pd.DataFrame(
+            list(report["issues_by_field"].items()),
+            columns=["Field", "Issues"]
         )
+
+        rule_df = pd.DataFrame(
+            list(report["issues_by_rule"].items()),
+            columns=["Rule", "Issues"]
+        )
+
+        with pd.ExcelWriter(self.summary_path, engine="openpyxl") as writer:
+
+            metrics_df.to_excel(
+                writer,
+                sheet_name="Summary",
+                index=False,
+                startrow=0
+            )
+
+            field_df.to_excel(
+                writer,
+                sheet_name="Summary",
+                index=False,
+                startrow=7
+            )
+
+            rule_df.to_excel(
+                writer,
+                sheet_name="Summary",
+                index=False,
+                startrow=7 + len(field_df) + 4
+            )
 
         self._format(self.summary_path)
 

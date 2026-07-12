@@ -14,6 +14,7 @@ from crdqe.core.logger import Logger
 from crdqe.core.file_manager import FileManager
 from crdqe.core.excel_reader import ExcelReader
 from crdqe.core.header_detector import HeaderDetector
+from crdqe.reporting.summary_report import SummaryReport
 from crdqe.utils.column_standardizer import ColumnStandardizer
 from crdqe.core.schema_mapper import SchemaMapper
 from crdqe.core.dataset_detector import DatasetDetector
@@ -22,7 +23,6 @@ from crdqe.core.datatype_processor import DataTypeProcessor
 from crdqe.core.rule_loader import RuleLoader
 from crdqe.core.rule_engine import RuleEngine
 from crdqe.core.issue_collector import IssueCollector
-from crdqe.core.summary_builder import SummaryBuilder
 from crdqe.core.excel_writer import ExcelWriter
 from pathlib import Path
 
@@ -148,7 +148,7 @@ def main():
     # -------------------------------------------------------
     # Load rules
     # -------------------------------------------------------
-
+    
     rules = RuleLoader.load(dataset, schema)
 
     engine = RuleEngine(
@@ -170,26 +170,48 @@ def main():
     logger.info(f"Issues found: {collector.count()}")
 
     # -------------------------------------------------------
-    # Build summary
+    # Build reports
     # -------------------------------------------------------
 
-    summary = SummaryBuilder.build(
-        df,
-        issues_df,
-    )
+    report = SummaryReport(df, issues_df).generate()
+
 
     # -------------------------------------------------------
-    # Write reports
+    # Write Excel outputs
     # -------------------------------------------------------
 
     writer = ExcelWriter(settings)
 
     writer.cleaned(df)
     writer.flags(issues_df)
-    writer.summary(summary)
+    writer.summary(report)
 
     logger.info("=" * 60)
     logger.info("CRDQE Finished Successfully")
+
+    # -------------------------------------------------------
+    # Console summary
+    # -------------------------------------------------------
+
+    print("\n" + "=" * 60)
+    print("CRDQE DATA QUALITY SUMMARY")
+    print("=" * 60)
+
+    print(f"Rows               : {report['rows']}")
+    print(f"Columns            : {report['columns']}")
+    print(f"Issues Found       : {report['issues']}")
+
+    print("\nIssues by Field")
+
+    for field, count in report["issues_by_field"].items():
+        print(f"  {field:<25} {count}")
+
+    print("\nIssues by Rule")
+
+    for rule, count in report["issues_by_rule"].items():
+        print(f"  {rule:<25} {count}")
+
+    print("=" * 60)
 
 
 if __name__ == "__main__":

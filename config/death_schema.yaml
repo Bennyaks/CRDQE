@@ -26,8 +26,8 @@ source_columns:
     aliases:
       - "sex(indicate whether male or female)"
     valid_values:
-      - male: "male"
-      - female: "female"
+      male: "male"
+      female: "female"
 
   age:
     datatype: integer
@@ -36,16 +36,16 @@ source_columns:
     maximum: 130
     aliases:
       - "Age(indicate number eg 1,2,3,)"
-    valid_values:
-      - days: Days
-      - months: Months
-      - years: Years
 
   age_unit:
     datatype: string
     required: true
     aliases:
       - "unit of age(days,months or years)"
+    valid_values:
+      days: Days
+      months: Months
+      years: Years
 
   place_of_death:
     datatype: string
@@ -59,11 +59,11 @@ source_columns:
     aliases:
       - "MARITAL STATUS"
     valid_values:
-      - single: "Single"
-      - married: "Married"
-      - divorced: "Divorced"
-      - widowed: "Widowed"
-      - not stated: "Not Stated"
+      single: "Single"
+      married: "Married"
+      divorced: "Divorced"
+      widowed: "Widowed"
+      not stated: "Not Stated"
 
   place_type:
     datatype: string
@@ -71,8 +71,8 @@ source_columns:
     aliases:
       - "Type of place(Indicate whether Home or Health Institution)"
     valid_values:
-      - home: "Home"
-      - health_institution: "Health Institution"
+      home: "Home"
+      health institution: "Health Institution"
 
   residence:
     datatype: string
@@ -92,8 +92,8 @@ source_columns:
     aliases:
       - "CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)"
     valid_values:
-      - medically certified: "Medically Certified"
-      - lay reporting: "Lay Reporting"
+      medically certified: "Medically Certified"
+      lay reporting: "Lay Reporting"
 
   registration_date:
     datatype: date
@@ -113,5 +113,5 @@ source_columns:
     aliases:
       - "Status"
     valid_values:
-      - current: "Current"
-      - late: "late"
+      current: "Current"
+      late: "late"
