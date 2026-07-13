@@ -1,5 +1,7 @@
 from pathlib import Path
 
+from crdqe.birth import schema
+from crdqe.birth import schema
 from crdqe.core.config_manager import ConfigManager
 from crdqe.core.logger import Logger
 from crdqe.core.file_manager import FileManager
@@ -15,6 +17,7 @@ from crdqe.core.rule_engine import RuleEngine
 from crdqe.core.issue_collector import IssueCollector
 from crdqe.core.excel_writer import ExcelWriter
 from crdqe.reporting.summary_report import SummaryReport
+from crdqe.core.schema_detector import SchemaDetector
 
 
 class CRDQEEngine:
@@ -162,7 +165,17 @@ class CRDQEEngine:
 
         self.df = self.mapper.map_columns(self.df)
 
-        self.schema = self.mapper.get_schema()
+        print(self.schema.keys())
+        print(schema.keys())
+        detector = SchemaDetector(self.schema)
+
+        mapping, confidence = detector.detect(self.df.columns)
+
+        self.log("")
+        self.log("Detected Schema")
+
+        for column, field in mapping.items():
+            self.log(f"{column}  -->  {field} ({confidence[field]}%)")
 
         # -------------------------------------------------------
         # Convert datatypes
