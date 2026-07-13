@@ -28,17 +28,3 @@ class FileManager:
         output = Path(self.settings["output"]["folder"])
 
         output.mkdir(parents=True, exist_ok=True)
-
-
-    def get_input_file(self):
-        """Return input workbook path."""
-
-        return (
-            Path(self.settings["input"]["folder"])
-            / self.settings["input"]["workbook"]
-        )
-
-    def workbook_exists(self):
-        """Check if workbook exists."""
-
-        return self.get_input_file().exists()

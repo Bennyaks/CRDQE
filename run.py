@@ -9,6 +9,8 @@ Benard Mandera
 ===========================================================
 """
 
+from openpyxl import worksheet
+
 from crdqe.core.config_manager import ConfigManager
 from crdqe.core.logger import Logger
 from crdqe.core.file_manager import FileManager
@@ -59,14 +61,14 @@ def main():
 
     reader = ExcelReader(
         workbook_path=file_manager.get_input_file(),
-        worksheet=settings["input"]["worksheet"],
+        worksheet= worksheet,
     )
 
     logger.info(f"Available worksheets: {reader.get_sheet_names()}")
 
     header_row = HeaderDetector.find_header_row(
         file_manager.get_input_file(),
-        settings["input"]["worksheet"],
+        worksheet= worksheet,
     )
 
     logger.info(f"Detected Header Row: {header_row}")

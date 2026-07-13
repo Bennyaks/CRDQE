@@ -4357,3 +4357,600 @@
 2026-07-12 11:57:16,644 | INFO | Issues found: 177
 2026-07-12 11:57:17,109 | INFO | ============================================================
 2026-07-12 11:57:17,109 | INFO | CRDQE Finished Successfully
+2026-07-13 08:41:49,987 | INFO | ============================================================
+2026-07-13 08:41:49,988 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 08:47:04,670 | INFO | ============================================================
+2026-07-13 08:47:04,671 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 08:55:38,548 | INFO | ============================================================
+2026-07-13 08:55:38,549 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 08:55:38,549 | INFO | Workbook found.
+2026-07-13 08:55:38,550 | INFO | data\input\Death_Data.xlsx
+2026-07-13 08:55:38,569 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 08:55:38,591 | INFO | Detected Header Row: 0
+2026-07-13 08:55:38,642 | INFO | Workbook loaded successfully.
+2026-07-13 08:55:38,642 | INFO | Rows: 411
+2026-07-13 08:55:38,642 | INFO | Columns: 15
+2026-07-13 08:55:38,642 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 08:55:38,643 | INFO | Standardized Columns:
+2026-07-13 08:55:38,643 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 08:55:38,643 | INFO | Detected Dataset: Death
+2026-07-13 08:55:38,661 | INFO | Schema Valid: True
+2026-07-13 08:55:38,662 | INFO | Rows: 411
+2026-07-13 08:55:38,662 | INFO | Columns: 15
+2026-07-13 08:55:38,662 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 08:55:38,822 | INFO | Rule Engine completed.
+2026-07-13 08:55:38,823 | INFO | Records processed: 411
+2026-07-13 08:55:38,823 | INFO | Issues found: 177
+2026-07-13 09:06:31,454 | INFO | ============================================================
+2026-07-13 09:06:31,455 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 09:06:31,456 | INFO | Workbook found.
+2026-07-13 09:06:31,456 | INFO | data\input\Death_Data.xlsx
+2026-07-13 09:06:31,470 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 09:06:31,493 | INFO | Detected Header Row: 0
+2026-07-13 09:06:31,543 | INFO | Workbook loaded successfully.
+2026-07-13 09:06:31,544 | INFO | Rows: 411
+2026-07-13 09:06:31,544 | INFO | Columns: 15
+2026-07-13 09:06:31,544 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 09:06:31,544 | INFO | Standardized Columns:
+2026-07-13 09:06:31,544 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 09:06:31,544 | INFO | Detected Dataset: Death
+2026-07-13 09:06:31,566 | INFO | Schema Valid: True
+2026-07-13 09:06:31,567 | INFO | Rows: 411
+2026-07-13 09:06:31,567 | INFO | Columns: 15
+2026-07-13 09:06:31,567 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 09:06:31,696 | INFO | Rule Engine completed.
+2026-07-13 09:06:31,697 | INFO | Records processed: 411
+2026-07-13 09:06:31,697 | INFO | Issues found: 177
+2026-07-13 09:10:59,084 | INFO | ============================================================
+2026-07-13 09:10:59,085 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 09:10:59,085 | INFO | Workbook found.
+2026-07-13 09:10:59,085 | INFO | data\input\Death_Data.xlsx
+2026-07-13 09:10:59,097 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 09:10:59,113 | INFO | Detected Header Row: 0
+2026-07-13 09:10:59,160 | INFO | Workbook loaded successfully.
+2026-07-13 09:10:59,161 | INFO | Rows: 411
+2026-07-13 09:10:59,161 | INFO | Columns: 15
+2026-07-13 09:10:59,161 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 09:10:59,161 | INFO | Standardized Columns:
+2026-07-13 09:10:59,162 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 09:10:59,162 | INFO | Detected Dataset: Death
+2026-07-13 09:10:59,172 | INFO | Schema Valid: True
+2026-07-13 09:10:59,172 | INFO | Rows: 411
+2026-07-13 09:10:59,172 | INFO | Columns: 15
+2026-07-13 09:10:59,172 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 09:10:59,292 | INFO | Rule Engine completed.
+2026-07-13 09:10:59,293 | INFO | Records processed: 411
+2026-07-13 09:10:59,293 | INFO | Issues found: 177
+2026-07-13 09:15:51,508 | INFO | ============================================================
+2026-07-13 09:15:51,508 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 09:15:51,509 | INFO | Workbook found.
+2026-07-13 09:15:51,509 | INFO | data\input\Death_Data.xlsx
+2026-07-13 09:15:51,523 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 09:15:51,536 | INFO | Detected Header Row: 0
+2026-07-13 09:15:51,583 | INFO | Workbook loaded successfully.
+2026-07-13 09:15:51,583 | INFO | Rows: 411
+2026-07-13 09:15:51,583 | INFO | Columns: 15
+2026-07-13 09:15:51,583 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 09:15:51,583 | INFO | Standardized Columns:
+2026-07-13 09:15:51,583 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 09:15:51,584 | INFO | Detected Dataset: Death
+2026-07-13 09:15:51,597 | INFO | Schema Valid: True
+2026-07-13 09:15:51,597 | INFO | Rows: 411
+2026-07-13 09:15:51,597 | INFO | Columns: 15
+2026-07-13 09:15:51,597 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 09:15:51,713 | INFO | Rule Engine completed.
+2026-07-13 09:15:51,714 | INFO | Records processed: 411
+2026-07-13 09:15:51,714 | INFO | Issues found: 177
+2026-07-13 09:15:51,993 | INFO | Validation complete.
+2026-07-13 09:29:24,834 | INFO | ============================================================
+2026-07-13 09:29:24,836 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 09:29:24,837 | INFO | Workbook found.
+2026-07-13 09:29:24,837 | INFO | data\input\Death_Data.xlsx
+2026-07-13 09:29:24,852 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 09:29:24,867 | INFO | Detected Header Row: 0
+2026-07-13 09:29:24,918 | INFO | Workbook loaded successfully.
+2026-07-13 09:29:24,918 | INFO | Rows: 411
+2026-07-13 09:29:24,918 | INFO | Columns: 15
+2026-07-13 09:29:24,918 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 09:29:24,919 | INFO | Standardized Columns:
+2026-07-13 09:29:24,919 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 09:29:24,919 | INFO | Detected Dataset: Death
+2026-07-13 09:29:24,930 | INFO | Schema Valid: True
+2026-07-13 09:29:24,931 | INFO | Rows: 411
+2026-07-13 09:29:24,931 | INFO | Columns: 15
+2026-07-13 09:29:24,931 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 09:29:25,052 | INFO | Rule Engine completed.
+2026-07-13 09:29:25,052 | INFO | Records processed: 411
+2026-07-13 09:29:25,053 | INFO | Issues found: 177
+2026-07-13 10:01:24,565 | INFO | ============================================================
+2026-07-13 10:01:24,566 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 10:01:24,566 | INFO | Workbook found.
+2026-07-13 10:01:24,566 | INFO | data\input\Death_Data.xlsx
+2026-07-13 10:01:24,583 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 10:01:24,600 | INFO | Detected Header Row: 0
+2026-07-13 10:01:24,647 | INFO | Workbook loaded successfully.
+2026-07-13 10:01:24,647 | INFO | Rows: 411
+2026-07-13 10:01:24,648 | INFO | Columns: 15
+2026-07-13 10:01:24,648 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 10:01:24,648 | INFO | Standardized Columns:
+2026-07-13 10:01:24,648 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 10:01:24,648 | INFO | Detected Dataset: Death
+2026-07-13 10:01:24,663 | INFO | Schema Valid: True
+2026-07-13 10:01:24,663 | INFO | Rows: 411
+2026-07-13 10:01:24,663 | INFO | Columns: 15
+2026-07-13 10:01:24,663 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 10:01:24,793 | INFO | Rule Engine completed.
+2026-07-13 10:01:24,794 | INFO | Records processed: 411
+2026-07-13 10:01:24,794 | INFO | Issues found: 177
+2026-07-13 10:09:30,065 | INFO | ============================================================
+2026-07-13 10:09:30,066 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 10:09:30,067 | INFO | Workbook found.
+2026-07-13 10:09:30,067 | INFO | data\input\Death_Data.xlsx
+2026-07-13 10:09:30,081 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 10:09:30,096 | INFO | Detected Header Row: 0
+2026-07-13 10:09:30,141 | INFO | Workbook loaded successfully.
+2026-07-13 10:09:30,142 | INFO | Rows: 411
+2026-07-13 10:09:30,142 | INFO | Columns: 15
+2026-07-13 10:09:30,142 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 10:09:30,143 | INFO | Standardized Columns:
+2026-07-13 10:09:30,143 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 10:09:30,143 | INFO | Detected Dataset: Death
+2026-07-13 10:09:30,153 | INFO | Schema Valid: True
+2026-07-13 10:09:30,153 | INFO | Rows: 411
+2026-07-13 10:09:30,154 | INFO | Columns: 15
+2026-07-13 10:09:30,154 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 10:09:30,272 | INFO | Rule Engine completed.
+2026-07-13 10:09:30,273 | INFO | Records processed: 411
+2026-07-13 10:09:30,274 | INFO | Issues found: 177
+2026-07-13 10:53:49,265 | INFO | ============================================================
+2026-07-13 10:53:49,266 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 10:53:49,267 | INFO | Workbook found.
+2026-07-13 10:53:49,267 | INFO | data\input\Death_Data.xlsx
+2026-07-13 10:53:49,283 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 10:53:49,301 | INFO | Detected Header Row: 0
+2026-07-13 10:53:49,349 | INFO | Workbook loaded successfully.
+2026-07-13 10:53:49,349 | INFO | Rows: 411
+2026-07-13 10:53:49,349 | INFO | Columns: 15
+2026-07-13 10:53:49,349 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 10:53:49,349 | INFO | Standardized Columns:
+2026-07-13 10:53:49,349 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 10:53:49,349 | INFO | Detected Dataset: Death
+2026-07-13 10:53:49,366 | INFO | Schema Valid: True
+2026-07-13 10:53:49,366 | INFO | Rows: 411
+2026-07-13 10:53:49,366 | INFO | Columns: 15
+2026-07-13 10:53:49,366 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 10:53:49,491 | INFO | Rule Engine completed.
+2026-07-13 10:53:49,492 | INFO | Records processed: 411
+2026-07-13 10:53:49,493 | INFO | Issues found: 177
+2026-07-13 10:56:16,670 | INFO | ============================================================
+2026-07-13 10:56:16,671 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 10:56:16,671 | INFO | Workbook found.
+2026-07-13 10:56:16,672 | INFO | data\input\Death_Data.xlsx
+2026-07-13 10:56:16,686 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 10:56:16,703 | INFO | Detected Header Row: 0
+2026-07-13 10:56:16,749 | INFO | Workbook loaded successfully.
+2026-07-13 10:56:16,749 | INFO | Rows: 411
+2026-07-13 10:56:16,749 | INFO | Columns: 15
+2026-07-13 10:56:16,750 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 10:56:16,750 | INFO | Standardized Columns:
+2026-07-13 10:56:16,750 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 10:56:16,750 | INFO | Detected Dataset: Death
+2026-07-13 10:56:16,760 | INFO | Schema Valid: True
+2026-07-13 10:56:16,761 | INFO | Rows: 411
+2026-07-13 10:56:16,761 | INFO | Columns: 15
+2026-07-13 10:56:16,761 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 10:56:16,882 | INFO | Rule Engine completed.
+2026-07-13 10:56:16,883 | INFO | Records processed: 411
+2026-07-13 10:56:16,883 | INFO | Issues found: 177
+2026-07-13 11:01:35,388 | INFO | ============================================================
+2026-07-13 11:01:35,389 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 11:01:35,390 | INFO | Workbook found.
+2026-07-13 11:01:35,390 | INFO | data\input\Death_Data.xlsx
+2026-07-13 11:01:35,405 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 11:01:35,418 | INFO | Detected Header Row: 0
+2026-07-13 11:01:35,465 | INFO | Workbook loaded successfully.
+2026-07-13 11:01:35,465 | INFO | Rows: 411
+2026-07-13 11:01:35,465 | INFO | Columns: 15
+2026-07-13 11:01:35,466 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:01:35,466 | INFO | Standardized Columns:
+2026-07-13 11:01:35,466 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:01:35,466 | INFO | Detected Dataset: Death
+2026-07-13 11:01:35,477 | INFO | Schema Valid: True
+2026-07-13 11:01:35,478 | INFO | Rows: 411
+2026-07-13 11:01:35,478 | INFO | Columns: 15
+2026-07-13 11:01:35,478 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 11:01:35,597 | INFO | Rule Engine completed.
+2026-07-13 11:01:35,598 | INFO | Records processed: 411
+2026-07-13 11:01:35,598 | INFO | Issues found: 177
+2026-07-13 11:14:42,232 | INFO | ============================================================
+2026-07-13 11:14:42,233 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 11:14:42,234 | INFO | Workbook found.
+2026-07-13 11:14:42,234 | INFO | data\input\Death_Data.xlsx
+2026-07-13 11:14:42,249 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 11:14:42,261 | INFO | Detected Header Row: 0
+2026-07-13 11:14:42,308 | INFO | Workbook loaded successfully.
+2026-07-13 11:14:42,309 | INFO | Rows: 411
+2026-07-13 11:14:42,309 | INFO | Columns: 15
+2026-07-13 11:14:42,309 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:14:42,309 | INFO | Standardized Columns:
+2026-07-13 11:14:42,310 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:14:42,310 | INFO | Detected Dataset: Death
+2026-07-13 11:14:42,320 | INFO | Schema Valid: True
+2026-07-13 11:14:42,320 | INFO | Rows: 411
+2026-07-13 11:14:42,320 | INFO | Columns: 15
+2026-07-13 11:14:42,320 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 11:14:42,446 | INFO | Rule Engine completed.
+2026-07-13 11:14:42,447 | INFO | Records processed: 411
+2026-07-13 11:14:42,447 | INFO | Issues found: 177
+2026-07-13 11:16:28,510 | INFO | ============================================================
+2026-07-13 11:16:28,510 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 11:16:28,511 | INFO | Workbook found.
+2026-07-13 11:16:28,511 | INFO | data\input\Death_Data.xlsx
+2026-07-13 11:16:28,525 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 11:16:28,538 | INFO | Detected Header Row: 0
+2026-07-13 11:16:28,588 | INFO | Workbook loaded successfully.
+2026-07-13 11:16:28,588 | INFO | Rows: 411
+2026-07-13 11:16:28,588 | INFO | Columns: 15
+2026-07-13 11:16:28,588 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:16:28,588 | INFO | Standardized Columns:
+2026-07-13 11:16:28,589 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:16:28,589 | INFO | Detected Dataset: Death
+2026-07-13 11:16:28,600 | INFO | Schema Valid: True
+2026-07-13 11:16:28,601 | INFO | Rows: 411
+2026-07-13 11:16:28,601 | INFO | Columns: 15
+2026-07-13 11:16:28,601 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 11:16:28,718 | INFO | Rule Engine completed.
+2026-07-13 11:16:28,718 | INFO | Records processed: 411
+2026-07-13 11:16:28,719 | INFO | Issues found: 177
+2026-07-13 11:26:10,974 | INFO | ============================================================
+2026-07-13 11:26:10,975 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 11:26:10,976 | INFO | Workbook found.
+2026-07-13 11:26:10,977 | INFO | data\input\Death_Data.xlsx
+2026-07-13 11:26:10,992 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 11:26:11,010 | INFO | Detected Header Row: 0
+2026-07-13 11:26:11,056 | INFO | Workbook loaded successfully.
+2026-07-13 11:26:11,056 | INFO | Rows: 411
+2026-07-13 11:26:11,056 | INFO | Columns: 15
+2026-07-13 11:26:11,056 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:26:11,056 | INFO | Standardized Columns:
+2026-07-13 11:26:11,057 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:26:11,057 | INFO | Detected Dataset: Death
+2026-07-13 11:26:11,067 | INFO | Schema Valid: True
+2026-07-13 11:26:11,068 | INFO | Rows: 411
+2026-07-13 11:26:11,068 | INFO | Columns: 15
+2026-07-13 11:26:11,068 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 11:26:11,184 | INFO | Rule Engine completed.
+2026-07-13 11:26:11,185 | INFO | Records processed: 411
+2026-07-13 11:26:11,185 | INFO | Issues found: 177
+2026-07-13 11:33:46,914 | INFO | ============================================================
+2026-07-13 11:33:46,915 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 11:33:46,916 | INFO | Workbook found.
+2026-07-13 11:33:46,916 | INFO | data\input\Death_Data.xlsx
+2026-07-13 11:33:46,935 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 11:33:46,952 | INFO | Detected Header Row: 0
+2026-07-13 11:33:47,001 | INFO | Workbook loaded successfully.
+2026-07-13 11:33:47,002 | INFO | Rows: 411
+2026-07-13 11:33:47,002 | INFO | Columns: 15
+2026-07-13 11:33:47,002 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:33:47,002 | INFO | Standardized Columns:
+2026-07-13 11:33:47,002 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:33:47,002 | INFO | Detected Dataset: Death
+2026-07-13 11:33:47,015 | INFO | Schema Valid: True
+2026-07-13 11:33:47,015 | INFO | Rows: 411
+2026-07-13 11:33:47,016 | INFO | Columns: 15
+2026-07-13 11:33:47,016 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 11:33:47,128 | INFO | Rule Engine completed.
+2026-07-13 11:33:47,129 | INFO | Records processed: 411
+2026-07-13 11:33:47,130 | INFO | Issues found: 177
+2026-07-13 11:35:36,518 | INFO | ============================================================
+2026-07-13 11:35:36,519 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 11:35:36,519 | INFO | Workbook found.
+2026-07-13 11:35:36,519 | INFO | data\input\Death_Data.xlsx
+2026-07-13 11:35:36,533 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 11:35:36,547 | INFO | Detected Header Row: 0
+2026-07-13 11:35:36,596 | INFO | Workbook loaded successfully.
+2026-07-13 11:35:36,596 | INFO | Rows: 411
+2026-07-13 11:35:36,596 | INFO | Columns: 15
+2026-07-13 11:35:36,596 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:35:36,596 | INFO | Standardized Columns:
+2026-07-13 11:35:36,596 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:35:36,597 | INFO | Detected Dataset: Death
+2026-07-13 11:35:36,606 | INFO | Schema Valid: True
+2026-07-13 11:35:36,606 | INFO | Rows: 411
+2026-07-13 11:35:36,607 | INFO | Columns: 15
+2026-07-13 11:35:36,607 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 11:35:36,725 | INFO | Rule Engine completed.
+2026-07-13 11:35:36,726 | INFO | Records processed: 411
+2026-07-13 11:35:36,726 | INFO | Issues found: 177
+2026-07-13 11:36:16,893 | INFO | ============================================================
+2026-07-13 11:36:16,893 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 11:36:16,894 | INFO | Workbook found.
+2026-07-13 11:36:16,894 | INFO | data\input\Death_Data.xlsx
+2026-07-13 11:36:16,908 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 11:36:16,923 | INFO | Detected Header Row: 0
+2026-07-13 11:36:16,971 | INFO | Workbook loaded successfully.
+2026-07-13 11:36:16,971 | INFO | Rows: 411
+2026-07-13 11:36:16,972 | INFO | Columns: 15
+2026-07-13 11:36:16,972 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:36:16,972 | INFO | Standardized Columns:
+2026-07-13 11:36:16,972 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:36:16,973 | INFO | Detected Dataset: Death
+2026-07-13 11:36:16,986 | INFO | Schema Valid: True
+2026-07-13 11:36:16,987 | INFO | Rows: 411
+2026-07-13 11:36:16,987 | INFO | Columns: 15
+2026-07-13 11:36:16,987 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 11:36:17,107 | INFO | Rule Engine completed.
+2026-07-13 11:36:17,108 | INFO | Records processed: 411
+2026-07-13 11:36:17,108 | INFO | Issues found: 177
+2026-07-13 11:41:17,972 | INFO | ============================================================
+2026-07-13 11:41:17,972 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 11:41:17,972 | INFO | Workbook found.
+2026-07-13 11:41:17,972 | INFO | data\input\Death_Data.xlsx
+2026-07-13 11:41:17,989 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 11:41:18,005 | INFO | Detected Header Row: 0
+2026-07-13 11:41:18,053 | INFO | Workbook loaded successfully.
+2026-07-13 11:41:18,054 | INFO | Rows: 411
+2026-07-13 11:41:18,054 | INFO | Columns: 15
+2026-07-13 11:41:18,054 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:41:18,054 | INFO | Standardized Columns:
+2026-07-13 11:41:18,054 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:41:18,055 | INFO | Detected Dataset: Death
+2026-07-13 11:41:18,066 | INFO | Schema Valid: True
+2026-07-13 11:41:18,066 | INFO | Rows: 411
+2026-07-13 11:41:18,066 | INFO | Columns: 15
+2026-07-13 11:41:18,066 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 11:41:18,184 | INFO | Rule Engine completed.
+2026-07-13 11:41:18,184 | INFO | Records processed: 411
+2026-07-13 11:41:18,185 | INFO | Issues found: 177
+2026-07-13 11:41:46,555 | INFO | ============================================================
+2026-07-13 11:41:46,555 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 11:41:46,555 | INFO | Workbook found.
+2026-07-13 11:41:46,555 | INFO | data\input\Death_Data.xlsx
+2026-07-13 11:41:46,570 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 11:41:46,585 | INFO | Detected Header Row: 0
+2026-07-13 11:41:46,632 | INFO | Workbook loaded successfully.
+2026-07-13 11:41:46,633 | INFO | Rows: 411
+2026-07-13 11:41:46,633 | INFO | Columns: 15
+2026-07-13 11:41:46,633 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:41:46,633 | INFO | Standardized Columns:
+2026-07-13 11:41:46,633 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:41:46,633 | INFO | Detected Dataset: Death
+2026-07-13 11:41:46,644 | INFO | Schema Valid: True
+2026-07-13 11:41:46,645 | INFO | Rows: 411
+2026-07-13 11:41:46,645 | INFO | Columns: 15
+2026-07-13 11:41:46,645 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 11:41:46,760 | INFO | Rule Engine completed.
+2026-07-13 11:41:46,760 | INFO | Records processed: 411
+2026-07-13 11:41:46,760 | INFO | Issues found: 177
+2026-07-13 11:54:44,903 | INFO | ============================================================
+2026-07-13 11:54:44,903 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 11:54:44,903 | INFO | Workbook found.
+2026-07-13 11:54:44,904 | INFO | data\input\Death_Data.xlsx
+2026-07-13 11:54:44,917 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 11:54:44,929 | INFO | Detected Header Row: 0
+2026-07-13 11:54:44,977 | INFO | Workbook loaded successfully.
+2026-07-13 11:54:44,977 | INFO | Rows: 411
+2026-07-13 11:54:44,978 | INFO | Columns: 15
+2026-07-13 11:54:44,978 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:54:44,978 | INFO | Standardized Columns:
+2026-07-13 11:54:44,978 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:54:44,979 | INFO | Detected Dataset: Death
+2026-07-13 11:54:44,992 | INFO | Schema Valid: True
+2026-07-13 11:54:44,992 | INFO | Rows: 411
+2026-07-13 11:54:44,993 | INFO | Columns: 15
+2026-07-13 11:54:44,993 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 11:54:45,112 | INFO | Rule Engine completed.
+2026-07-13 11:54:45,112 | INFO | Records processed: 411
+2026-07-13 11:54:45,112 | INFO | Issues found: 177
+2026-07-13 11:56:08,014 | INFO | ============================================================
+2026-07-13 11:56:08,014 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 11:56:08,014 | INFO | Workbook found.
+2026-07-13 11:56:08,015 | INFO | data\input\Death_Data.xlsx
+2026-07-13 11:56:08,032 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 11:56:08,045 | INFO | Detected Header Row: 0
+2026-07-13 11:56:08,092 | INFO | Workbook loaded successfully.
+2026-07-13 11:56:08,092 | INFO | Rows: 411
+2026-07-13 11:56:08,092 | INFO | Columns: 15
+2026-07-13 11:56:08,092 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:56:08,092 | INFO | Standardized Columns:
+2026-07-13 11:56:08,093 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:56:08,093 | INFO | Detected Dataset: Death
+2026-07-13 11:56:08,104 | INFO | Schema Valid: True
+2026-07-13 11:56:08,105 | INFO | Rows: 411
+2026-07-13 11:56:08,105 | INFO | Columns: 15
+2026-07-13 11:56:08,105 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 11:56:08,221 | INFO | Rule Engine completed.
+2026-07-13 11:56:08,222 | INFO | Records processed: 411
+2026-07-13 11:56:08,222 | INFO | Issues found: 177
+2026-07-13 11:57:48,339 | INFO | ============================================================
+2026-07-13 11:57:48,339 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 11:57:48,339 | INFO | Workbook found.
+2026-07-13 11:57:48,339 | INFO | data\input\Death_Data.xlsx
+2026-07-13 11:57:48,353 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 11:57:48,365 | INFO | Detected Header Row: 0
+2026-07-13 11:57:48,411 | INFO | Workbook loaded successfully.
+2026-07-13 11:57:48,411 | INFO | Rows: 411
+2026-07-13 11:57:48,411 | INFO | Columns: 15
+2026-07-13 11:57:48,411 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:57:48,412 | INFO | Standardized Columns:
+2026-07-13 11:57:48,412 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 11:57:48,413 | INFO | Detected Dataset: Death
+2026-07-13 11:57:48,425 | INFO | Schema Valid: True
+2026-07-13 11:57:48,425 | INFO | Rows: 411
+2026-07-13 11:57:48,425 | INFO | Columns: 15
+2026-07-13 11:57:48,425 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 11:57:48,544 | INFO | Rule Engine completed.
+2026-07-13 11:57:48,544 | INFO | Records processed: 411
+2026-07-13 11:57:48,544 | INFO | Issues found: 177
+2026-07-13 12:07:25,366 | INFO | ============================================================
+2026-07-13 12:07:25,367 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 12:07:25,367 | INFO | Workbook found.
+2026-07-13 12:07:25,367 | INFO | data\input\Death_Data.xlsx
+2026-07-13 12:07:25,381 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 12:07:25,393 | INFO | Detected Header Row: 0
+2026-07-13 12:07:25,444 | INFO | Workbook loaded successfully.
+2026-07-13 12:07:25,445 | INFO | Rows: 411
+2026-07-13 12:07:25,445 | INFO | Columns: 15
+2026-07-13 12:07:25,445 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 12:07:25,445 | INFO | Standardized Columns:
+2026-07-13 12:07:25,445 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 12:07:25,445 | INFO | Detected Dataset: Death
+2026-07-13 12:07:25,456 | INFO | Schema Valid: True
+2026-07-13 12:07:25,457 | INFO | Rows: 411
+2026-07-13 12:07:25,457 | INFO | Columns: 15
+2026-07-13 12:07:25,457 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 12:07:25,572 | INFO | Rule Engine completed.
+2026-07-13 12:07:25,572 | INFO | Records processed: 411
+2026-07-13 12:07:25,572 | INFO | Issues found: 177
+2026-07-13 12:32:19,362 | INFO | ============================================================
+2026-07-13 12:32:19,363 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 12:32:19,364 | INFO | Workbook found.
+2026-07-13 12:32:19,364 | INFO | data\input\Death_Data.xlsx
+2026-07-13 12:32:19,382 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 12:32:19,395 | INFO | Detected Header Row: 0
+2026-07-13 12:32:19,443 | INFO | Workbook loaded successfully.
+2026-07-13 12:32:19,443 | INFO | Rows: 411
+2026-07-13 12:32:19,443 | INFO | Columns: 15
+2026-07-13 12:32:19,444 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 12:32:19,444 | INFO | Standardized Columns:
+2026-07-13 12:32:19,444 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 12:32:19,444 | INFO | Detected Dataset: Death
+2026-07-13 12:32:19,458 | INFO | Schema Valid: True
+2026-07-13 12:32:19,458 | INFO | Rows: 411
+2026-07-13 12:32:19,458 | INFO | Columns: 15
+2026-07-13 12:32:19,458 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 12:32:19,587 | INFO | Rule Engine completed.
+2026-07-13 12:32:19,587 | INFO | Records processed: 411
+2026-07-13 12:32:19,587 | INFO | Issues found: 177
+2026-07-13 12:39:48,908 | INFO | ============================================================
+2026-07-13 12:39:48,908 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 12:39:48,908 | INFO | Workbook found.
+2026-07-13 12:39:48,909 | INFO | data\input\Death_Data.xlsx
+2026-07-13 12:39:48,924 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 12:39:48,937 | INFO | Detected Header Row: 0
+2026-07-13 12:39:48,984 | INFO | Workbook loaded successfully.
+2026-07-13 12:39:48,985 | INFO | Rows: 411
+2026-07-13 12:39:48,985 | INFO | Columns: 15
+2026-07-13 12:39:48,985 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 12:39:48,985 | INFO | Standardized Columns:
+2026-07-13 12:39:48,986 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 12:39:48,986 | INFO | Detected Dataset: Death
+2026-07-13 12:39:48,996 | INFO | Schema Valid: True
+2026-07-13 12:39:48,996 | INFO | Rows: 411
+2026-07-13 12:39:48,996 | INFO | Columns: 15
+2026-07-13 12:39:48,996 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 12:39:49,113 | INFO | Rule Engine completed.
+2026-07-13 12:39:49,114 | INFO | Records processed: 411
+2026-07-13 12:39:49,114 | INFO | Issues found: 177
+2026-07-13 12:46:14,834 | INFO | ============================================================
+2026-07-13 12:46:14,834 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 12:46:14,835 | INFO | Workbook found.
+2026-07-13 12:46:14,835 | INFO | data\input\Death_Data.xlsx
+2026-07-13 12:46:14,851 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 12:46:14,864 | INFO | Detected Header Row: 0
+2026-07-13 12:46:14,913 | INFO | Workbook loaded successfully.
+2026-07-13 12:46:14,913 | INFO | Rows: 411
+2026-07-13 12:46:14,914 | INFO | Columns: 15
+2026-07-13 12:46:14,914 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 12:46:14,914 | INFO | Standardized Columns:
+2026-07-13 12:46:14,914 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 12:46:14,915 | INFO | Detected Dataset: Death
+2026-07-13 12:46:14,925 | INFO | Schema Valid: True
+2026-07-13 12:46:14,926 | INFO | Rows: 411
+2026-07-13 12:46:14,926 | INFO | Columns: 15
+2026-07-13 12:46:14,926 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 12:46:15,045 | INFO | Rule Engine completed.
+2026-07-13 12:46:15,045 | INFO | Records processed: 411
+2026-07-13 12:46:15,045 | INFO | Issues found: 177
+2026-07-13 13:00:40,163 | INFO | ============================================================
+2026-07-13 13:00:40,164 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 13:00:40,164 | INFO | Workbook found.
+2026-07-13 13:00:40,165 | INFO | data\input\Death_Data.xlsx
+2026-07-13 13:00:40,176 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 13:00:40,193 | INFO | Detected Header Row: 0
+2026-07-13 13:00:40,245 | INFO | Workbook loaded successfully.
+2026-07-13 13:00:40,245 | INFO | Rows: 411
+2026-07-13 13:00:40,245 | INFO | Columns: 15
+2026-07-13 13:00:40,245 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 13:00:40,246 | INFO | Standardized Columns:
+2026-07-13 13:00:40,246 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 13:00:40,246 | INFO | Detected Dataset: Death
+2026-07-13 13:00:40,257 | INFO | Schema Valid: True
+2026-07-13 13:00:40,257 | INFO | Rows: 411
+2026-07-13 13:00:40,257 | INFO | Columns: 15
+2026-07-13 13:00:40,257 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 13:00:40,381 | INFO | Rule Engine completed.
+2026-07-13 13:00:40,381 | INFO | Records processed: 411
+2026-07-13 13:00:40,382 | INFO | Issues found: 177
+2026-07-13 13:09:47,368 | INFO | ============================================================
+2026-07-13 13:09:47,370 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 13:09:47,370 | INFO | Workbook found.
+2026-07-13 13:09:47,370 | INFO | data\input\Death_Data.xlsx
+2026-07-13 13:09:47,379 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 13:09:47,402 | INFO | Detected Header Row: 0
+2026-07-13 13:09:47,454 | INFO | Workbook loaded successfully.
+2026-07-13 13:09:47,454 | INFO | Rows: 411
+2026-07-13 13:09:47,454 | INFO | Columns: 15
+2026-07-13 13:09:47,454 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 13:09:47,455 | INFO | Standardized Columns:
+2026-07-13 13:09:47,455 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 13:09:47,455 | INFO | Detected Dataset: Death
+2026-07-13 13:09:47,474 | INFO | Schema Valid: True
+2026-07-13 13:09:47,474 | INFO | Rows: 411
+2026-07-13 13:09:47,474 | INFO | Columns: 15
+2026-07-13 13:09:47,474 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 13:09:47,602 | INFO | Rule Engine completed.
+2026-07-13 13:09:47,602 | INFO | Records processed: 411
+2026-07-13 13:09:47,603 | INFO | Issues found: 177
+2026-07-13 13:15:19,826 | INFO | ============================================================
+2026-07-13 13:15:19,826 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 13:15:19,827 | INFO | Workbook found.
+2026-07-13 13:15:19,827 | INFO | data\input\Death_Data.xlsx
+2026-07-13 13:15:19,837 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 13:15:19,850 | INFO | Detected Header Row: 0
+2026-07-13 13:15:19,898 | INFO | Workbook loaded successfully.
+2026-07-13 13:15:19,898 | INFO | Rows: 411
+2026-07-13 13:15:19,898 | INFO | Columns: 15
+2026-07-13 13:15:19,898 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age( indicate number eg 1,2,3,)', 'unit of age (days,months or years)', 'Place of death \n(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 13:15:19,899 | INFO | Standardized Columns:
+2026-07-13 13:15:19,899 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'sex(indicate whether male or female)', 'Age(indicate number eg 1,2,3,)', 'unit of age(days,months or years)', 'Place of death(Indicate the name of exact place of death)', 'MARITAL STATUS', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death(Indicate the underlying cause of death)', 'CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-13 13:15:19,899 | INFO | Detected Dataset: Death
+2026-07-13 13:15:19,911 | INFO | Schema Valid: True
+2026-07-13 13:15:19,912 | INFO | Rows: 411
+2026-07-13 13:15:19,912 | INFO | Columns: 15
+2026-07-13 13:15:19,912 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'place_of_death', 'marital_status', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-13 13:15:20,028 | INFO | Rule Engine completed.
+2026-07-13 13:15:20,029 | INFO | Records processed: 411
+2026-07-13 13:15:20,029 | INFO | Issues found: 177
+2026-07-13 13:31:07,462 | INFO | ============================================================
+2026-07-13 13:31:07,462 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 13:31:07,463 | INFO | Workbook found.
+2026-07-13 13:31:07,463 | INFO | data\input\Death_Data.xlsx
+2026-07-13 13:31:07,472 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 13:37:44,589 | INFO | ============================================================
+2026-07-13 13:37:44,589 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 13:37:44,589 | INFO | Workbook found.
+2026-07-13 13:37:44,590 | INFO | data\input\Death_Data.xlsx
+2026-07-13 13:37:44,601 | INFO | Available worksheets: ['JANUARY 2026', 'Sheet2', 'Sheet3']
+2026-07-13 13:43:12,571 | INFO | ============================================================
+2026-07-13 13:43:12,572 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 13:43:12,572 | INFO | Workbook found.
+2026-07-13 13:54:19,665 | INFO | ============================================================
+2026-07-13 13:54:19,666 | INFO | Civil Registration Data Quality Engine Started
+2026-07-13 13:54:19,666 | INFO | Workbook found.
+2026-07-13 13:54:19,666 | INFO | C:/Users/Admin/Desktop/data/DEATH TEMPLATE.xlsx
+2026-07-13 13:54:19,694 | INFO | Available worksheets: ['JAN', 'FEB', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPT', 'OCT', 'DEC', 'Drop Down']
+2026-07-13 13:54:19,739 | INFO | Detected Header Row: 0
+2026-07-13 13:54:19,786 | INFO | Workbook loaded successfully.
+2026-07-13 13:54:19,787 | INFO | Rows: 110
+2026-07-13 13:54:19,787 | INFO | Columns: 14
+2026-07-13 13:54:19,787 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Age \n(Indicate number eg 1,2,3)', 'Unit of age \n(Days, Months or Years)', 'Marital status', 'Place of death \n(Indicate the name of exact place of death)', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence(SUB-COUNTY)', 'Cause of death \n(Indicate the underlying cause of death)', 'Cause of death certification\n(state whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number']
+2026-07-13 13:54:19,787 | INFO | Standardized Columns:
+2026-07-13 13:54:19,787 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Age(Indicate number eg 1,2,3)', 'Unit of age(Days, Months or Years)', 'Marital status', 'Place of death(Indicate the name of exact place of death)', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence(SUB-COUNTY)', 'Cause of death(Indicate the underlying cause of death)', 'Cause of death certification(state whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number']
+2026-07-13 13:54:19,787 | INFO | Detected Dataset: Death
+2026-07-13 13:54:19,805 | INFO | Schema Valid: False
+2026-07-13 13:54:19,805 | WARNING | Missing Columns: ['age', 'age_unit', 'residence', 'status']
+2026-07-13 13:54:19,805 | INFO | Extra Columns: ['Age(Indicate number eg 1,2,3)', 'Unit of age(Days, Months or Years)', 'Place of usual residence(SUB-COUNTY)']
+2026-07-13 13:54:19,805 | INFO | Rows: 110
+2026-07-13 13:54:19,806 | INFO | Columns: 14
+2026-07-13 13:54:19,806 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'Age(Indicate number eg 1,2,3)', 'Unit of age(Days, Months or Years)', 'marital_status', 'place_of_death', 'place_type', 'Place of usual residence(SUB-COUNTY)', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number']

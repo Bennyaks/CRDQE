@@ -7,11 +7,6 @@ project:
   name: CRDQE
   version: "1.0"
 
-input:
-  folder: "data/input"
-  workbook: "Death_Data.xlsx"
-  worksheet: "JANUARY 2026"
-
 output:
   folder: "data/output"
   cleaned_folder: "cleaned"

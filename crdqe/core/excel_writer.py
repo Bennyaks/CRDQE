@@ -36,25 +36,53 @@ class ExcelWriter:
             "summary_report.xlsx"
         )
 
-    def cleaned(self, dataframe):
+    def write_cleaned(self, dataframe):
 
-        dataframe.to_excel(
+        df = dataframe.copy()
+
+        date_columns = [
+            "date_of_death",
+            "registration_date"
+        ]
+
+        for col in date_columns:
+
+            if col in df.columns:
+
+                df[col] = (
+                    df[col]
+                    .dt.strftime("%d/%m/%Y")
+                    .fillna("")
+                )
+            if "entry_number" in df.columns:
+
+                df["entry_number"] = (
+                    pd.to_numeric(
+                        df["entry_number"],
+                        errors="coerce"
+                    )
+                    .astype("Int64")
+                )
+
+        df.to_excel(
             self.cleaned_path,
             index=False
         )
 
         self._format(self.cleaned_path)
 
-    def flags(self, dataframe):
+    def write_flags(self, dataframe):
 
-        dataframe.to_excel(
+        df = dataframe.copy()
+
+        df.to_excel(
             self.flags_path,
             index=False
         )
 
         self._format(self.flags_path)
 
-    def summary(self, report):
+    def write_summary(self, report):
 
         metrics_df = pd.DataFrame({
             "Metric": [

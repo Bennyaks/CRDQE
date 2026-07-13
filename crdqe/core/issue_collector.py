@@ -22,13 +22,14 @@ class IssueCollector:
 
         if self.issues.empty:
             self.issues = issues.copy()
+
         else:
             self.issues = pd.concat(
                 [self.issues, issues],
                 ignore_index=True
             )
 
-    def dataframe(self):
+    def to_dataframe(self):
         return self.issues
 
     def count(self):
