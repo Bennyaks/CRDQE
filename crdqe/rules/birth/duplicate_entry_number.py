@@ -34,13 +34,19 @@ class DuplicateEntryNumberRule(BaseRule):
             values.duplicated(keep=False)
         )
 
-        for index in df.index[mask]:
+        for index, row in df.iterrows():
 
-            self.add_issue(
-                row=index,
-                field=self.FIELD,
-                issue="Duplicate Entry Number",
-                value=df.at[index, self.FIELD]
-            )
+            value = row[self.FIELD]
+
+            if self.is_missing(value):
+
+                self.add_issues(
+                    issue="Duplicate Entry Number",
+                    row=row,
+                    field=self.FIELD,
+                    value=df.at[index, self.FIELD],
+                    message=f"Missing {self.TITLE}"
+                )
+                continue
 
         return df, self.get_issues()

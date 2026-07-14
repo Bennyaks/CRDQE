@@ -17,14 +17,18 @@ class TextRule(BaseRule):
 
         df = dataframe.copy()
 
-        for index, value in df[self.FIELD].items():
+        for index, row in df.iterrows():
+
+            value = row[self.FIELD]
 
             if self.is_missing(value):
 
-                self.add_issue(
-                    row=index,
+                self.add_issues(
+                    issues=self.issues,
+                    row=row,
                     field=self.FIELD,
-                    issue=f"Missing {self.TITLE}"
+                    value=value,
+                    message=f"Missing {self.TITLE}"
                 )
                 continue
 

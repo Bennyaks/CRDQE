@@ -11,6 +11,7 @@ source_columns:
 
   sex:
     aliases:
+      - "Sex"
       - "Sex (Indicate whether male or female)"
     datatype: string
     required: true
@@ -23,7 +24,9 @@ source_columns:
 
   nature_of_birth:
     aliases:
-      - "Nature of birth (Indicate whether born alive or dead)"
+    - "Nature of Birth"
+    - "Nature of birth"
+    - "Nature of birth (Indicate whether born alive or dead)"
     datatype: string
     required: true
     output: true
@@ -45,6 +48,8 @@ source_columns:
 
   place_of_birth:
     aliases:
+      - "Place of Birth"
+      - "Place of birth"
       - "Place of birth (Indicate the name of facility or Sublocation of birth)"
     datatype: string
     required: true
@@ -63,13 +68,15 @@ source_columns:
       health facility: Health Facility
 
   mother_age:
-   aliases:
-     - "Age of the mother(indicate the age of the mother at the birth of the child)"
-   datatype: integer
-   required: true
-   minimum: 13
-   maximum: 55
-   output: true
+    aliases:
+      - "Age of Mother"
+      - "Age of the Mother"
+      - "Age of the mother(indicate the age of the mother at the birth of the child)"
+    datatype: integer
+    required: true
+    minimum: 13
+    maximum: 55
+    output: true
 
   marital_status:
     datatype: string
@@ -132,11 +139,11 @@ source_columns:
   residence:
     datatype: string
     required: true
-
     aliases:
       - "Place of Residence"
+      - "Place of Residence(Sub County)"
+      - "Place of Residence (Sub County)"
       - "Place of Residence (indicate the sub county where the mother residence)"
-      - "Place of Residence(indicate the sub county where the mother residence)"
 
 
   registration_date:
@@ -158,6 +165,13 @@ source_columns:
 derived_columns:
 
   status:
+    aliases:
+      - "Status"
+      - T.O.R
+      - tor
+      - TOR
+      - T O R
+      - Time of Registration
     datatype: string
     required: true
   Valid values:

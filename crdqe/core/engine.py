@@ -1,7 +1,5 @@
 from pathlib import Path
 
-from crdqe.birth import schema
-from crdqe.birth import schema
 from crdqe.core.config_manager import ConfigManager
 from crdqe.core.logger import Logger
 from crdqe.core.file_manager import FileManager
@@ -17,7 +15,9 @@ from crdqe.core.rule_engine import RuleEngine
 from crdqe.core.issue_collector import IssueCollector
 from crdqe.core.excel_writer import ExcelWriter
 from crdqe.reporting.summary_report import SummaryReport
-from crdqe.core.schema_detector import SchemaDetector
+from crdqe.reports.issue_statistics import IssueStatistics
+from crdqe.core.placeholder_processor import PlaceholderProcessor
+# from crdqe.core.schema_detector import SchemaDetector
 
 
 class CRDQEEngine:
@@ -162,20 +162,23 @@ class CRDQEEngine:
             )
 
         self.mapper = SchemaMapper(schema_file)
+        self.schema = self.mapper.get_schema()
 
         self.df = self.mapper.map_columns(self.df)
 
-        print(self.schema.keys())
-        print(schema.keys())
-        detector = SchemaDetector(self.schema)
+        # detector = SchemaDetector(self.schema)
 
-        mapping, confidence = detector.detect(self.df.columns)
+        # mapping, confidence = detector.detect(self.df.columns)
 
-        self.log("")
-        self.log("Detected Schema")
+        # self.log("")
+        # self.log("Detected Schema")
 
-        for column, field in mapping.items():
-            self.log(f"{column}  -->  {field} ({confidence[field]}%)")
+        # for column, field in mapping.items():
+            # self.log(f"{column}  -->  {field} ({confidence[field]}%)")
+        self.df = PlaceholderProcessor.process(
+        self.df,
+        self.schema
+        )
 
         # -------------------------------------------------------
         # Convert datatypes
@@ -244,6 +247,11 @@ class CRDQEEngine:
 
         self.df, self.issues_df = self.engine.run(
             self.df
+        )
+
+
+        self.issue_summary = IssueStatistics.generate(
+            self.issues_df
         )
 
         self.log("Rule Engine completed.")

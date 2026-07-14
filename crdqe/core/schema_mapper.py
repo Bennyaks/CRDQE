@@ -6,12 +6,13 @@ Module:
 Schema Mapper
 
 Purpose:
-Map workbook columns to internal schema.
+Maps workbook columns to the internal CRDQE schema using
+alias matching and fuzzy matching.
 ===========================================================
 """
 
-from pathlib import Path
 import yaml
+from difflib import SequenceMatcher
 
 from crdqe.utils.text_normalizer import normalize
 
@@ -26,25 +27,60 @@ class SchemaMapper:
     def get_schema(self):
         return self.schema
 
+    def similarity(self, text1, text2):
+        """
+        Returns similarity between two strings.
+        """
+
+        return SequenceMatcher(
+            None,
+            text1,
+            text2
+        ).ratio()
+
     def map_columns(self, dataframe):
 
         mapping = {}
 
-        for field, details in self.schema["source_columns"].items():
+        print("\n========== COLUMN MAPPING ==========\n")
 
-            print(f"{field} --> {type(details)}")
+        for column in dataframe.columns:
 
-            if not isinstance(details, dict):
-                raise TypeError(
-                    f"Schema error: '{field}' should be a dictionary but is {type(details)}.\nValue: {details}"
+            best_field = None
+            best_score = 0
+
+            for field, details in self.schema["source_columns"].items():
+
+                aliases = [
+                    normalize(alias)
+                    for alias in details.get("aliases", [])
+                ]
+
+                for alias in aliases:
+
+                    score = self.similarity(
+                        normalize(column),
+                        alias
+                    )
+
+                    if score > best_score:
+                        best_score = score
+                        best_field = field
+
+            if best_score >= 0.90:
+
+                mapping[column] = best_field
+
+                print(
+                    f"{column}  --->  {best_field} ({best_score:.0%})"
                 )
 
-            aliases = details.get("aliases", [])
-            aliases = [normalize(alias) for alias in aliases]
+            else:
 
-            for column in dataframe.columns:
+                print(
+                    f"{column}  --->  NOT MAPPED ({best_score:.0%})"
+                )
 
-                if normalize(column) in aliases:
-                    mapping[column] = field
+        print("\n====================================\n")
 
         return dataframe.rename(columns=mapping)

@@ -41,29 +41,30 @@ class ExcelWriter:
         df = dataframe.copy()
 
         date_columns = [
-            "date_of_death",
-            "registration_date"
+            column
+            for column in df.columns
+            if "date" in column.lower()
         ]
 
         for col in date_columns:
 
-            if col in df.columns:
+            df[col] = (
+                pd.to_datetime(df[col], errors="coerce")
+                .dt.strftime("%d/%m/%Y")
+                .fillna("")
+            )
+        if "entry_number" in df.columns:
 
-                df[col] = (
-                    df[col]
-                    .dt.strftime("%d/%m/%Y")
-                    .fillna("")
+            df["entry_number"] = (
+                pd.to_numeric(
+                    df["entry_number"],
+                    errors="coerce"
                 )
-            if "entry_number" in df.columns:
+                .astype("Int64")
+            )
+        print(df.columns.tolist())
 
-                df["entry_number"] = (
-                    pd.to_numeric(
-                        df["entry_number"],
-                        errors="coerce"
-                    )
-                    .astype("Int64")
-                )
-
+        print(df.head())
         df.to_excel(
             self.cleaned_path,
             index=False
@@ -89,27 +90,32 @@ class ExcelWriter:
                 "Rows",
                 "Columns",
                 "Issues Found",
-                "Quality Score (%)"
+                "Quality Score (%)",
+                "Current Registrations",
+                "Late Registrations"
             ],
             "Value": [
                 report["rows"],
                 report["columns"],
                 report["issues"],
-                report["quality_score"]
+                report["quality_score"],
+                report.get("current_cases", 0),
+                report.get("late_cases", 0)
             ]
         })
 
         field_df = pd.DataFrame(
             list(report["issues_by_field"].items()),
-            columns=["Field", "Issues"]
+            columns=[
+                "Field",
+                "Issues"
+            ]
         )
 
-        rule_df = pd.DataFrame(
-            list(report["issues_by_rule"].items()),
-            columns=["Rule", "Issues"]
-        )
-
-        with pd.ExcelWriter(self.summary_path, engine="openpyxl") as writer:
+        with pd.ExcelWriter(
+            self.summary_path,
+            engine="openpyxl"
+        ) as writer:
 
             metrics_df.to_excel(
                 writer,
@@ -122,14 +128,7 @@ class ExcelWriter:
                 writer,
                 sheet_name="Summary",
                 index=False,
-                startrow=7
-            )
-
-            rule_df.to_excel(
-                writer,
-                sheet_name="Summary",
-                index=False,
-                startrow=7 + len(field_df) + 4
+                startrow=10
             )
 
         self._format(self.summary_path)

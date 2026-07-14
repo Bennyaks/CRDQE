@@ -24,19 +24,63 @@ class SummaryReport:
         report["columns"] = len(self.df.columns)
         report["issues"] = len(self.issues)
 
-        report["issues_by_field"] = (
-            self.issues["field"]
-            .value_counts()
-            .sort_values(ascending=False)
-            .to_dict()
-        )
+        # -----------------------------------
+        # Registration Status Statistics
+        # -----------------------------------
 
-        report["issues_by_rule"] = (
-            self.issues["rule"]
-            .value_counts()
-            .sort_values(ascending=False)
-            .to_dict()
-        )
+        status_column = None
+
+        if "Status" in self.df.columns:
+            status_column = "Status"
+
+        elif "status" in self.df.columns:
+            status_column = "status"
+
+        if status_column:
+
+            report["current"] = (
+                self.df[status_column]
+                .astype(str)
+                .str.strip()
+                .str.lower()
+                .eq("current")
+                .sum()
+            )
+
+            report["late"] = (
+                self.df[status_column]
+                .astype(str)
+                .str.strip()
+                .str.lower()
+                .eq("late")
+                .sum()
+            )
+
+        else:
+
+            report["current"] = 0
+            report["late"] = 0
+
+        # -----------------------------------
+        # Issues by Field
+        # -----------------------------------
+
+        if not self.issues.empty:
+
+            report["issues_by_field"] = (
+                self.issues["field"]
+                .value_counts()
+                .sort_values(ascending=False)
+                .to_dict()
+            )
+
+        else:
+
+            report["issues_by_field"] = {}
+
+        # -----------------------------------
+        # Quality Score
+        # -----------------------------------
 
         report["quality_score"] = round(
             (1 - len(self.issues) / max(len(self.df), 1)) * 100,

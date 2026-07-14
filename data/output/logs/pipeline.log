@@ -5012,3 +5012,880 @@
 2026-07-13 14:33:13,982 | INFO | Standardized Columns:
 2026-07-13 14:33:13,983 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Age(Indicate number eg 1,2,3)', 'Unit of age(Days, Months or Years)', 'Marital status', 'Place of death(Indicate the name of exact place of death)', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence(SUB-COUNTY)', 'Cause of death(Indicate the underlying cause of death)', 'Cause of death certification(state whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number']
 2026-07-13 14:33:13,983 | INFO | Detected Dataset: Death
+2026-07-14 08:20:21,226 | INFO | ============================================================
+2026-07-14 08:20:21,228 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 08:20:21,228 | INFO | Workbook found.
+2026-07-14 08:20:21,229 | INFO | C:/Users/Admin/Desktop/data/DEATH TEMPLATE.xlsx
+2026-07-14 08:20:21,258 | INFO | Available worksheets: ['JAN', 'FEB', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPT', 'OCT', 'DEC', 'Drop Down']
+2026-07-14 08:20:21,299 | INFO | Detected Header Row: 0
+2026-07-14 08:20:21,346 | INFO | Workbook loaded successfully.
+2026-07-14 08:20:21,347 | INFO | Rows: 126
+2026-07-14 08:20:21,347 | INFO | Columns: 14
+2026-07-14 08:20:21,347 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Age \n(Indicate number eg 1,2,3)', 'Unit of age \n(Days, Months or Years)', 'Marital status', 'Place of death \n(Indicate the name of exact place of death)', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence(SUB-COUNTY)', 'Cause of death \n(Indicate the underlying cause of death)', 'Cause of death certification\n(state whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number']
+2026-07-14 08:20:21,347 | INFO | Standardized Columns:
+2026-07-14 08:20:21,348 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Age(Indicate number eg 1,2,3)', 'Unit of age(Days, Months or Years)', 'Marital status', 'Place of death(Indicate the name of exact place of death)', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence(SUB-COUNTY)', 'Cause of death(Indicate the underlying cause of death)', 'Cause of death certification(state whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number']
+2026-07-14 08:20:21,348 | INFO | Detected Dataset: Death
+2026-07-14 08:21:25,125 | INFO | ============================================================
+2026-07-14 08:21:25,125 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 08:21:25,125 | INFO | Workbook found.
+2026-07-14 08:21:25,125 | INFO | C:/Users/Admin/Desktop/data/clean_Feb_death_data.xlsx
+2026-07-14 08:21:25,128 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 08:21:25,135 | INFO | Detected Header Row: 0
+2026-07-14 08:21:25,158 | INFO | Workbook loaded successfully.
+2026-07-14 08:21:25,158 | INFO | Rows: 119
+2026-07-14 08:21:25,159 | INFO | Columns: 15
+2026-07-14 08:21:25,159 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 08:21:25,159 | INFO | Standardized Columns:
+2026-07-14 08:21:25,159 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 08:21:25,159 | INFO | Detected Dataset: Death
+2026-07-14 08:23:38,386 | INFO | ============================================================
+2026-07-14 08:23:38,387 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 08:23:38,388 | INFO | Workbook found.
+2026-07-14 08:23:38,388 | INFO | C:/Users/Admin/Desktop/data/clean_birth_data.xlsx
+2026-07-14 08:23:38,393 | INFO | Available worksheets: ['Cleaned Data']
+2026-07-14 08:23:38,403 | INFO | Detected Header Row: 0
+2026-07-14 08:23:38,432 | INFO | Workbook loaded successfully.
+2026-07-14 08:23:38,432 | INFO | Rows: 244
+2026-07-14 08:23:38,433 | INFO | Columns: 15
+2026-07-14 08:23:38,433 | INFO | ['Date of Birth (dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth (Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence (Sub County)', 'Date of Registration (dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 08:23:38,433 | INFO | Standardized Columns:
+2026-07-14 08:23:38,433 | INFO | ['Date of Birth(dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth(Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence(Sub County)', 'Date of Registration(dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 08:23:38,433 | INFO | Detected Dataset: Birth
+2026-07-14 09:11:12,931 | INFO | ============================================================
+2026-07-14 09:11:12,932 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 09:11:12,932 | INFO | Workbook found.
+2026-07-14 09:11:12,933 | INFO | C:/Users/Admin/Desktop/data/clean_birth_data.xlsx
+2026-07-14 09:11:12,941 | INFO | Available worksheets: ['Cleaned Data']
+2026-07-14 09:11:12,950 | INFO | Detected Header Row: 0
+2026-07-14 09:11:12,982 | INFO | Workbook loaded successfully.
+2026-07-14 09:11:12,982 | INFO | Rows: 244
+2026-07-14 09:11:12,983 | INFO | Columns: 15
+2026-07-14 09:11:12,983 | INFO | ['Date of Birth (dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth (Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence (Sub County)', 'Date of Registration (dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 09:11:12,983 | INFO | Standardized Columns:
+2026-07-14 09:11:12,983 | INFO | ['Date of Birth(dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth(Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence(Sub County)', 'Date of Registration(dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 09:11:12,983 | INFO | Detected Dataset: Birth
+2026-07-14 09:14:09,546 | INFO | ============================================================
+2026-07-14 09:14:09,546 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 09:14:09,547 | INFO | Workbook found.
+2026-07-14 09:14:09,547 | INFO | C:/Users/Admin/Desktop/data/clean_birth_data.xlsx
+2026-07-14 09:14:09,551 | INFO | Available worksheets: ['Cleaned Data']
+2026-07-14 09:14:09,564 | INFO | Detected Header Row: 0
+2026-07-14 09:14:09,591 | INFO | Workbook loaded successfully.
+2026-07-14 09:14:09,591 | INFO | Rows: 244
+2026-07-14 09:14:09,591 | INFO | Columns: 15
+2026-07-14 09:14:09,591 | INFO | ['Date of Birth (dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth (Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence (Sub County)', 'Date of Registration (dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 09:14:09,592 | INFO | Standardized Columns:
+2026-07-14 09:14:09,592 | INFO | ['Date of Birth(dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth(Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence(Sub County)', 'Date of Registration(dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 09:14:09,592 | INFO | Detected Dataset: Birth
+2026-07-14 09:14:09,611 | INFO | Schema Valid: False
+2026-07-14 09:14:09,611 | WARNING | Missing Columns: ['sex', 'nature_of_birth', 'place_of_birth', 'mother_age', 'residence']
+2026-07-14 09:14:09,611 | INFO | Extra Columns: ['Sex', 'Nature of Birth', 'Place of Birth', 'Age of Mother', 'Place of Residence(Sub County)', 'Status']
+2026-07-14 09:14:09,611 | INFO | Rows: 244
+2026-07-14 09:14:09,611 | INFO | Columns: 15
+2026-07-14 09:14:09,611 | INFO | ['date_of_birth', 'Sex', 'Nature of Birth', 'birth_weight', 'Place of Birth', 'place_type', 'Age of Mother', 'marital_status', 'nationality', 'occupation', 'education', 'Place of Residence(Sub County)', 'registration_date', 'entry_number', 'Status']
+2026-07-14 09:24:50,945 | INFO | ============================================================
+2026-07-14 09:24:50,945 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 09:24:50,946 | INFO | Workbook found.
+2026-07-14 09:24:50,946 | INFO | C:/Users/Admin/Desktop/data/clean_birth_data.xlsx
+2026-07-14 09:24:50,953 | INFO | Available worksheets: ['Cleaned Data']
+2026-07-14 09:24:50,965 | INFO | Detected Header Row: 0
+2026-07-14 09:24:50,992 | INFO | Workbook loaded successfully.
+2026-07-14 09:24:50,992 | INFO | Rows: 244
+2026-07-14 09:24:50,992 | INFO | Columns: 15
+2026-07-14 09:24:50,992 | INFO | ['Date of Birth (dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth (Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence (Sub County)', 'Date of Registration (dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 09:24:50,993 | INFO | Standardized Columns:
+2026-07-14 09:24:50,993 | INFO | ['Date of Birth(dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth(Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence(Sub County)', 'Date of Registration(dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 09:24:50,993 | INFO | Detected Dataset: Birth
+2026-07-14 09:39:04,194 | INFO | ============================================================
+2026-07-14 09:39:04,195 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 09:39:04,195 | INFO | Workbook found.
+2026-07-14 09:39:04,195 | INFO | C:/Users/Admin/Desktop/data/clean_birth_data.xlsx
+2026-07-14 09:39:04,200 | INFO | Available worksheets: ['Cleaned Data']
+2026-07-14 09:39:04,212 | INFO | Detected Header Row: 0
+2026-07-14 09:39:04,237 | INFO | Workbook loaded successfully.
+2026-07-14 09:39:04,237 | INFO | Rows: 244
+2026-07-14 09:39:04,237 | INFO | Columns: 15
+2026-07-14 09:39:04,237 | INFO | ['Date of Birth (dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth (Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence (Sub County)', 'Date of Registration (dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 09:39:04,238 | INFO | Standardized Columns:
+2026-07-14 09:39:04,238 | INFO | ['Date of Birth(dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth(Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence(Sub County)', 'Date of Registration(dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 09:39:04,238 | INFO | Detected Dataset: Birth
+2026-07-14 09:39:04,259 | INFO | Schema Valid: True
+2026-07-14 09:39:04,260 | INFO | Extra Columns: ['Status']
+2026-07-14 09:39:04,260 | INFO | Rows: 244
+2026-07-14 09:39:04,260 | INFO | Columns: 15
+2026-07-14 09:39:04,260 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'Status']
+2026-07-14 09:39:04,430 | INFO | Rule Engine completed.
+2026-07-14 09:39:04,431 | INFO | Records processed: 244
+2026-07-14 09:39:04,431 | INFO | Issues found: 24
+2026-07-14 09:56:05,183 | INFO | ============================================================
+2026-07-14 09:56:05,183 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 09:56:05,184 | INFO | Workbook found.
+2026-07-14 09:56:05,184 | INFO | C:/Users/Admin/Desktop/data/clean_birth_data.xlsx
+2026-07-14 09:56:05,189 | INFO | Available worksheets: ['Cleaned Data']
+2026-07-14 09:56:05,203 | INFO | Detected Header Row: 0
+2026-07-14 09:56:05,232 | INFO | Workbook loaded successfully.
+2026-07-14 09:56:05,233 | INFO | Rows: 244
+2026-07-14 09:56:05,233 | INFO | Columns: 15
+2026-07-14 09:56:05,233 | INFO | ['Date of Birth (dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth (Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence (Sub County)', 'Date of Registration (dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 09:56:05,233 | INFO | Standardized Columns:
+2026-07-14 09:56:05,233 | INFO | ['Date of Birth(dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth(Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence(Sub County)', 'Date of Registration(dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 09:56:05,234 | INFO | Detected Dataset: Birth
+2026-07-14 10:00:20,262 | INFO | ============================================================
+2026-07-14 10:00:20,263 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 10:00:20,264 | INFO | Workbook found.
+2026-07-14 10:00:20,264 | INFO | C:/Users/Admin/Desktop/data/clean_birth_data.xlsx
+2026-07-14 10:00:20,269 | INFO | Available worksheets: ['Cleaned Data']
+2026-07-14 10:00:20,285 | INFO | Detected Header Row: 0
+2026-07-14 10:00:20,310 | INFO | Workbook loaded successfully.
+2026-07-14 10:00:20,310 | INFO | Rows: 244
+2026-07-14 10:00:20,311 | INFO | Columns: 15
+2026-07-14 10:00:20,311 | INFO | ['Date of Birth (dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth (Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence (Sub County)', 'Date of Registration (dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 10:00:20,311 | INFO | Standardized Columns:
+2026-07-14 10:00:20,311 | INFO | ['Date of Birth(dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth(Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence(Sub County)', 'Date of Registration(dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 10:00:20,312 | INFO | Detected Dataset: Birth
+2026-07-14 10:00:20,337 | INFO | Schema Valid: True
+2026-07-14 10:00:20,338 | INFO | Extra Columns: ['Status', '_calculated_status']
+2026-07-14 10:00:20,338 | INFO | Rows: 244
+2026-07-14 10:00:20,338 | INFO | Columns: 16
+2026-07-14 10:00:20,338 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'Status', '_calculated_status']
+2026-07-14 10:00:20,511 | INFO | Rule Engine completed.
+2026-07-14 10:00:20,512 | INFO | Records processed: 244
+2026-07-14 10:00:20,512 | INFO | Issues found: 24
+2026-07-14 10:13:35,350 | INFO | ============================================================
+2026-07-14 10:13:35,350 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 10:13:35,351 | INFO | Workbook found.
+2026-07-14 10:13:35,351 | INFO | C:/Users/Admin/Desktop/data/clean_birth_data.xlsx
+2026-07-14 10:13:35,359 | INFO | Available worksheets: ['Cleaned Data']
+2026-07-14 10:13:35,372 | INFO | Detected Header Row: 0
+2026-07-14 10:13:35,397 | INFO | Workbook loaded successfully.
+2026-07-14 10:13:35,397 | INFO | Rows: 244
+2026-07-14 10:13:35,397 | INFO | Columns: 15
+2026-07-14 10:13:35,397 | INFO | ['Date of Birth (dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth (Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence (Sub County)', 'Date of Registration (dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 10:13:35,398 | INFO | Standardized Columns:
+2026-07-14 10:13:35,398 | INFO | ['Date of Birth(dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth(Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence(Sub County)', 'Date of Registration(dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 10:13:35,398 | INFO | Detected Dataset: Birth
+2026-07-14 10:13:35,418 | INFO | Schema Valid: True
+2026-07-14 10:13:35,419 | INFO | Extra Columns: ['Status']
+2026-07-14 10:13:35,419 | INFO | Rows: 244
+2026-07-14 10:13:35,419 | INFO | Columns: 15
+2026-07-14 10:13:35,419 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'Status']
+2026-07-14 10:13:35,758 | INFO | Rule Engine completed.
+2026-07-14 10:13:35,759 | INFO | Records processed: 244
+2026-07-14 10:13:35,759 | INFO | Issues found: 25
+2026-07-14 10:14:42,373 | INFO | ============================================================
+2026-07-14 10:14:42,374 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 10:14:42,374 | INFO | Workbook found.
+2026-07-14 10:14:42,374 | INFO | C:/Users/Admin/Desktop/data/clean_birth_data.xlsx
+2026-07-14 10:14:42,380 | INFO | Available worksheets: ['Cleaned Data']
+2026-07-14 10:14:42,392 | INFO | Detected Header Row: 0
+2026-07-14 10:14:42,417 | INFO | Workbook loaded successfully.
+2026-07-14 10:14:42,417 | INFO | Rows: 244
+2026-07-14 10:14:42,417 | INFO | Columns: 15
+2026-07-14 10:14:42,417 | INFO | ['Date of Birth (dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth (Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence (Sub County)', 'Date of Registration (dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 10:14:42,418 | INFO | Standardized Columns:
+2026-07-14 10:14:42,418 | INFO | ['Date of Birth(dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth(Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence(Sub County)', 'Date of Registration(dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 10:14:42,418 | INFO | Detected Dataset: Birth
+2026-07-14 10:14:42,438 | INFO | Schema Valid: True
+2026-07-14 10:14:42,439 | INFO | Extra Columns: ['Status']
+2026-07-14 10:14:42,439 | INFO | Rows: 244
+2026-07-14 10:14:42,439 | INFO | Columns: 15
+2026-07-14 10:14:42,439 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'Status']
+2026-07-14 10:14:42,608 | INFO | Rule Engine completed.
+2026-07-14 10:14:42,609 | INFO | Records processed: 244
+2026-07-14 10:14:42,609 | INFO | Issues found: 25
+2026-07-14 10:16:08,118 | INFO | ============================================================
+2026-07-14 10:16:08,119 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 10:16:08,119 | INFO | Workbook found.
+2026-07-14 10:16:08,119 | INFO | C:/Users/Admin/Desktop/data/clean_birth_data.xlsx
+2026-07-14 10:16:08,125 | INFO | Available worksheets: ['Cleaned Data']
+2026-07-14 10:16:08,140 | INFO | Detected Header Row: 0
+2026-07-14 10:16:08,165 | INFO | Workbook loaded successfully.
+2026-07-14 10:16:08,165 | INFO | Rows: 244
+2026-07-14 10:16:08,165 | INFO | Columns: 15
+2026-07-14 10:16:08,165 | INFO | ['Date of Birth (dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth (Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence (Sub County)', 'Date of Registration (dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 10:16:08,166 | INFO | Standardized Columns:
+2026-07-14 10:16:08,166 | INFO | ['Date of Birth(dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth(Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence(Sub County)', 'Date of Registration(dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 10:16:08,166 | INFO | Detected Dataset: Birth
+2026-07-14 10:16:08,185 | INFO | Schema Valid: True
+2026-07-14 10:16:08,185 | INFO | Extra Columns: ['Status']
+2026-07-14 10:16:08,185 | INFO | Rows: 244
+2026-07-14 10:16:08,186 | INFO | Columns: 15
+2026-07-14 10:16:08,186 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'Status']
+2026-07-14 10:16:08,516 | INFO | Rule Engine completed.
+2026-07-14 10:16:08,517 | INFO | Records processed: 244
+2026-07-14 10:16:08,517 | INFO | Issues found: 25
+2026-07-14 10:17:01,934 | INFO | ============================================================
+2026-07-14 10:17:01,934 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 10:17:01,934 | INFO | Workbook found.
+2026-07-14 10:17:01,934 | INFO | C:/Users/Admin/Desktop/data/clean_birth_data.xlsx
+2026-07-14 10:17:01,939 | INFO | Available worksheets: ['Cleaned Data']
+2026-07-14 10:17:01,954 | INFO | Detected Header Row: 0
+2026-07-14 10:17:01,978 | INFO | Workbook loaded successfully.
+2026-07-14 10:17:01,979 | INFO | Rows: 244
+2026-07-14 10:17:01,979 | INFO | Columns: 15
+2026-07-14 10:17:01,979 | INFO | ['Date of Birth (dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth (Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence (Sub County)', 'Date of Registration (dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 10:17:01,979 | INFO | Standardized Columns:
+2026-07-14 10:17:01,979 | INFO | ['Date of Birth(dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth(Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence(Sub County)', 'Date of Registration(dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 10:17:01,979 | INFO | Detected Dataset: Birth
+2026-07-14 10:17:02,002 | INFO | Schema Valid: True
+2026-07-14 10:17:02,002 | INFO | Extra Columns: ['Status']
+2026-07-14 10:17:02,002 | INFO | Rows: 244
+2026-07-14 10:17:02,002 | INFO | Columns: 15
+2026-07-14 10:17:02,002 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'Status']
+2026-07-14 10:17:02,328 | INFO | Rule Engine completed.
+2026-07-14 10:17:02,329 | INFO | Records processed: 244
+2026-07-14 10:17:02,329 | INFO | Issues found: 25
+2026-07-14 10:18:26,982 | INFO | ============================================================
+2026-07-14 10:18:26,983 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 10:18:26,983 | INFO | Workbook found.
+2026-07-14 10:18:26,983 | INFO | C:/Users/Admin/Desktop/data/clean_birth_data.xlsx
+2026-07-14 10:18:26,991 | INFO | Available worksheets: ['Cleaned Data']
+2026-07-14 10:18:27,004 | INFO | Detected Header Row: 0
+2026-07-14 10:18:27,027 | INFO | Workbook loaded successfully.
+2026-07-14 10:18:27,028 | INFO | Rows: 244
+2026-07-14 10:18:27,028 | INFO | Columns: 15
+2026-07-14 10:18:27,028 | INFO | ['Date of Birth (dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth (Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence (Sub County)', 'Date of Registration (dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 10:18:27,028 | INFO | Standardized Columns:
+2026-07-14 10:18:27,028 | INFO | ['Date of Birth(dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth(Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence(Sub County)', 'Date of Registration(dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 10:18:27,028 | INFO | Detected Dataset: Birth
+2026-07-14 10:18:27,048 | INFO | Schema Valid: True
+2026-07-14 10:18:27,048 | INFO | Extra Columns: ['Status']
+2026-07-14 10:18:27,048 | INFO | Rows: 244
+2026-07-14 10:18:27,048 | INFO | Columns: 15
+2026-07-14 10:18:27,048 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'Status']
+2026-07-14 10:18:27,376 | INFO | Rule Engine completed.
+2026-07-14 10:18:27,376 | INFO | Records processed: 244
+2026-07-14 10:18:27,376 | INFO | Issues found: 25
+2026-07-14 10:24:04,366 | INFO | ============================================================
+2026-07-14 10:24:04,366 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 10:24:04,367 | INFO | Workbook found.
+2026-07-14 10:24:04,367 | INFO | C:/Users/Admin/Desktop/data/clean_birth_data.xlsx
+2026-07-14 10:24:04,372 | INFO | Available worksheets: ['Cleaned Data']
+2026-07-14 10:24:04,384 | INFO | Detected Header Row: 0
+2026-07-14 10:24:04,412 | INFO | Workbook loaded successfully.
+2026-07-14 10:24:04,412 | INFO | Rows: 244
+2026-07-14 10:24:04,412 | INFO | Columns: 15
+2026-07-14 10:24:04,412 | INFO | ['Date of Birth (dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth (Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence (Sub County)', 'Date of Registration (dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 10:24:04,412 | INFO | Standardized Columns:
+2026-07-14 10:24:04,413 | INFO | ['Date of Birth(dd/mm/yy)', 'Sex', 'Nature of Birth', 'Weight of Birth(Kgs)', 'Place of Birth', 'Type of Place', 'Age of Mother', 'Marital Status', 'Nationality of Mother', 'Occupation of Mother', "Mother's Level of Education", 'Place of Residence(Sub County)', 'Date of Registration(dd/mm/yy)', 'Entry Number', 'Status']
+2026-07-14 10:24:04,413 | INFO | Detected Dataset: Birth
+2026-07-14 10:24:04,433 | INFO | Schema Valid: True
+2026-07-14 10:24:04,433 | INFO | Extra Columns: ['Status']
+2026-07-14 10:24:04,434 | INFO | Rows: 244
+2026-07-14 10:24:04,434 | INFO | Columns: 15
+2026-07-14 10:24:04,434 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'Status']
+2026-07-14 10:24:04,608 | INFO | Rule Engine completed.
+2026-07-14 10:24:04,609 | INFO | Records processed: 244
+2026-07-14 10:24:04,609 | INFO | Issues found: 25
+2026-07-14 10:25:14,100 | INFO | ============================================================
+2026-07-14 10:25:14,101 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 10:25:14,101 | INFO | Workbook found.
+2026-07-14 10:25:14,101 | INFO | C:/Users/Admin/Desktop/data/cleaned_death_data.xlsx
+2026-07-14 10:25:14,104 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 10:25:14,116 | INFO | Detected Header Row: 0
+2026-07-14 10:25:14,137 | INFO | Workbook loaded successfully.
+2026-07-14 10:25:14,137 | INFO | Rows: 95
+2026-07-14 10:25:14,137 | INFO | Columns: 15
+2026-07-14 10:25:14,137 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 10:25:14,138 | INFO | Standardized Columns:
+2026-07-14 10:25:14,138 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 10:25:14,138 | INFO | Detected Dataset: Death
+2026-07-14 10:25:14,160 | INFO | Schema Valid: False
+2026-07-14 10:25:14,160 | WARNING | Missing Columns: ['deceased_name', 'id_number', 'sex', 'age', 'age_unit', 'place_of_death', 'place_type', 'cause_of_death', 'death_certification']
+2026-07-14 10:25:14,160 | INFO | Extra Columns: ['Name of Deceased', 'ID Number', 'Sex', 'Age', 'Unit of age', 'Place of death', 'Type of place', 'Cause of death', 'Cause of death certification']
+2026-07-14 10:25:14,160 | INFO | Rows: 95
+2026-07-14 10:25:14,160 | INFO | Columns: 15
+2026-07-14 10:25:14,160 | INFO | ['Name of Deceased', 'ID Number', 'date_of_death', 'Sex', 'Age', 'Unit of age', 'marital_status', 'Place of death', 'Type of place', 'residence', 'Cause of death', 'Cause of death certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 10:28:41,723 | INFO | ============================================================
+2026-07-14 10:28:41,723 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 10:28:41,724 | INFO | Workbook found.
+2026-07-14 10:28:41,724 | INFO | C:/Users/Admin/Desktop/data/clean_Feb_death_data.xlsx
+2026-07-14 10:28:41,727 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 10:28:41,739 | INFO | Detected Header Row: 0
+2026-07-14 10:28:41,763 | INFO | Workbook loaded successfully.
+2026-07-14 10:28:41,763 | INFO | Rows: 119
+2026-07-14 10:28:41,763 | INFO | Columns: 15
+2026-07-14 10:28:41,763 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 10:28:41,763 | INFO | Standardized Columns:
+2026-07-14 10:28:41,764 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 10:28:41,764 | INFO | Detected Dataset: Death
+2026-07-14 10:28:41,778 | INFO | Schema Valid: False
+2026-07-14 10:28:41,779 | WARNING | Missing Columns: ['deceased_name', 'id_number', 'sex', 'age', 'age_unit', 'place_of_death', 'place_type', 'cause_of_death', 'death_certification']
+2026-07-14 10:28:41,779 | INFO | Extra Columns: ['Name of Deceased', 'ID Number', 'Sex', 'Age', 'Unit of age', 'Place of death', 'Type of place', 'Cause of death', 'Cause of death certification']
+2026-07-14 10:28:41,779 | INFO | Rows: 119
+2026-07-14 10:28:41,779 | INFO | Columns: 15
+2026-07-14 10:28:41,779 | INFO | ['Name of Deceased', 'ID Number', 'date_of_death', 'Sex', 'Age', 'Unit of age', 'marital_status', 'Place of death', 'Type of place', 'residence', 'Cause of death', 'Cause of death certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 10:40:48,628 | INFO | ============================================================
+2026-07-14 10:40:48,628 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 10:40:48,629 | INFO | Workbook found.
+2026-07-14 10:40:48,629 | INFO | C:/Users/Admin/Desktop/data/clean_Feb_death_data.xlsx
+2026-07-14 10:40:48,633 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 10:40:48,646 | INFO | Detected Header Row: 0
+2026-07-14 10:40:48,669 | INFO | Workbook loaded successfully.
+2026-07-14 10:40:48,669 | INFO | Rows: 119
+2026-07-14 10:40:48,669 | INFO | Columns: 15
+2026-07-14 10:40:48,669 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 10:40:48,669 | INFO | Standardized Columns:
+2026-07-14 10:40:48,669 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 10:40:48,669 | INFO | Detected Dataset: Death
+2026-07-14 10:40:48,694 | INFO | Schema Valid: True
+2026-07-14 10:40:48,694 | INFO | Rows: 119
+2026-07-14 10:40:48,694 | INFO | Columns: 15
+2026-07-14 10:40:48,694 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 10:40:48,737 | INFO | Rule Engine completed.
+2026-07-14 10:40:48,738 | INFO | Records processed: 119
+2026-07-14 10:40:48,741 | INFO | Issues found: 237
+2026-07-14 10:51:18,358 | INFO | ============================================================
+2026-07-14 10:51:18,359 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 10:51:18,359 | INFO | Workbook found.
+2026-07-14 10:51:18,359 | INFO | C:/Users/Admin/Desktop/data/clean_May_death_data.xlsx
+2026-07-14 10:51:18,363 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 10:51:18,377 | INFO | Detected Header Row: 0
+2026-07-14 10:51:18,387 | INFO | Workbook loaded successfully.
+2026-07-14 10:51:18,387 | INFO | Rows: 30
+2026-07-14 10:51:18,387 | INFO | Columns: 15
+2026-07-14 10:51:18,387 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 10:51:18,388 | INFO | Standardized Columns:
+2026-07-14 10:51:18,388 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 10:51:18,388 | INFO | Detected Dataset: Death
+2026-07-14 10:51:18,409 | INFO | Schema Valid: True
+2026-07-14 10:51:18,409 | INFO | Rows: 30
+2026-07-14 10:51:18,410 | INFO | Columns: 15
+2026-07-14 10:51:18,410 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 10:51:18,446 | INFO | Rule Engine completed.
+2026-07-14 10:51:18,446 | INFO | Records processed: 30
+2026-07-14 10:51:18,446 | INFO | Issues found: 20
+2026-07-14 10:55:21,612 | INFO | ============================================================
+2026-07-14 10:55:21,612 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 10:55:21,613 | INFO | Workbook found.
+2026-07-14 10:55:21,613 | INFO | C:/Users/Admin/Desktop/data/clean_May_death_data.xlsx
+2026-07-14 10:55:21,616 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 10:55:21,631 | INFO | Detected Header Row: 0
+2026-07-14 10:55:21,640 | INFO | Workbook loaded successfully.
+2026-07-14 10:55:21,640 | INFO | Rows: 30
+2026-07-14 10:55:21,640 | INFO | Columns: 15
+2026-07-14 10:55:21,641 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 10:55:21,641 | INFO | Standardized Columns:
+2026-07-14 10:55:21,641 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 10:55:21,641 | INFO | Detected Dataset: Death
+2026-07-14 10:55:21,663 | INFO | Schema Valid: True
+2026-07-14 10:55:21,663 | INFO | Rows: 30
+2026-07-14 10:55:21,663 | INFO | Columns: 15
+2026-07-14 10:55:21,663 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 10:55:21,689 | INFO | Rule Engine completed.
+2026-07-14 10:55:21,689 | INFO | Records processed: 30
+2026-07-14 10:55:21,690 | INFO | Issues found: 20
+2026-07-14 11:32:19,757 | INFO | ============================================================
+2026-07-14 11:32:19,759 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 11:32:19,760 | INFO | Workbook found.
+2026-07-14 11:32:19,761 | INFO | C:/Users/Admin/Desktop/data/clean_May_death_data.xlsx
+2026-07-14 11:32:19,765 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 11:32:19,779 | INFO | Detected Header Row: 0
+2026-07-14 11:32:19,787 | INFO | Workbook loaded successfully.
+2026-07-14 11:32:19,788 | INFO | Rows: 30
+2026-07-14 11:32:19,788 | INFO | Columns: 15
+2026-07-14 11:32:19,788 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 11:32:19,788 | INFO | Standardized Columns:
+2026-07-14 11:32:19,788 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 11:32:19,788 | INFO | Detected Dataset: Death
+2026-07-14 11:32:19,809 | INFO | Schema Valid: True
+2026-07-14 11:32:19,809 | INFO | Rows: 30
+2026-07-14 11:32:19,810 | INFO | Columns: 15
+2026-07-14 11:32:19,810 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 11:32:19,840 | INFO | Rule Engine completed.
+2026-07-14 11:32:19,841 | INFO | Records processed: 30
+2026-07-14 11:32:19,842 | INFO | Issues found: 10
+2026-07-14 11:43:22,095 | INFO | ============================================================
+2026-07-14 11:43:22,096 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 11:43:22,096 | INFO | Workbook found.
+2026-07-14 11:43:22,096 | INFO | C:/Users/Admin/Desktop/data/clean_May_death_data.xlsx
+2026-07-14 11:43:22,099 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 11:43:22,116 | INFO | Detected Header Row: 0
+2026-07-14 11:43:22,127 | INFO | Workbook loaded successfully.
+2026-07-14 11:43:22,127 | INFO | Rows: 30
+2026-07-14 11:43:22,127 | INFO | Columns: 15
+2026-07-14 11:43:22,129 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 11:43:22,129 | INFO | Standardized Columns:
+2026-07-14 11:43:22,129 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 11:43:22,129 | INFO | Detected Dataset: Death
+2026-07-14 11:43:22,149 | INFO | Schema Valid: True
+2026-07-14 11:43:22,149 | INFO | Rows: 30
+2026-07-14 11:43:22,149 | INFO | Columns: 15
+2026-07-14 11:43:22,149 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 11:44:16,481 | INFO | ============================================================
+2026-07-14 11:44:16,482 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 11:44:16,483 | INFO | Workbook found.
+2026-07-14 11:44:16,483 | INFO | C:/Users/Admin/Desktop/data/clean_May_death_data.xlsx
+2026-07-14 11:44:16,486 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 11:44:16,500 | INFO | Detected Header Row: 0
+2026-07-14 11:44:16,508 | INFO | Workbook loaded successfully.
+2026-07-14 11:44:16,509 | INFO | Rows: 30
+2026-07-14 11:44:16,509 | INFO | Columns: 15
+2026-07-14 11:44:16,509 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 11:44:16,509 | INFO | Standardized Columns:
+2026-07-14 11:44:16,510 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 11:44:16,510 | INFO | Detected Dataset: Death
+2026-07-14 11:44:16,530 | INFO | Schema Valid: True
+2026-07-14 11:44:16,530 | INFO | Rows: 30
+2026-07-14 11:44:16,531 | INFO | Columns: 15
+2026-07-14 11:44:16,531 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 11:45:22,177 | INFO | ============================================================
+2026-07-14 11:45:22,177 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 11:45:22,178 | INFO | Workbook found.
+2026-07-14 11:45:22,178 | INFO | C:/Users/Admin/Desktop/data/clean_May_death_data.xlsx
+2026-07-14 11:45:22,182 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 11:45:22,196 | INFO | Detected Header Row: 0
+2026-07-14 11:45:22,204 | INFO | Workbook loaded successfully.
+2026-07-14 11:45:22,204 | INFO | Rows: 30
+2026-07-14 11:45:22,205 | INFO | Columns: 15
+2026-07-14 11:45:22,206 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 11:45:22,206 | INFO | Standardized Columns:
+2026-07-14 11:45:22,206 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 11:45:22,206 | INFO | Detected Dataset: Death
+2026-07-14 11:45:22,226 | INFO | Schema Valid: True
+2026-07-14 11:45:22,226 | INFO | Rows: 30
+2026-07-14 11:45:22,227 | INFO | Columns: 15
+2026-07-14 11:45:22,227 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 11:49:46,467 | INFO | ============================================================
+2026-07-14 11:49:46,467 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 11:49:46,468 | INFO | Workbook found.
+2026-07-14 11:49:46,468 | INFO | C:/Users/Admin/Desktop/data/clean_May_death_data.xlsx
+2026-07-14 11:49:46,473 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 11:49:46,486 | INFO | Detected Header Row: 0
+2026-07-14 11:49:46,495 | INFO | Workbook loaded successfully.
+2026-07-14 11:49:46,496 | INFO | Rows: 30
+2026-07-14 11:49:46,496 | INFO | Columns: 15
+2026-07-14 11:49:46,496 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 11:49:46,496 | INFO | Standardized Columns:
+2026-07-14 11:49:46,496 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 11:49:46,496 | INFO | Detected Dataset: Death
+2026-07-14 11:49:46,517 | INFO | Schema Valid: True
+2026-07-14 11:49:46,517 | INFO | Rows: 30
+2026-07-14 11:49:46,517 | INFO | Columns: 15
+2026-07-14 11:49:46,517 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 11:52:57,560 | INFO | ============================================================
+2026-07-14 11:52:57,561 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 11:52:57,562 | INFO | Workbook found.
+2026-07-14 11:52:57,562 | INFO | C:/Users/Admin/Desktop/data/clean_May_death_data.xlsx
+2026-07-14 11:52:57,565 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 11:52:57,579 | INFO | Detected Header Row: 0
+2026-07-14 11:52:57,588 | INFO | Workbook loaded successfully.
+2026-07-14 11:52:57,588 | INFO | Rows: 30
+2026-07-14 11:52:57,588 | INFO | Columns: 15
+2026-07-14 11:52:57,588 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 11:52:57,589 | INFO | Standardized Columns:
+2026-07-14 11:52:57,589 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 11:52:57,589 | INFO | Detected Dataset: Death
+2026-07-14 11:52:57,608 | INFO | Schema Valid: True
+2026-07-14 11:52:57,609 | INFO | Rows: 30
+2026-07-14 11:52:57,609 | INFO | Columns: 15
+2026-07-14 11:52:57,609 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 11:55:00,971 | INFO | ============================================================
+2026-07-14 11:55:00,972 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 11:55:00,972 | INFO | Workbook found.
+2026-07-14 11:55:00,972 | INFO | C:/Users/Admin/Desktop/data/clean_May_death_data.xlsx
+2026-07-14 11:55:00,975 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 11:55:00,990 | INFO | Detected Header Row: 0
+2026-07-14 11:55:01,000 | INFO | Workbook loaded successfully.
+2026-07-14 11:55:01,000 | INFO | Rows: 30
+2026-07-14 11:55:01,000 | INFO | Columns: 15
+2026-07-14 11:55:01,000 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 11:55:01,000 | INFO | Standardized Columns:
+2026-07-14 11:55:01,001 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 11:55:01,001 | INFO | Detected Dataset: Death
+2026-07-14 11:55:01,020 | INFO | Schema Valid: True
+2026-07-14 11:55:01,021 | INFO | Rows: 30
+2026-07-14 11:55:01,021 | INFO | Columns: 15
+2026-07-14 11:55:01,021 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 12:03:25,136 | INFO | ============================================================
+2026-07-14 12:03:25,137 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 12:03:25,137 | INFO | Workbook found.
+2026-07-14 12:03:25,137 | INFO | C:/Users/Admin/Desktop/data/clean_May_death_data.xlsx
+2026-07-14 12:03:25,143 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 12:03:25,156 | INFO | Detected Header Row: 0
+2026-07-14 12:03:25,167 | INFO | Workbook loaded successfully.
+2026-07-14 12:03:25,167 | INFO | Rows: 30
+2026-07-14 12:03:25,167 | INFO | Columns: 15
+2026-07-14 12:03:25,167 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 12:03:25,168 | INFO | Standardized Columns:
+2026-07-14 12:03:25,168 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 12:03:25,168 | INFO | Detected Dataset: Death
+2026-07-14 12:03:25,188 | INFO | Schema Valid: True
+2026-07-14 12:03:25,188 | INFO | Rows: 30
+2026-07-14 12:03:25,188 | INFO | Columns: 15
+2026-07-14 12:03:25,188 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 12:04:39,632 | INFO | ============================================================
+2026-07-14 12:04:39,633 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 12:04:39,633 | INFO | Workbook found.
+2026-07-14 12:04:39,633 | INFO | C:/Users/Admin/Desktop/data/clean_May_death_data.xlsx
+2026-07-14 12:04:39,636 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 12:04:39,649 | INFO | Detected Header Row: 0
+2026-07-14 12:04:39,661 | INFO | Workbook loaded successfully.
+2026-07-14 12:04:39,661 | INFO | Rows: 30
+2026-07-14 12:04:39,661 | INFO | Columns: 15
+2026-07-14 12:04:39,661 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 12:04:39,662 | INFO | Standardized Columns:
+2026-07-14 12:04:39,662 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 12:04:39,662 | INFO | Detected Dataset: Death
+2026-07-14 12:04:39,683 | INFO | Schema Valid: True
+2026-07-14 12:04:39,684 | INFO | Rows: 30
+2026-07-14 12:04:39,684 | INFO | Columns: 15
+2026-07-14 12:04:39,684 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 12:06:49,337 | INFO | ============================================================
+2026-07-14 12:06:49,337 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 12:06:49,338 | INFO | Workbook found.
+2026-07-14 12:06:49,338 | INFO | C:/Users/Admin/Desktop/data/clean_May_death_data.xlsx
+2026-07-14 12:06:49,341 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 12:06:49,354 | INFO | Detected Header Row: 0
+2026-07-14 12:06:49,366 | INFO | Workbook loaded successfully.
+2026-07-14 12:06:49,366 | INFO | Rows: 30
+2026-07-14 12:06:49,367 | INFO | Columns: 15
+2026-07-14 12:06:49,367 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 12:06:49,368 | INFO | Standardized Columns:
+2026-07-14 12:06:49,368 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 12:06:49,368 | INFO | Detected Dataset: Death
+2026-07-14 12:06:49,388 | INFO | Schema Valid: True
+2026-07-14 12:06:49,388 | INFO | Rows: 30
+2026-07-14 12:06:49,389 | INFO | Columns: 15
+2026-07-14 12:06:49,389 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 12:08:49,361 | INFO | ============================================================
+2026-07-14 12:08:49,361 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 12:08:49,362 | INFO | Workbook found.
+2026-07-14 12:08:49,362 | INFO | C:/Users/Admin/Desktop/data/clean_May_death_data.xlsx
+2026-07-14 12:08:49,365 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 12:08:49,378 | INFO | Detected Header Row: 0
+2026-07-14 12:08:49,387 | INFO | Workbook loaded successfully.
+2026-07-14 12:08:49,387 | INFO | Rows: 30
+2026-07-14 12:08:49,387 | INFO | Columns: 15
+2026-07-14 12:08:49,387 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 12:08:49,387 | INFO | Standardized Columns:
+2026-07-14 12:08:49,387 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 12:08:49,387 | INFO | Detected Dataset: Death
+2026-07-14 12:08:49,407 | INFO | Schema Valid: True
+2026-07-14 12:08:49,408 | INFO | Rows: 30
+2026-07-14 12:08:49,408 | INFO | Columns: 15
+2026-07-14 12:08:49,408 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 12:44:48,032 | INFO | ============================================================
+2026-07-14 12:44:48,032 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 12:44:48,033 | INFO | Workbook found.
+2026-07-14 12:44:48,033 | INFO | C:/Users/Admin/Desktop/data/clean_May_death_data.xlsx
+2026-07-14 12:44:48,036 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 12:44:48,043 | INFO | Detected Header Row: 0
+2026-07-14 12:44:48,053 | INFO | Workbook loaded successfully.
+2026-07-14 12:44:48,053 | INFO | Rows: 30
+2026-07-14 12:44:48,053 | INFO | Columns: 15
+2026-07-14 12:44:48,053 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 12:44:48,054 | INFO | Standardized Columns:
+2026-07-14 12:44:48,054 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 12:44:48,054 | INFO | Detected Dataset: Death
+2026-07-14 12:44:48,075 | INFO | Schema Valid: True
+2026-07-14 12:44:48,075 | INFO | Rows: 30
+2026-07-14 12:44:48,075 | INFO | Columns: 15
+2026-07-14 12:44:48,075 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 12:44:48,133 | INFO | Rule Engine completed.
+2026-07-14 12:44:48,134 | INFO | Records processed: 30
+2026-07-14 12:44:48,134 | INFO | Issues found: 10
+2026-07-14 12:54:18,862 | INFO | ============================================================
+2026-07-14 12:54:18,863 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 12:54:18,864 | INFO | Workbook found.
+2026-07-14 12:54:18,864 | INFO | C:/Users/Admin/Desktop/data/clean_May_death_data.xlsx
+2026-07-14 12:54:18,867 | INFO | Available worksheets: ['Sheet1']
+2026-07-14 12:54:18,891 | INFO | Detected Header Row: 0
+2026-07-14 12:54:18,904 | INFO | Workbook loaded successfully.
+2026-07-14 12:54:18,904 | INFO | Rows: 30
+2026-07-14 12:54:18,904 | INFO | Columns: 15
+2026-07-14 12:54:18,904 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death (dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration (dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 12:54:18,904 | INFO | Standardized Columns:
+2026-07-14 12:54:18,904 | INFO | ['Name of Deceased', 'ID Number', 'Date of Death(dd-mm-yy)', 'Sex', 'Age', 'Unit of age', 'Marital status', 'Place of death', 'Type of place', 'Place of usual residence', 'Cause of death', 'Cause of death certification', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Status']
+2026-07-14 12:54:18,904 | INFO | Detected Dataset: Death
+2026-07-14 12:54:18,930 | INFO | Schema Valid: True
+2026-07-14 12:54:18,931 | INFO | Rows: 30
+2026-07-14 12:54:18,931 | INFO | Columns: 15
+2026-07-14 12:54:18,931 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-14 12:54:18,976 | INFO | Rule Engine completed.
+2026-07-14 12:54:18,977 | INFO | Records processed: 30
+2026-07-14 12:54:18,978 | INFO | Issues found: 10
+2026-07-14 13:02:57,288 | INFO | ============================================================
+2026-07-14 13:02:57,289 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 13:02:57,289 | INFO | Workbook found.
+2026-07-14 13:02:57,289 | INFO | C:/Users/Admin/Desktop/data/DEATH TEMPLATE.xlsx
+2026-07-14 13:02:57,319 | INFO | Available worksheets: ['JAN', 'FEB', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPT', 'OCT', 'DEC', 'Drop Down']
+2026-07-14 13:02:57,349 | INFO | Detected Header Row: 0
+2026-07-14 13:02:57,394 | INFO | Workbook loaded successfully.
+2026-07-14 13:02:57,395 | INFO | Rows: 126
+2026-07-14 13:02:57,395 | INFO | Columns: 14
+2026-07-14 13:02:57,395 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Age \n(Indicate number eg 1,2,3)', 'Unit of age \n(Days, Months or Years)', 'Marital status', 'Place of death \n(Indicate the name of exact place of death)', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence(SUB-COUNTY)', 'Cause of death \n(Indicate the underlying cause of death)', 'Cause of death certification\n(state whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number']
+2026-07-14 13:02:57,395 | INFO | Standardized Columns:
+2026-07-14 13:02:57,396 | INFO | ['Name of Deceased(Indicate full names of the deceased)', 'ID Number(Indicate the ID number where applicable and available)', 'Date of Death(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Age(Indicate number eg 1,2,3)', 'Unit of age(Days, Months or Years)', 'Marital status', 'Place of death(Indicate the name of exact place of death)', 'Type of place(Indicate whether Home or Health Institution)', 'Place of usual residence(SUB-COUNTY)', 'Cause of death(Indicate the underlying cause of death)', 'Cause of death certification(state whether medically certified or lay reporting)', 'Date of Registration(dd-mm-yy)', 'Entry Number']
+2026-07-14 13:02:57,396 | INFO | Detected Dataset: Death
+2026-07-14 13:02:57,426 | INFO | Schema Valid: False
+2026-07-14 13:02:57,426 | WARNING | Missing Columns: ['residence', 'status']
+2026-07-14 13:02:57,426 | INFO | Extra Columns: ['Place of usual residence(SUB-COUNTY)']
+2026-07-14 13:02:57,426 | INFO | Rows: 126
+2026-07-14 13:02:57,426 | INFO | Columns: 14
+2026-07-14 13:02:57,426 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'Place of usual residence(SUB-COUNTY)', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number']
+2026-07-14 13:06:40,764 | INFO | ============================================================
+2026-07-14 13:06:40,765 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 13:06:40,766 | INFO | Workbook found.
+2026-07-14 13:06:40,766 | INFO | C:/Users/Admin/Desktop/data/BIRTH TEMPLATE 2026.xlsx
+2026-07-14 13:06:40,787 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'April', 'Sheet3', 'Sheet4', 'Sheet5', 'Sheet6', 'Sheet7', 'Sheet8', 'Sheet9', 'Sheet10']
+2026-07-14 13:06:40,815 | INFO | Detected Header Row: 1
+2026-07-14 13:06:40,888 | INFO | Workbook loaded successfully.
+2026-07-14 13:06:40,889 | INFO | Rows: 501
+2026-07-14 13:06:40,889 | INFO | Columns: 15
+2026-07-14 13:06:40,889 | INFO | ['Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight of birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-14 13:06:40,889 | INFO | Standardized Columns:
+2026-07-14 13:06:40,889 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Serial No.', 'Entry Number']
+2026-07-14 13:06:40,889 | INFO | Detected Dataset: Birth
+2026-07-14 13:06:40,930 | INFO | Schema Valid: True
+2026-07-14 13:06:40,930 | INFO | Extra Columns: ['Serial No.']
+2026-07-14 13:06:40,931 | INFO | Rows: 501
+2026-07-14 13:06:40,931 | INFO | Columns: 15
+2026-07-14 13:06:40,931 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'Serial No.', 'entry_number']
+2026-07-14 13:06:41,660 | INFO | Rule Engine completed.
+2026-07-14 13:06:41,661 | INFO | Records processed: 501
+2026-07-14 13:06:41,661 | INFO | Issues found: 4
+2026-07-14 13:28:01,976 | INFO | ============================================================
+2026-07-14 13:28:01,977 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 13:28:01,978 | INFO | Workbook found.
+2026-07-14 13:28:01,978 | INFO | C:/Users/Admin/Desktop/DESKTOP BERNARD/1. 2023 DATA/1. 2023 Birth templates/2. NORTH EASTERN BIRTH TEMPLATE.xlsx
+2026-07-14 13:28:02,153 | INFO | Available worksheets: ['Jan', 'March', 'Feb', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Drop Down', 'Sheet1']
+2026-07-14 13:28:02,368 | INFO | Detected Header Row: 0
+2026-07-14 13:28:02,764 | INFO | Workbook loaded successfully.
+2026-07-14 13:28:02,765 | INFO | Rows: 2073
+2026-07-14 13:28:02,765 | INFO | Columns: 18
+2026-07-14 13:28:02,765 | INFO | ['REGION', 'COUNTY', 'SUB-COUNTY', 'Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight of birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Unnamed: 17']
+2026-07-14 13:28:02,766 | INFO | Standardized Columns:
+2026-07-14 13:28:02,766 | INFO | ['REGION', 'COUNTY', 'SUB-COUNTY', 'Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'Unnamed: 17']
+2026-07-14 13:28:02,766 | INFO | Detected Dataset: Birth
+2026-07-14 13:28:02,827 | INFO | Schema Valid: True
+2026-07-14 13:28:02,827 | INFO | Extra Columns: ['REGION', 'COUNTY', 'SUB-COUNTY', 'Unnamed: 17']
+2026-07-14 13:28:02,827 | INFO | Rows: 2073
+2026-07-14 13:28:02,827 | INFO | Columns: 18
+2026-07-14 13:28:02,828 | INFO | ['REGION', 'COUNTY', 'SUB-COUNTY', 'date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'Unnamed: 17']
+2026-07-14 13:28:04,220 | INFO | Rule Engine completed.
+2026-07-14 13:28:04,221 | INFO | Records processed: 2073
+2026-07-14 13:28:04,221 | INFO | Issues found: 1593
+2026-07-14 13:31:25,364 | INFO | ============================================================
+2026-07-14 13:31:25,364 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 13:31:25,364 | INFO | Workbook found.
+2026-07-14 13:31:25,365 | INFO | C:/Users/Admin/Desktop/DESKTOP BERNARD/1. 2023 DATA/2023 CENTRAL FINAL/GATANGA/01 - January/Birth Template 2023.xlsx
+2026-07-14 13:31:25,382 | INFO | Available worksheets: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Drop Down', 'Sheet1']
+2026-07-14 13:31:25,404 | INFO | Detected Header Row: 1
+2026-07-14 13:31:25,583 | INFO | Workbook loaded successfully.
+2026-07-14 13:31:25,584 | INFO | Rows: 305
+2026-07-14 13:31:25,584 | INFO | Columns: 17
+2026-07-14 13:31:25,584 | INFO | ['Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight of birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:31:25,584 | INFO | Standardized Columns:
+2026-07-14 13:31:25,584 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:31:25,584 | INFO | Detected Dataset: Birth
+2026-07-14 13:31:25,615 | INFO | Schema Valid: True
+2026-07-14 13:31:25,616 | INFO | Extra Columns: ['T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:31:25,616 | INFO | Rows: 305
+2026-07-14 13:31:25,616 | INFO | Columns: 17
+2026-07-14 13:31:25,616 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:31:25,882 | INFO | Rule Engine completed.
+2026-07-14 13:31:25,883 | INFO | Records processed: 305
+2026-07-14 13:31:25,883 | INFO | Issues found: 54
+2026-07-14 13:42:31,091 | INFO | ============================================================
+2026-07-14 13:42:31,092 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 13:42:31,092 | INFO | Workbook found.
+2026-07-14 13:42:31,092 | INFO | C:/Users/Admin/Desktop/DESKTOP BERNARD/1. 2023 DATA/2023 CENTRAL FINAL/GATANGA/01 - January/Birth Template 2023.xlsx
+2026-07-14 13:42:31,108 | INFO | Available worksheets: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Drop Down', 'Sheet1']
+2026-07-14 13:42:31,134 | INFO | Detected Header Row: 1
+2026-07-14 13:42:31,312 | INFO | Workbook loaded successfully.
+2026-07-14 13:42:31,312 | INFO | Rows: 305
+2026-07-14 13:42:31,312 | INFO | Columns: 17
+2026-07-14 13:42:31,313 | INFO | ['Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight of birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:42:31,313 | INFO | Standardized Columns:
+2026-07-14 13:42:31,313 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:42:31,314 | INFO | Detected Dataset: Birth
+2026-07-14 13:42:31,348 | INFO | Schema Valid: True
+2026-07-14 13:42:31,349 | INFO | Extra Columns: ['T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:42:31,349 | INFO | Rows: 305
+2026-07-14 13:42:31,349 | INFO | Columns: 17
+2026-07-14 13:42:31,349 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:42:31,673 | INFO | Rule Engine completed.
+2026-07-14 13:42:31,674 | INFO | Records processed: 305
+2026-07-14 13:42:31,675 | INFO | Issues found: 54
+2026-07-14 13:45:48,971 | INFO | ============================================================
+2026-07-14 13:45:48,972 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 13:45:48,972 | INFO | Workbook found.
+2026-07-14 13:45:48,972 | INFO | C:/Users/Admin/Desktop/DESKTOP BERNARD/1. 2023 DATA/2023 CENTRAL FINAL/GATANGA/01 - January/Birth Template 2023.xlsx
+2026-07-14 13:45:48,991 | INFO | Available worksheets: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Drop Down', 'Sheet1']
+2026-07-14 13:45:49,017 | INFO | Detected Header Row: 1
+2026-07-14 13:45:49,199 | INFO | Workbook loaded successfully.
+2026-07-14 13:45:49,199 | INFO | Rows: 305
+2026-07-14 13:45:49,200 | INFO | Columns: 17
+2026-07-14 13:45:49,200 | INFO | ['Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight of birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:45:49,200 | INFO | Standardized Columns:
+2026-07-14 13:45:49,200 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:45:49,200 | INFO | Detected Dataset: Birth
+2026-07-14 13:45:49,232 | INFO | Schema Valid: True
+2026-07-14 13:45:49,232 | INFO | Extra Columns: ['T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:45:49,232 | INFO | Rows: 305
+2026-07-14 13:45:49,232 | INFO | Columns: 17
+2026-07-14 13:45:49,233 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:45:49,493 | INFO | Rule Engine completed.
+2026-07-14 13:45:49,493 | INFO | Records processed: 305
+2026-07-14 13:45:49,494 | INFO | Issues found: 54
+2026-07-14 13:50:33,029 | INFO | ============================================================
+2026-07-14 13:50:33,030 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 13:50:33,030 | INFO | Workbook found.
+2026-07-14 13:50:33,031 | INFO | C:/Users/Admin/Desktop/DESKTOP BERNARD/1. 2023 DATA/2023 CENTRAL FINAL/GATANGA/01 - January/Birth Template 2023.xlsx
+2026-07-14 13:50:33,050 | INFO | Available worksheets: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Drop Down', 'Sheet1']
+2026-07-14 13:50:33,074 | INFO | Detected Header Row: 1
+2026-07-14 13:50:33,250 | INFO | Workbook loaded successfully.
+2026-07-14 13:50:33,250 | INFO | Rows: 305
+2026-07-14 13:50:33,250 | INFO | Columns: 17
+2026-07-14 13:50:33,251 | INFO | ['Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight of birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:50:33,251 | INFO | Standardized Columns:
+2026-07-14 13:50:33,251 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:50:33,251 | INFO | Detected Dataset: Birth
+2026-07-14 13:56:46,625 | INFO | ============================================================
+2026-07-14 13:56:46,626 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 13:56:46,626 | INFO | Workbook found.
+2026-07-14 13:56:46,626 | INFO | C:/Users/Admin/Desktop/DESKTOP BERNARD/1. 2023 DATA/Central Region/GATANGA/01 - January/Birth Template 2023.xlsx
+2026-07-14 13:56:46,645 | INFO | Available worksheets: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Drop Down', 'Sheet1']
+2026-07-14 13:56:46,667 | INFO | Detected Header Row: 1
+2026-07-14 13:56:46,848 | INFO | Workbook loaded successfully.
+2026-07-14 13:56:46,848 | INFO | Rows: 305
+2026-07-14 13:56:46,849 | INFO | Columns: 17
+2026-07-14 13:56:46,849 | INFO | ['Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight of birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:56:46,850 | INFO | Standardized Columns:
+2026-07-14 13:56:46,851 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:56:46,851 | INFO | Detected Dataset: Birth
+2026-07-14 13:56:46,883 | INFO | Schema Valid: True
+2026-07-14 13:56:46,883 | INFO | Extra Columns: ['T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:56:46,883 | INFO | Rows: 305
+2026-07-14 13:56:46,883 | INFO | Columns: 17
+2026-07-14 13:56:46,883 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 13:56:47,145 | INFO | Rule Engine completed.
+2026-07-14 13:56:47,146 | INFO | Records processed: 305
+2026-07-14 13:56:47,147 | INFO | Issues found: 54
+2026-07-14 14:17:01,711 | INFO | ============================================================
+2026-07-14 14:17:01,711 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 14:17:01,712 | INFO | Workbook found.
+2026-07-14 14:17:01,712 | INFO | C:/Users/Admin/Desktop/DESKTOP BERNARD/1. 2023 DATA/Central Region/GATANGA/01 - January/Birth Template 2023.xlsx
+2026-07-14 14:17:01,730 | INFO | Available worksheets: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Drop Down', 'Sheet1']
+2026-07-14 14:17:01,763 | INFO | Detected Header Row: 1
+2026-07-14 14:17:01,945 | INFO | Workbook loaded successfully.
+2026-07-14 14:17:01,945 | INFO | Rows: 305
+2026-07-14 14:17:01,945 | INFO | Columns: 17
+2026-07-14 14:17:01,945 | INFO | ['Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight of birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:17:01,946 | INFO | Standardized Columns:
+2026-07-14 14:17:01,946 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:17:01,946 | INFO | Detected Dataset: Birth
+2026-07-14 14:17:01,990 | INFO | Schema Valid: True
+2026-07-14 14:17:01,991 | INFO | Extra Columns: ['T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:17:01,991 | INFO | Rows: 305
+2026-07-14 14:17:01,991 | INFO | Columns: 17
+2026-07-14 14:17:01,991 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:17:02,362 | INFO | Rule Engine completed.
+2026-07-14 14:17:02,362 | INFO | Records processed: 305
+2026-07-14 14:17:02,363 | INFO | Issues found: 54
+2026-07-14 14:19:52,875 | INFO | ============================================================
+2026-07-14 14:19:52,876 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 14:19:52,876 | INFO | Workbook found.
+2026-07-14 14:19:52,876 | INFO | C:/Users/Admin/Desktop/DESKTOP BERNARD/1. 2023 DATA/Central Region/GATANGA/01 - January/Birth Template 2023.xlsx
+2026-07-14 14:19:52,893 | INFO | Available worksheets: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Drop Down', 'Sheet1']
+2026-07-14 14:19:52,914 | INFO | Detected Header Row: 1
+2026-07-14 14:19:53,090 | INFO | Workbook loaded successfully.
+2026-07-14 14:19:53,090 | INFO | Rows: 305
+2026-07-14 14:19:53,090 | INFO | Columns: 17
+2026-07-14 14:19:53,090 | INFO | ['Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight of birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:19:53,091 | INFO | Standardized Columns:
+2026-07-14 14:19:53,091 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:19:53,091 | INFO | Detected Dataset: Birth
+2026-07-14 14:19:53,125 | INFO | Schema Valid: True
+2026-07-14 14:19:53,125 | INFO | Extra Columns: ['T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:19:53,126 | INFO | Rows: 305
+2026-07-14 14:19:53,126 | INFO | Columns: 17
+2026-07-14 14:19:53,126 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:19:53,382 | INFO | Rule Engine completed.
+2026-07-14 14:19:53,383 | INFO | Records processed: 305
+2026-07-14 14:19:53,383 | INFO | Issues found: 54
+2026-07-14 14:23:04,928 | INFO | ============================================================
+2026-07-14 14:23:04,928 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 14:23:04,929 | INFO | Workbook found.
+2026-07-14 14:23:04,929 | INFO | C:/Users/Admin/Desktop/DESKTOP BERNARD/1. 2023 DATA/Central Region/GATANGA/01 - January/Birth Template 2023.xlsx
+2026-07-14 14:23:04,950 | INFO | Available worksheets: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Drop Down', 'Sheet1']
+2026-07-14 14:23:04,973 | INFO | Detected Header Row: 1
+2026-07-14 14:23:05,145 | INFO | Workbook loaded successfully.
+2026-07-14 14:23:05,145 | INFO | Rows: 305
+2026-07-14 14:23:05,145 | INFO | Columns: 17
+2026-07-14 14:23:05,145 | INFO | ['Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight of birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:23:05,146 | INFO | Standardized Columns:
+2026-07-14 14:23:05,146 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:23:05,146 | INFO | Detected Dataset: Birth
+2026-07-14 14:23:05,213 | INFO | Schema Valid: True
+2026-07-14 14:23:05,213 | INFO | Extra Columns: ['T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:23:05,213 | INFO | Rows: 305
+2026-07-14 14:23:05,214 | INFO | Columns: 17
+2026-07-14 14:23:05,214 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:23:05,478 | INFO | Rule Engine completed.
+2026-07-14 14:23:05,479 | INFO | Records processed: 305
+2026-07-14 14:23:05,480 | INFO | Issues found: 54
+2026-07-14 14:28:52,672 | INFO | ============================================================
+2026-07-14 14:28:52,673 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 14:28:52,673 | INFO | Workbook found.
+2026-07-14 14:28:52,673 | INFO | C:/Users/Admin/Desktop/DESKTOP BERNARD/1. 2023 DATA/Central Region/GATANGA/01 - January/Birth Template 2023.xlsx
+2026-07-14 14:28:52,690 | INFO | Available worksheets: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Drop Down', 'Sheet1']
+2026-07-14 14:28:52,712 | INFO | Detected Header Row: 1
+2026-07-14 14:28:52,887 | INFO | Workbook loaded successfully.
+2026-07-14 14:28:52,887 | INFO | Rows: 305
+2026-07-14 14:28:52,887 | INFO | Columns: 17
+2026-07-14 14:28:52,887 | INFO | ['Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight of birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:28:52,887 | INFO | Standardized Columns:
+2026-07-14 14:28:52,887 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:28:52,888 | INFO | Detected Dataset: Birth
+2026-07-14 14:28:52,951 | INFO | Schema Valid: True
+2026-07-14 14:28:52,951 | INFO | Extra Columns: ['T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:28:52,952 | INFO | Rows: 305
+2026-07-14 14:28:52,952 | INFO | Columns: 17
+2026-07-14 14:28:52,952 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:28:53,225 | INFO | Rule Engine completed.
+2026-07-14 14:28:53,226 | INFO | Records processed: 305
+2026-07-14 14:28:53,226 | INFO | Issues found: 54
+2026-07-14 14:36:36,776 | INFO | ============================================================
+2026-07-14 14:36:36,776 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 14:36:36,777 | INFO | Workbook found.
+2026-07-14 14:36:36,777 | INFO | C:/Users/Admin/Desktop/DESKTOP BERNARD/1. 2023 DATA/Central Region/GATANGA/01 - January/Birth Template 2023.xlsx
+2026-07-14 14:36:36,797 | INFO | Available worksheets: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Drop Down', 'Sheet1']
+2026-07-14 14:36:36,820 | INFO | Detected Header Row: 1
+2026-07-14 14:36:37,004 | INFO | Workbook loaded successfully.
+2026-07-14 14:36:37,004 | INFO | Rows: 305
+2026-07-14 14:36:37,004 | INFO | Columns: 17
+2026-07-14 14:36:37,004 | INFO | ['Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight of birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:36:37,004 | INFO | Standardized Columns:
+2026-07-14 14:36:37,004 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:36:37,005 | INFO | Detected Dataset: Birth
+2026-07-14 14:36:37,060 | INFO | Schema Valid: True
+2026-07-14 14:36:37,061 | INFO | Extra Columns: ['T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:36:37,061 | INFO | Rows: 305
+2026-07-14 14:36:37,061 | INFO | Columns: 17
+2026-07-14 14:36:37,061 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 14:36:37,323 | INFO | Rule Engine completed.
+2026-07-14 14:36:37,323 | INFO | Records processed: 305
+2026-07-14 14:36:37,323 | INFO | Issues found: 54
+2026-07-14 15:01:54,666 | INFO | ============================================================
+2026-07-14 15:01:54,667 | INFO | Civil Registration Data Quality Engine Started
+2026-07-14 15:01:54,668 | INFO | Workbook found.
+2026-07-14 15:01:54,668 | INFO | C:/Users/Admin/Desktop/DESKTOP BERNARD/1. 2023 DATA/Central Region/GATANGA/01 - January/Birth Template 2023.xlsx
+2026-07-14 15:01:54,686 | INFO | Available worksheets: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Drop Down', 'Sheet1']
+2026-07-14 15:01:54,716 | INFO | Detected Header Row: 1
+2026-07-14 15:01:54,900 | INFO | Workbook loaded successfully.
+2026-07-14 15:01:54,900 | INFO | Rows: 305
+2026-07-14 15:01:54,900 | INFO | Columns: 17
+2026-07-14 15:01:54,901 | INFO | ['Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight of birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 15:01:54,901 | INFO | Standardized Columns:
+2026-07-14 15:01:54,901 | INFO | ['Date of Birth(dd-mm-yy)', 'Sex(Indicate whether male or female)', 'Nature of birth(Indicate whether born alive or dead)', 'Weight of birth(Kgs)', 'Place of birth(Indicate the name of facility or Sublocation of birth)', 'Type of place(Indicate whether Home or Health Facility)', 'Age of the mother(indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence(indicate the sub county where the mother residence)', 'Date of Registration(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 15:01:54,901 | INFO | Detected Dataset: Birth
+2026-07-14 15:01:54,942 | INFO | Schema Valid: True
+2026-07-14 15:01:54,942 | INFO | Extra Columns: ['T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 15:01:54,942 | INFO | Rows: 305
+2026-07-14 15:01:54,942 | INFO | Columns: 17
+2026-07-14 15:01:54,943 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-14 15:01:55,551 | INFO | Rule Engine completed.
+2026-07-14 15:01:55,551 | INFO | Records processed: 305
+2026-07-14 15:01:55,552 | INFO | Issues found: 54

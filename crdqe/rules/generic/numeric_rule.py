@@ -29,14 +29,18 @@ class NumericRule(BaseRule):
         minimum = self.field_schema.get("minimum")
         maximum = self.field_schema.get("maximum")
 
-        for index, value in df[self.FIELD].items():
+        for index, row in df.iterrows():
+
+            value = row[self.FIELD]
 
             if self.is_missing(value):
 
-                self.add_issue(
-                    index,
-                    self.FIELD,
-                    f"Missing {self.TITLE}"
+                self.add_issues(
+                    issues=self.issues,
+                    row=row,
+                    field=self.FIELD,
+                    value=value,
+                    message=f"Missing {self.TITLE}"
                 )
                 continue
 
@@ -46,30 +50,33 @@ class NumericRule(BaseRule):
 
             except Exception:
 
-                self.add_issue(
-                    index,
-                    self.FIELD,
-                    f"Invalid {self.TITLE}",
-                    value
+                self.add_issues(
+                    issues=self.issues,
+                    row=row,
+                    field=self.FIELD,
+                    value=value,
+                    message=f"Invalid {self.TITLE}"
                 )
                 continue
 
             if minimum is not None and number < minimum:
 
-                self.add_issue(
-                    index,
-                    self.FIELD,
-                    f"{self.TITLE} below minimum",
-                    value
+                self.add_issues(
+                    issues=self.issues,
+                    row=row,
+                    field=self.FIELD,
+                    value=value,
+                    message=f"Invalid {self.TITLE}"
                 )
 
             elif maximum is not None and number > maximum:
 
-                self.add_issue(
-                    index,
-                    self.FIELD,
-                    f"{self.FIELD} above maximum",
-                    value
+                self.add_issues(
+                    issues=self.issues,
+                    row=row,
+                    field=self.FIELD,
+                    value=value,
+                    message=f"Invalid {self.TITLE}"
                 )
 
             else:

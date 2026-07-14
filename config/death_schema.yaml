@@ -6,13 +6,21 @@ source_columns:
     datatype: string
     required: true
     aliases:
-      - "Name of Deceased(Indicate full names of the deceased)"
+      - Name of Deceased
+      - Name of deceased
+      - Deceased Name
+      - Full Name of Deceased
+      - Name of Deceased (Indicate full names of the deceased)
 
   id_number:
     datatype: string
     required: true
     aliases:
-      - "ID Number(Indicate the ID number where applicable and available)"
+      - ID Number
+      - ID Number(Indicate the ID number where applicable and available)
+      - ID No
+      - Identification Number
+      - National ID
 
   date_of_death:
     datatype: date
@@ -21,13 +29,18 @@ source_columns:
       - "Date of Death(dd-mm-yy)"
 
   sex:
+    aliases:
+      - "Sex"
+      - "Sex (Indicate whether male or female)"
+      - Gender
     datatype: string
     required: true
-    aliases:
-      - "sex(indicate whether male or female)"
+    output: true
     valid_values:
-      male: "male"
-      female: "female"
+      male: Male
+      m: Male
+      female: Female
+      f: Female
 
   age:
     datatype: integer
@@ -36,12 +49,15 @@ source_columns:
     maximum: 130
     aliases:
       - "Age(indicate number eg 1,2,3,)"
+      - Age
 
   age_unit:
     datatype: string
     required: true
     aliases:
       - "unit of age(days,months or years)"
+      - Unit of age
+      - Age Unit
     valid_values:
       days: Days
       months: Months
@@ -52,6 +68,8 @@ source_columns:
     required: true
     aliases:
       - "Place of death(Indicate the name of exact place of death)"
+      - Place of death
+      - Place of Death
 
   marital_status:
     datatype: string
@@ -69,7 +87,9 @@ source_columns:
     datatype: string
     required: true
     aliases:
-      - "Type of place(Indicate whether Home or Health Institution)"
+      - Type of place(Indicate whether Home or Health Institution)
+      - Type of place
+      - Place Type
     valid_values:
       home: "Home"
       health institution: "Health Institution"
@@ -78,19 +98,23 @@ source_columns:
     datatype: string
     required: true
     aliases:
-      - "Place of usual residence"
+      - Place of usual residence
+      - Place of usual residence(SUB-COUNTY)
 
   cause_of_death:
     datatype: string
     required: true
     aliases:
-      - "Cause of death(Indicate the underlying cause of death)"
+      - Cause of death(Indicate the underlying cause of death)
+      - Cause of death
 
   death_certification:
     datatype: string
     required: true
     aliases:
-      - "CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)"
+      - CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)
+      - Cause of death certification
+      - Death Certification
     valid_values:
       medically certified: "Medically Certified"
       lay reporting: "Lay Reporting"
@@ -112,6 +136,11 @@ source_columns:
     required: true
     aliases:
       - "Status"
+      - T.O.R
+      - tor
+      - TOR
+      - T O R
+      - Time of Registration
     valid_values:
       current: "Current"
       late: "late"

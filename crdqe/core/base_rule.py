@@ -10,8 +10,6 @@ Base class for all validation and cleaning rules.
 ===========================================================
 """
 
-from operator import index
-
 import pandas as pd
 
 
@@ -22,20 +20,28 @@ class BaseRule:
         self.schema = schema
         self.issues = []
 
-    def add_issue(self, row, field, issue, value=None, expected=None, severity=None, recommendation=None):
+    def add_issues(
+        self,
+        issues,
+        row,
+        field,
+        value,
+        message,
+        severity="Error"
+    ):
+        """
+        Add a standardized issue.
+        """
 
-        entry_number = row + 1
-        self.issues.append({
-           "entry_number": entry_number,
-           "row": row + 2,           # Excel row number
-           "field": field,
-           "rule": self.__class__.__name__,
-           "issue": issue,
-           "current_value": value,
-           "expected": expected,
-           "severity": severity,
-           "recommendation": recommendation
-        })
+        record = {
+            "entry_number": row.get("entry_number", None),
+            "field": field,
+            "value": value,
+            "issue": message,
+            "severity": severity
+        }
+
+        issues.append(record)
 
     def is_missing(self, value):
 
@@ -44,7 +50,6 @@ class BaseRule:
 
         if str(value).strip() == "":
             return True
-
         return False
     def field_schema(self):
         return self.schema["source_columns"].get(self.FIELD, {})
