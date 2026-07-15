@@ -7,28 +7,28 @@ class DateConsistencyRule(CrossFieldRule):
 
     def validate(self, index, row):
 
-        death = pd.to_datetime(
+        event_date = pd.to_datetime(
             row["date_of_death"],
-            errors="coerce",
-            dayfirst=True
+            dayfirst=True,
+            errors="coerce"
         )
 
-        registration = pd.to_datetime(
+        registration_date = pd.to_datetime(
             row["registration_date"],
-            errors="coerce",
-            dayfirst=True
+            dayfirst=True,
+            errors="coerce"
         )
 
-        if pd.isna(death) or pd.isna(registration):
+        if pd.isna(event_date) or pd.isna(registration_date):
             return
 
-        if registration < death:
+        if registration_date < event_date:
 
             self.add_issues(
                 issues=self.issues,
                 row=row,
                 field="registration_date",
-                value=registration,
+                value=registration_date,
                 message="Registration date before death date"
             )
             

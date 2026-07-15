@@ -1,15 +1,15 @@
 """
 ===========================================================
-Writes output Excel files.
+Writes output Excel report.
 ===========================================================
 """
 
 from pathlib import Path
 
-from openpyxl import load_workbook
-from openpyxl.styles import Font, PatternFill, Border, Side, Alignment
-from openpyxl.utils import get_column_letter
 import pandas as pd
+from openpyxl import load_workbook
+from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
+from openpyxl.utils import get_column_letter
 
 
 class ExcelWriter:
@@ -18,41 +18,36 @@ class ExcelWriter:
 
         output = Path(settings["output"]["folder"])
 
-        self.cleaned_path = (
+        self.report_path = (
             output /
-            settings["output"]["cleaned_folder"] /
-            "cleaned_data.xlsx"
+            "CRDQE Validation Report.xlsx"
         )
 
-        self.flags_path = (
-            output /
-            settings["output"]["flags_folder"] /
-            "flag_report.xlsx"
-        )
-
-        self.summary_path = (
-            output /
-            settings["output"]["summaries_folder"] /
-            "summary_report.xlsx"
-        )
+    # -----------------------------------------------------
+    # Prepare cleaned dataframe
+    # -----------------------------------------------------
 
     def write_cleaned(self, dataframe):
 
         df = dataframe.copy()
 
         date_columns = [
-            column
-            for column in df.columns
-            if "date" in column.lower()
+            c for c in df.columns
+            if "date" in c.lower()
         ]
 
         for col in date_columns:
 
             df[col] = (
-                pd.to_datetime(df[col], errors="coerce")
+                pd.to_datetime(
+                    df[col],
+                    errors="coerce",
+                    dayfirst=True
+                )
                 .dt.strftime("%d/%m/%Y")
                 .fillna("")
             )
+
         if "entry_number" in df.columns:
 
             df["entry_number"] = (
@@ -62,127 +57,188 @@ class ExcelWriter:
                 )
                 .astype("Int64")
             )
-        print(df.columns.tolist())
 
-        print(df.head())
-        df.to_excel(
-            self.cleaned_path,
-            index=False
-        )
+        return df
 
-        self._format(self.cleaned_path)
+    # -----------------------------------------------------
+    # Prepare Flag dataframe
+    # -----------------------------------------------------
 
     def write_flags(self, dataframe):
 
-        df = dataframe.copy()
+        return dataframe.copy()
 
-        df.to_excel(
-            self.flags_path,
-            index=False
-        )
+    # -----------------------------------------------------
+    # Write complete report
+    # -----------------------------------------------------
 
-        self._format(self.flags_path)
+    def write_report(
+        self,
+        cleaned_df,
+        flags_df,
+        report
+    ):
 
-    def write_summary(self, report):
+        cleaned_df = self.write_cleaned(cleaned_df)
+        flags_df = self.write_flags(flags_df)
 
-        metrics_df = pd.DataFrame({
+        summary_df = pd.DataFrame({
+
             "Metric": [
+
                 "Rows",
+
                 "Columns",
+
                 "Issues Found",
+
                 "Quality Score (%)",
+
                 "Current Registrations",
-                "Late Registrations"
+
+                "Late Registrations",
+                "Health Facility Date Corrections"
+
             ],
+
             "Value": [
+
                 report["rows"],
+
                 report["columns"],
+
                 report["issues"],
+
                 report["quality_score"],
+
                 report.get("current_cases", 0),
-                report.get("late_cases", 0)
+
+                report.get("late_cases", 0),
+                report.get("swapped_dates", 0)
             ]
+
         })
 
-        field_df = pd.DataFrame(
+        issues_df = pd.DataFrame(
+
             list(report["issues_by_field"].items()),
+
             columns=[
+
                 "Field",
+
                 "Issues"
+
             ]
+
         )
 
         with pd.ExcelWriter(
-            self.summary_path,
+            self.report_path,
             engine="openpyxl"
         ) as writer:
 
-            metrics_df.to_excel(
+            summary_df.to_excel(
                 writer,
-                sheet_name="Summary",
+                sheet_name="Validation Summary",
                 index=False,
                 startrow=0
             )
 
-            field_df.to_excel(
+            issues_df.to_excel(
                 writer,
-                sheet_name="Summary",
-                index=False,
-                startrow=10
+                sheet_name="Validation Summary",
+                startrow=len(summary_df) + 3,
+                index=False
             )
 
-        self._format(self.summary_path)
+            cleaned_df.to_excel(
+                writer,
+                sheet_name="Cleaned Data",
+                index=False
+            )
+
+            flags_df.to_excel(
+                writer,
+                sheet_name="Flag Report",
+                index=False
+            )
+
+        # VERY IMPORTANT
+        # Workbook must be closed before formatting
+
+        self._format(self.report_path)
+
+    # -----------------------------------------------------
+    # Formatting
+    # -----------------------------------------------------
 
     def _format(self, path):
 
         workbook = load_workbook(path)
 
-        worksheet = workbook.active
-
         header_fill = PatternFill(
+
             fill_type="solid",
+
             fgColor="1F4E78"
+
         )
 
         header_font = Font(
+
             bold=True,
+
             color="FFFFFF"
+
         )
 
         thin = Side(style="thin")
 
         border = Border(
+
             left=thin,
+
             right=thin,
+
             top=thin,
+
             bottom=thin
+
         )
 
-        for cell in worksheet[1]:
+        # Format every worksheet
 
-            cell.fill = header_fill
-            cell.font = header_font
-            cell.border = border
-            cell.alignment = Alignment(
-                horizontal="center",
-                vertical="center"
-            )
+        for worksheet in workbook.worksheets:
 
-        worksheet.freeze_panes = "A2"
+            for cell in worksheet[1]:
 
-        worksheet.auto_filter.ref = worksheet.dimensions
+                cell.fill = header_fill
+                cell.font = header_font
+                cell.border = border
+                cell.alignment = Alignment(
+                    horizontal="center",
+                    vertical="center"
+                )
 
-        for column in worksheet.columns:
+            worksheet.freeze_panes = "A2"
 
-            width = max(
-                len(str(cell.value))
-                if cell.value is not None
-                else 0
-                for cell in column
-            )
+            worksheet.auto_filter.ref = worksheet.dimensions
 
-            worksheet.column_dimensions[
-                get_column_letter(column[0].column)
-            ].width = min(width + 4, 50)
+            for column in worksheet.columns:
+
+                width = max(
+
+                    len(str(cell.value))
+                    if cell.value is not None
+                    else 0
+
+                    for cell in column
+
+                )
+
+                worksheet.column_dimensions[
+                    get_column_letter(column[0].column)
+                ].width = min(width + 4, 50)
 
         workbook.save(path)

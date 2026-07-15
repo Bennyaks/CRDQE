@@ -29,6 +29,15 @@ class ColumnStandardizer:
 
             # Remove line breaks
             column = column.replace("\n", " ")
+            column = column.lower()
+
+            column = column.replace(".", "")
+
+            column = column.replace("_", " ")
+
+            column = re.sub(r"\s+", " ", column)
+
+            column = column.strip()
 
             # Collapse multiple spaces
             column = re.sub(r"\s+", " ", column)

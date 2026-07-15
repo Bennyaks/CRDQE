@@ -1,4 +1,5 @@
 from pathlib import Path
+import yaml
 
 from crdqe.core.config_manager import ConfigManager
 from crdqe.core.logger import Logger
@@ -10,6 +11,7 @@ from crdqe.core.schema_mapper import SchemaMapper
 from crdqe.core.dataset_detector import DatasetDetector
 from crdqe.core.schema_validator import SchemaValidator
 from crdqe.core.datatype_processor import DataTypeProcessor
+from crdqe.core.status_processor import StatusProcessor
 from crdqe.core.rule_loader import RuleLoader
 from crdqe.core.rule_engine import RuleEngine
 from crdqe.core.issue_collector import IssueCollector
@@ -17,7 +19,6 @@ from crdqe.core.excel_writer import ExcelWriter
 from crdqe.reporting.summary_report import SummaryReport
 from crdqe.reports.issue_statistics import IssueStatistics
 from crdqe.core.placeholder_processor import PlaceholderProcessor
-# from crdqe.core.schema_detector import SchemaDetector
 
 
 class CRDQEEngine:
@@ -161,20 +162,24 @@ class CRDQEEngine:
                 f"Unknown dataset: {self.dataset}"
             )
 
-        self.mapper = SchemaMapper(schema_file)
-        self.schema = self.mapper.get_schema()
+        # ---------------------------------------
+        # Load Schema
+        # ---------------------------------------
+
+        with open(schema_file, "r", encoding="utf-8") as file:
+            self.schema = yaml.safe_load(file)
+
+        # ---------------------------------------
+        # Create Mapper
+        # ---------------------------------------
+
+        self.mapper = SchemaMapper(self.schema)
+
+        # ---------------------------------------
+        # Map Columns
+        # ---------------------------------------
 
         self.df = self.mapper.map_columns(self.df)
-
-        # detector = SchemaDetector(self.schema)
-
-        # mapping, confidence = detector.detect(self.df.columns)
-
-        # self.log("")
-        # self.log("Detected Schema")
-
-        # for column, field in mapping.items():
-            # self.log(f"{column}  -->  {field} ({confidence[field]}%)")
         self.df = PlaceholderProcessor.process(
         self.df,
         self.schema
@@ -227,6 +232,20 @@ class CRDQEEngine:
         self.logger.info(
             self.df.columns.tolist()
         )
+        if self.dataset == "Birth":
+
+            event_column = "date_of_birth"
+
+        else:
+
+            event_column = "date_of_death"
+
+        self.df, status_issues, swapped_rows = (
+            StatusProcessor.validate_status(
+                self.df,
+                event_column
+            )
+        )
 
         # -------------------------------------------------------
         # Load rules
@@ -262,47 +281,69 @@ class CRDQEEngine:
             f"Issues found: {len(self.issues_df)}"
         )
 
-        # -------------------------------------------------------
+       # -------------------------------------------------------
         # Collect Issues
         # -------------------------------------------------------
 
         self.collector = IssueCollector()
 
+        # Rule Engine issues
         self.collector.add(self.issues_df)
 
+        # Status validation issues
+        self.collector.add(status_issues)
+
+        # -------------------------------------------------------
+        # Add Status Validation Issues
+        # -------------------------------------------------------
+
+        if status_issues:
+
+            import pandas as pd
+
+            self.collector.add(
+                pd.DataFrame(status_issues)
+            )
         self.issues_df = self.collector.to_dataframe()
+        if swapped_rows:
 
-        # -------------------------------------------------------
-        # Write Excel Reports
-        # -------------------------------------------------------
+            callback(
+                f"✓ Automatically corrected {len(swapped_rows)} Health Facility Late registrations "
+                "by swapping Event Date and Registration Date."
+            )
 
-        self.writer = ExcelWriter(
-            self.settings
-        )
-
-        self.writer.write_cleaned(
-            self.df
-        )
-
-        self.writer.write_flags(
-            self.issues_df
-        )
+        self.issues_df = self.collector.to_dataframe()
 
         # -------------------------------------------------------
         # Generate Summary
         # -------------------------------------------------------
 
         summary = SummaryReport(
-        self.df,
-        self.issues_df
+            self.df,
+            self.issues_df
         )
 
         report = summary.generate()
+        report["swapped_dates"] = len(swapped_rows)
 
-        self.writer.write_summary(report)
+        # -------------------------------------------------------
+        # Write Final Excel Report
+        # -------------------------------------------------------
+
+        self.writer = ExcelWriter(
+            self.settings
+        )
+
+        self.writer.write_report(
+            self.df,
+            self.issues_df,
+            report
+        )
+
         self.dataset = dataset
         self.records = len(self.df)
         self.issue_count = len(self.issues_df)
+
         return {
             "cleaned": self.df,
             "issues": self.issues_df,

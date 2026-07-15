@@ -17,8 +17,13 @@ class IssueCollector:
         if issues is None:
             return
 
-        if issues.empty:
-            return
+        if isinstance(issues, list):
+            if not issues:
+                return
+            issues = pd.DataFrame(issues)
+        else:
+            if issues.empty:
+                return
 
         if self.issues.empty:
             self.issues = issues.copy()
