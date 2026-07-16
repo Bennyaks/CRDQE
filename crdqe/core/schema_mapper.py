@@ -19,6 +19,7 @@ Supports both:
 from difflib import SequenceMatcher
 
 from crdqe.utils.column_standardizer import ColumnStandardizer
+from crdqe.core.value_matcher import ValueMatcher
 
 
 def normalize(text):
@@ -64,10 +65,11 @@ class SchemaMapper:
 
         print("\n========== LOADED SCHEMA ==========")
 
-        for field in self.schema:
-            print(field)
+        # for field in self.schema:
+            # print(field)
 
-        print("===================================")
+        # print("===================================")
+        self.value_matcher = ValueMatcher(schema)
     # ===========================================================
     # Column Similarity
     # ===========================================================
@@ -98,9 +100,7 @@ class SchemaMapper:
             best_score = 0
 
             for field, details in self.schema.items():
-                print("\nFIELD:", field)
-                print("TYPE:", type(details))
-                print("VALUE:", details)
+            
 
                 aliases = details.get("aliases", [])
 
@@ -207,3 +207,4 @@ def value_match(self, dataframe, used_columns):
     mapping.update(value_mapping)
 
     return mapping
+

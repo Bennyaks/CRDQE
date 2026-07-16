@@ -8,7 +8,7 @@ Main dashboard shown on application startup.
 
 from tkinter import ttk
 
-from crdqe.gui.widgets import SectionFrame, InfoCard, PrimaryButton, SecondaryButton
+from crdqe.gui.widgets import SectionFrame, InfoCard
 
 
 class Dashboard(ttk.Frame):
@@ -37,8 +37,6 @@ class Dashboard(ttk.Frame):
 
         self._statistics()
 
-        self._quick_actions()
-
     # ----------------------------------------------------
 
     def _statistics(self):
@@ -62,36 +60,6 @@ class Dashboard(ttk.Frame):
         self.issues.grid(row=0, column=1, padx=8, sticky="ew")
         self.current.grid(row=0, column=2, padx=8, sticky="ew")
         self.late.grid(row=0, column=3, padx=8, sticky="ew")
-
-    # ----------------------------------------------------
-
-    def _quick_actions(self):
-
-        section = SectionFrame(self, "Quick Actions")
-
-        section.pack(fill="x")
-
-        buttons = ttk.Frame(section)
-
-        buttons.pack(pady=10)
-
-        PrimaryButton(
-            buttons,
-            "Open Workbook",
-            self.open_callback
-        ).grid(row=0, column=0, padx=10)
-
-        PrimaryButton(
-            buttons,
-            "Run Validation",
-            self.validate_callback
-        ).grid(row=0, column=1, padx=10)
-
-        SecondaryButton(
-            buttons,
-            "Open Report",
-            self.report_callback
-        ).grid(row=0, column=2, padx=10)
 
     # ----------------------------------------------------
 

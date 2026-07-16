@@ -1,4 +1,5 @@
 from pathlib import Path
+import pandas as pd
 import yaml
 
 from crdqe.core.config_manager import ConfigManager
@@ -42,10 +43,12 @@ class CRDQEEngine:
         self,
         workbook_path,
         worksheet,
+        registration_month=None,
         callback=None
     ):
         self.log(f"Workbook received : {workbook_path}")
         self.log(f"Worksheet received: {worksheet}")
+        self.registration_month = registration_month
 
         self.callback = callback
         self.workbook_path = Path(workbook_path)
@@ -195,6 +198,37 @@ class CRDQEEngine:
         )
 
         # -------------------------------------------------------
+        # Birth Weight: convert grams to kilograms
+        # -------------------------------------------------------
+        # No child is born weighing more than 100 (kg), so any
+        # value above 100 is assumed to be in grams and is
+        # converted: weight / 1000.
+        # Matches: =IF(CELL REF>100, CELL REF/1000, CELL REF)
+
+        if self.dataset == "Birth":
+
+            weight_column = next(
+                (c for c in self.df.columns if "weight" in c.lower()),
+                None
+            )
+
+            if weight_column:
+
+                self.df[weight_column] = pd.to_numeric(
+                    self.df[weight_column],
+                    errors="coerce"
+                )
+
+                self.df[weight_column] = self.df[weight_column].apply(
+                    lambda w: w / 1000 if pd.notna(w) and w > 100 else w
+                )
+
+                self.logger.info(
+                    f"Converted values in '{weight_column}' above 100 "
+                    "from grams to kilograms."
+                )
+
+        # -------------------------------------------------------
         # Validate schema
         # -------------------------------------------------------
 
@@ -204,6 +238,13 @@ class CRDQEEngine:
             self.df,
             self.schema
         )
+        if not result["valid"]:
+
+            missing = ", ".join(result["missing"])
+
+            raise ValueError(
+                f"Required columns are missing: {missing}"
+            )
 
         self.logger.info(
             f"Schema Valid: {result['valid']}"
@@ -243,9 +284,14 @@ class CRDQEEngine:
         self.df, status_issues, swapped_rows = (
             StatusProcessor.validate_status(
                 self.df,
-                event_column
+                event_column,
+                registration_month=self.registration_month
             )
         )
+        mch_count = (
+            (self.df["place_of_death"] == "Home") &
+            (self.df["death_certification"] == "Health Facility")
+        ).sum()
 
         # -------------------------------------------------------
         # Load rules
@@ -260,11 +306,11 @@ class CRDQEEngine:
         # Run Rule Engine
         # -------------------------------------------------------
 
-        self.engine = RuleEngine(
+        self.rule_engine = RuleEngine(
             self.rules
         )
 
-        self.df, self.issues_df = self.engine.run(
+        self.df, self.issues_df = self.rule_engine.run(
             self.df
         )
 
@@ -290,16 +336,10 @@ class CRDQEEngine:
         # Rule Engine issues
         self.collector.add(self.issues_df)
 
-        # Status validation issues
-        self.collector.add(status_issues)
-
-        # -------------------------------------------------------
-        # Add Status Validation Issues
-        # -------------------------------------------------------
-
+        # Status validation issues (must be converted to a DataFrame
+        # before being handed to the collector -- adding the raw list
+        # here caused "'list' object has no attribute 'empty'")
         if status_issues:
-
-            import pandas as pd
 
             self.collector.add(
                 pd.DataFrame(status_issues)
@@ -307,10 +347,12 @@ class CRDQEEngine:
         self.issues_df = self.collector.to_dataframe()
         if swapped_rows:
 
-            callback(
-                f"✓ Automatically corrected {len(swapped_rows)} Health Facility Late registrations "
-                "by swapping Event Date and Registration Date."
-            )
+            if callback:
+                callback(
+                    f"✓ Automatically corrected {len(swapped_rows)} "
+                    "Health Facility Late registrations by swapping "
+                    "Event Date and Registration Date."
+                )
 
         self.issues_df = self.collector.to_dataframe()
 
@@ -345,7 +387,11 @@ class CRDQEEngine:
         self.issue_count = len(self.issues_df)
 
         return {
+            "records": len(self.df),
+            "issues": len(self.issues_df),
+            "current": report.get("current_cases", 0),
+            "late": report.get("late_cases", 0),
+            "summary": report,
             "cleaned": self.df,
-            "issues": self.issues_df,
-            "summary": report
+            "issues_df": self.issues_df,
         }

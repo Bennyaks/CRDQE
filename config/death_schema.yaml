@@ -88,6 +88,7 @@ source_columns:
     required: true
     aliases:
       - Type of place(Indicate whether Home or Health Institution)
+      - "Type of place(Indicate whether Home or Health Institution)"
       - Type of place
       - Place Type
     valid_values:
@@ -113,6 +114,7 @@ source_columns:
     required: true
     aliases:
       - CAUSE OF DEATH CERTIFICATION(State whether medically certified or lay reporting)
+      - Cause of death certification(state whether medically certified or lay reporting)
       - Cause of death certification
       - Death Certification
     valid_values:

@@ -42,6 +42,8 @@ source_columns:
 
     aliases:
       - "Weight of birth(Kgs)"
+      - "Weight(Indicate child's weight in Kilograms)"
+      - "Weight"
     minimum: 0.3
     maximum: 8.0
     output: true
@@ -62,6 +64,7 @@ source_columns:
     aliases:
       - "Type of place"
       - "Type of place(Indicate whether Home or Health Facility)"
+      - "Type of place(Indicate whether Home or Health Institution)"
 
     valid_values:
       home: Home

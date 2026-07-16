@@ -50,14 +50,14 @@ class Toolbar(ttk.Frame):
             padx=5
         )
 
-        self.report_button = ttk.Button(
+        self.output_button = ttk.Button(
             self,
-            text="📊 Open Report",
-            command=self.parent.open_report,
+            text="📂 Open Output Folder",
+            command=self.parent.open_output_folder,
             width=18
         )
 
-        self.report_button.grid(
+        self.output_button.grid(
             row=0,
             column=2,
             padx=5

@@ -26,8 +26,6 @@ class SectionFrame(ttk.LabelFrame):
             padding=10
         )
 
-        self.pack_propagate(False)
-
 
 # ==========================================================
 # Label + Entry
