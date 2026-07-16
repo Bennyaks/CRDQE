@@ -1,0 +1,85 @@
+CRDQE Proprietary Software License
+
+Civil Registration Data Quality Engine (CRDQE)
+
+Copyright (c) 2026 Benard Mandera
+
+All Rights Reserved.
+
+1. Ownership
+
+The Civil Registration Data Quality Engine (CRDQE), including its source code, documentation, algorithms, user interface, reports, configuration files, and associated materials, is the intellectual property of Benard Mandera.
+
+2. Grant of License
+
+Permission is granted to use the software solely for:
+
+Civil registration data validation
+Research
+Educational purposes
+Government and institutional evaluation
+
+This license does not transfer ownership of the software.
+
+3. Restrictions
+
+Without prior written permission from the copyright holder, you may not:
+
+Copy or redistribute the source code.
+Modify or create derivative works.
+Reverse engineer the software.
+Sell, lease, sublicense, or commercially exploit the software.
+Remove or alter copyright notices.
+Publish the source code online.
+4. Commercial Use
+
+Commercial use of CRDQE is prohibited without written authorization from the copyright holder.
+
+Organizations wishing to deploy CRDQE commercially must obtain a separate commercial license.
+
+5. Attribution
+
+Any publications or reports generated using CRDQE should acknowledge the software as:
+
+Civil Registration Data Quality Engine (CRDQE), developed by Benard Mandera.
+
+6. Warranty Disclaimer
+
+This software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to:
+
+merchantability,
+fitness for a particular purpose,
+non-infringement,
+accuracy of results.
+
+The entire risk arising out of the use of the software remains with the user.
+
+7. Limitation of Liability
+
+Under no circumstances shall the author be liable for any claim, damages, data loss, or other liability arising from the use or inability to use this software.
+
+8. Support
+
+Support, updates, and maintenance are provided solely at the discretion of the copyright holder.
+
+9. Contact
+
+For licensing inquiries, collaboration, or commercial use, contact:
+
+Benard Mandera
+
+GitHub: https://github.com/Bennyaks
+
+Copyright Notice
+
+Every source file should include the following header:
+
+"""
+Civil Registration Data Quality Engine (CRDQE)
+
+Copyright (c) 2026 Benard Mandera.
+All Rights Reserved.
+
+Unauthorized copying, modification, distribution,
+or commercial use of this software is prohibited.
+"""
