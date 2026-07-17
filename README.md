@@ -3,20 +3,27 @@
 </p>
 
 <h1 align="center">
-Civil Registration Data Quality Engine
+Civil Registration Data Quality Engine (CRDQE)
 </h1>
 
 <p align="center">
 Automated Birth & Death Registration Data Quality Validation
 </p>
 
-# Civil Registration Data Quality Engine (CRDQE)
-
-> A professional desktop application for automated validation, cleaning, and quality assessment of Civil Registration and Vital Statistics (CRVS) data.
-
 <p align="center">
 <img src="assets/banner.png">
 </p>
+
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.13-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)
+![Status](https://img.shields.io/badge/Status-Stable-success.svg)
+
+</p>
+
+> A professional desktop application for automated validation, cleaning, and quality assessment of Civil Registration and Vital Statistics (CRVS) data.
 
 ---
 
@@ -30,6 +37,12 @@ The application is designed for government agencies, health departments, statist
 
 ---
 
+## Screenshots
+
+![Dashboard](assets/dashboard.png)
+
+---
+
 # Key Features
 
 ### Intelligent Dataset Detection
@@ -39,7 +52,7 @@ Automatically detects whether the uploaded workbook contains:
 - Birth Registration Data
 - Death Registration Data
 
-No manual configuration required.
+Detection scores column headers (and, when that's inconclusive, actual cell values) against both schemas — no manual configuration required.
 
 ---
 
@@ -47,18 +60,18 @@ No manual configuration required.
 
 CRDQE automatically maps spreadsheet columns to standardized fields using:
 
-- Exact Matching
+- Alias Matching
 - Fuzzy Matching
 - Value-based Detection
 - Placeholder Replacement
 
-This allows the application to work with spreadsheets that contain inconsistent column names.
+This allows the application to work with spreadsheets that contain inconsistent column names across different offices and templates.
 
 ---
 
 ### Rule-Based Validation Engine
 
-The validation engine performs hundreds of automated checks including:
+The validation engine performs a wide range of automated checks including:
 
 - Missing values
 - Invalid dates
@@ -70,7 +83,13 @@ The validation engine performs hundreds of automated checks including:
 - Mandatory field validation
 - Formatting validation
 
-Every issue is recorded with detailed information for later review.
+Every issue is recorded with an entry number, field, and plain-language description for easy review.
+
+---
+
+### Smart Registration Status Correction
+
+Registration status (Current/Late) is calculated from event and registration dates. Since a Health Facility registration should never plausibly be Late, CRDQE tests an alternate day/month interpretation of the dates — a common data-entry ambiguity between `dd/mm/yyyy` and `mm/dd/yyyy` formats — before flagging a record for manual review.
 
 ---
 
@@ -84,7 +103,7 @@ Users can choose which worksheet to validate without modifying the original work
 
 ### Registration Month Selection
 
-Allows validation using the selected registration month for month-specific rules and reporting.
+Allows validation using the selected registration month for month-specific consistency checks and reporting.
 
 ---
 
@@ -115,7 +134,7 @@ Built using Tkinter with a modular architecture featuring:
 The interface is designed for simplicity while remaining scalable for future enhancements.
 
 ---
-![Dashboard](assets/dashboard.png)
+
 # Project Structure
 
 ```
@@ -123,24 +142,26 @@ CRDQE/
 │
 ├── config/
 │   ├── settings.yaml
-│   └── schemas/
+│   ├── birth_schema.yaml
+│   └── death_schema.yaml
 │
 ├── data/
-│   ├── input/
-│   ├── output/
-│   │   ├── cleaned/
-│   │   ├── flags/
-│   │   ├── summaries/
-│   │   └── logs/
+│   └── output/
+│       ├── flags/
+│       ├── logs/
+│       └── summaries/
 │
 ├── crdqe/
-│   ├── engine/
-│   ├── gui/
-│   ├── validation/
-│   ├── reporting/
-│   ├── io/
-│   ├── utils/
-│   └── core/
+│   ├── core/          # Engine, schema mapping, dataset detection, rule engine
+│   ├── gui/            # Tkinter application (main window, sidebar, dashboard, etc.)
+│   ├── rules/          # Per-dataset, per-field validation rule classes
+│   ├── reporting/       # Summary report generation
+│   └── utils/          # Shared helpers (paths, column standardization, etc.)
+│
+├── reference/           # Reference lookup data (counties, countries, facilities)
+├── docs/                # Architecture, business rules, developer/user guides
+├── tests/
+├── assets/              # Logo, splash screen, and icon assets
 │
 ├── run_gui.py
 ├── requirements.txt
@@ -193,7 +214,7 @@ Display Validation Summary
 Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/CRDQE.git
+git clone https://github.com/Bennyaks/CRDQE.git
 ```
 
 Move into the project directory
@@ -306,7 +327,7 @@ This project is licensed under the MIT License.
 
 # Author
 
-**Benard Mandera**
+**Benard Mandera Nyakoni**
 
 Bachelor of Science in Data Science
 
