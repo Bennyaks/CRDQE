@@ -88,12 +88,18 @@ class StatusProcessor:
     # ===========================================================
     # Validate Registration Status
     # ===========================================================
+    
 
     @staticmethod
     def validate_status(df, event_column, registration_month=None):
 
         issues = []
         corrections = []
+
+        has_status_column = "status" in df.columns
+
+        if not has_status_column:
+            df["status"] = ""
 
         target_month_number = None
 
@@ -137,18 +143,20 @@ class StatusProcessor:
 
                 issues.append({
 
-                    "Row": index + 2,
+                    "entry_number": row.get("entry_number", None),
 
-                    "Field": "registration_date",
+                    "field": "registration_date",
 
-                    "Issue": (
+                    "value": registration_date.strftime("%d/%m/%Y"),
+
+                    "issue": (
                         f"Registration date month "
                         f"({registration_date.strftime('%B')}) does not "
                         f"match the selected registration month "
                         f"({registration_month})"
                     ),
 
-                    "Value": registration_date.strftime("%d/%m/%Y")
+                    "severity": "Warning"
                 })
 
             # -----------------------------------------
@@ -160,14 +168,24 @@ class StatusProcessor:
                 registration_date
             )
 
-            original_status = str(
-                row["status"]
-            ).strip().title()
+            original_status = (
+                str(row["status"]).strip().title()
+                if has_status_column
+                else ""
+            )
 
             # -----------------------------------------
             # Status is Correct
             # -----------------------------------------
 
+            # No Status column supplied by the workbook.
+            # Simply generate one.
+            if not has_status_column:
+                df.at[index, "status"] = calculated_status
+                continue
+
+            # Workbook already contained Status.
+            # Validate it.
             if calculated_status == original_status:
                 continue
 
@@ -272,24 +290,50 @@ class StatusProcessor:
 
                         continue
 
-                # Neither swap resolved it -- fall through and flag below
+                # Neither swap resolved it -- fall through and flag below,
+                # with a message explaining why no auto-correction was
+                # possible (so it doesn't look like an inconsistent
+                # failure -- day/month swapping is only mathematically
+                # possible when the day is <= 12).
+
+                issues.append({
+
+                    "entry_number": row.get("entry_number", None),
+
+                    "field": "status",
+
+                    "value": original_status,
+
+                    "issue": (
+                        "Health Facility record still shows Late after "
+                        "attempting date corrections. Registration date "
+                        f"and/or {event_column} could not be swapped "
+                        "(day component > 12, so no alternate d/m/y "
+                        "interpretation exists). Please review manually."
+                    ),
+
+                    "severity": "Error"
+                })
+
+                continue
 
             # -----------------------------------------
             # Record Validation Issue
-            # (Home records, and Health Facility records
-            # where neither swap resolved the mismatch)
+            # (Home records, and any other unresolved mismatch)
             # -----------------------------------------
 
             issues.append({
 
-                "Row": index + 2,
+                "entry_number": row.get("entry_number", None),
 
-                "Field": "status",
+                "field": "status",
 
-                "Issue":
+                "value": original_status,
+
+                "issue":
                     f"Expected {calculated_status} but found {original_status}",
 
-                "Value": original_status
+                "severity": "Error"
             })
 
         return df, issues, corrections

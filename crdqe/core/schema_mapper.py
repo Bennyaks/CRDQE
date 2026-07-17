@@ -69,7 +69,7 @@ class SchemaMapper:
             # print(field)
 
         # print("===================================")
-        self.value_matcher = ValueMatcher(schema)
+        self.value_matcher = ValueMatcher(self.schema)
     # ===========================================================
     # Column Similarity
     # ===========================================================
@@ -91,6 +91,7 @@ class SchemaMapper:
     def map_columns(self, dataframe):
 
         mapping = {}
+        used_columns = set()
 
         print("\n========== COLUMN MAPPING ==========\n")
 
@@ -116,6 +117,7 @@ class SchemaMapper:
             if best_score >= 0.90:
 
                 mapping[column] = best_field
+                used_columns.add(column)
 
                 print(
                     f"{column} ---> {best_field} ({best_score:.0%})"
@@ -124,11 +126,20 @@ class SchemaMapper:
             else:
 
                 print(
-                    f"{column} ---> NOT MAPPED ({best_score:.0%})"
+                    f"{column} ---> NOT MAPPED BY HEADER ({best_score:.0%})"
                 )
 
+        # ------------------------------------------
+        # Value Matching (fallback via ValueMatcher --
+        # identifies columns by their actual values:
+        # enum/valid_values, numeric range, or date format)
+        # ------------------------------------------
+
+        value_mapping = self.value_match(dataframe, used_columns)
+
+        mapping.update(value_mapping)
+
         print("\n====================================\n")
-        
 
         # Rename and keep mapped columns
         mapped_columns = list(mapping.keys())
@@ -138,73 +149,38 @@ class SchemaMapper:
         dataframe = dataframe.rename(columns=mapping)
 
         return dataframe
+
     # ==========================================================
-# Value Matching
-# ==========================================================
+    # Value Matching (fallback)
+    # ==========================================================
 
-def value_match(self, dataframe, used_columns):
+    def value_match(self, dataframe, used_columns):
+        """
+        For columns that didn't map to any field via header/alias
+        similarity, delegate to ValueMatcher to identify the field
+        from its actual values (enum membership, numeric range, or
+        date format).
+        """
 
-    mapping = {}
+        mapping = {}
 
-    for column in dataframe.columns:
+        for column in dataframe.columns:
 
-        if column in used_columns:
-            continue
-
-        values = (
-            dataframe[column]
-            .dropna()
-            .astype(str)
-            .str.strip()
-            .str.lower()
-            .unique()
-        )
-
-        values = set(values)
-
-        best_field = None
-        best_score = 0
-
-        for field, details in self.fields.items():
-
-            valid = details.get("Valid_values", {})
-
-            if not valid:
+            if column in used_columns:
                 continue
 
-            expected = {
-                str(v).strip().lower()
-                for v in valid.values()
-            }
-
-            if len(expected) == 0:
-                continue
-
-            score = len(values & expected) / len(expected)
-
-            if score > best_score:
-                best_score = score
-                best_field = field
-
-        if best_field and best_score >= 0.50:
-
-            mapping[column] = best_field
-            used_columns.add(column)
-
-            print(
-                f"{column} ---> {best_field} "
-                f"(Value Match {best_score:.0%})"
+            field, confidence = self.value_matcher.match(
+                dataframe[column]
             )
-    # ------------------------------------------
-    # Value Matching
-    # ------------------------------------------
 
-    value_mapping = self.value_match(
-        dataframe,
-        used_columns
-    )
+            if field:
 
-    mapping.update(value_mapping)
+                mapping[column] = field
+                used_columns.add(column)
 
-    return mapping
+                print(
+                    f"{column} ---> {field} "
+                    f"(Value Match {confidence}%)"
+                )
 
+        return mapping

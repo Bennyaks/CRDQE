@@ -177,7 +177,7 @@ derived_columns:
       - Time of Registration
     datatype: string
     required: true
-    Valid_values:
+    valid_values:
       current: Current
       late: Late
 

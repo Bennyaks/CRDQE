@@ -68,7 +68,7 @@ class ValueMatcher:
 
         datatype = rules.get("datatype")
 
-        if "valid_values" in rules:
+        if "valid_values" in rules or "Valid_values" in rules:
             return self._score_enum(values, rules)
 
         if datatype in ("integer", "float"):
@@ -80,9 +80,11 @@ class ValueMatcher:
         return 0
     def _score_enum(self, values, rules):
 
+        raw_valid = rules.get("valid_values") or rules.get("Valid_values") or {}
+
         valid = {
             k.lower()
-            for k in rules["valid_values"]
+            for k in raw_valid
         }
 
         hits = 0

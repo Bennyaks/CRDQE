@@ -86,5 +86,38 @@ class SummaryReport:
             (1 - len(self.issues) / max(len(self.df), 1)) * 100,
             2
         )
+        mch_cases = 0
+
+        # Only Death datasets have these columns
+        if (
+            "place_type" in self.df.columns
+            and "death_certification" in self.df.columns
+        ):
+
+            home = (
+                self.df["place_type"]
+                .astype(str)
+                .str.strip()
+                .str.lower()
+            )
+
+            certification = (
+                self.df["death_certification"]
+                .astype(str)
+                .str.strip()
+                .str.lower()
+            )
+
+            mch_cases = (
+                home.eq("home")
+                &
+                certification.str.contains(
+                    "medical",
+                    case=False,
+                    na=False
+                )
+            ).sum()
+
+        report["mch_cases"] = int(mch_cases)
 
         return report

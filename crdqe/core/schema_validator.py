@@ -16,7 +16,11 @@ class SchemaValidator:
     @staticmethod
     def validate(dataframe, schema):
 
-        required = list(schema["source_columns"].keys())
+        required = [
+            column
+            for column in schema["source_columns"].keys()
+            if column != "status"
+        ]
 
         missing = [
             column

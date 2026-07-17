@@ -14,6 +14,7 @@ import pandas as pd
 
 from crdqe.core.base_rule import BaseRule
 from crdqe.utils.status_calculator import StatusCalculator
+from crdqe.core.status_processor import StatusProcessor
 
 
 class StatusRule(BaseRule):

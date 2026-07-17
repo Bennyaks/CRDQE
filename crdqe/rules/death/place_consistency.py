@@ -14,7 +14,7 @@ class PlaceConsistencyRule(BaseRule):
 
         for index, row in df.iterrows():
 
-            place = str(row["place_of_birth"]).strip()
+            place = str(row["place_of_death"]).strip()
             place_type = str(row["place_type"]).strip().lower()
 
             if place == "":
@@ -22,9 +22,9 @@ class PlaceConsistencyRule(BaseRule):
                 self.add_issues(
                     issues=self.issues,
                     row=row,
-                    field="place_of_birth",
-                    value=row["place_of_birth"],
-                    message="Missing Place of Birth"
+                    field="place_of_death",
+                    value=row["place_of_death"],
+                    message="Missing Place of Death"
                 )
 
                 continue

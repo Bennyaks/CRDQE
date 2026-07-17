@@ -126,10 +126,31 @@ class CRDQEEngine:
         self.logger.info(self.df.columns.tolist())
 
         # -------------------------------------------------------
+        # Load both schemas (needed for detection itself, since
+        # detection now compares column aliases and values
+        # against each schema rather than a hardcoded keyword list)
+        # -------------------------------------------------------
+
+        BASE_DIR = Path(__file__).parents[2]
+
+        birth_schema_file = BASE_DIR / "config" / "birth_schema.yaml"
+        death_schema_file = BASE_DIR / "config" / "death_schema.yaml"
+
+        with open(birth_schema_file, "r", encoding="utf-8") as file:
+            birth_schema = yaml.safe_load(file)
+
+        with open(death_schema_file, "r", encoding="utf-8") as file:
+            death_schema = yaml.safe_load(file)
+
+        # -------------------------------------------------------
         # Detect dataset
         # -------------------------------------------------------
 
-        dataset = DatasetDetector.detect(self.df.columns)
+        dataset = DatasetDetector.detect(
+            self.df,
+            birth_schema,
+            death_schema
+        )
 
         self.dataset = dataset
 
@@ -138,39 +159,22 @@ class CRDQEEngine:
         )
 
         # -------------------------------------------------------
-        # Map schema
+        # Select schema
         # -------------------------------------------------------
-
-        BASE_DIR = Path(__file__).parents[2]
 
         if self.dataset == "Birth":
 
-            schema_file = (
-                BASE_DIR /
-                "config" /
-                "birth_schema.yaml"
-            )
+            self.schema = birth_schema
 
         elif self.dataset == "Death":
 
-            schema_file = (
-                BASE_DIR /
-                "config" /
-                "death_schema.yaml"
-            )
+            self.schema = death_schema
 
         else:
 
             raise ValueError(
                 f"Unknown dataset: {self.dataset}"
             )
-
-        # ---------------------------------------
-        # Load Schema
-        # ---------------------------------------
-
-        with open(schema_file, "r", encoding="utf-8") as file:
-            self.schema = yaml.safe_load(file)
 
         # ---------------------------------------
         # Create Mapper
@@ -288,10 +292,6 @@ class CRDQEEngine:
                 registration_month=self.registration_month
             )
         )
-        mch_count = (
-            (self.df["place_of_death"] == "Home") &
-            (self.df["death_certification"] == "Health Facility")
-        ).sum()
 
         # -------------------------------------------------------
         # Load rules
@@ -327,7 +327,7 @@ class CRDQEEngine:
             f"Issues found: {len(self.issues_df)}"
         )
 
-       # -------------------------------------------------------
+        # -------------------------------------------------------
         # Collect Issues
         # -------------------------------------------------------
 
@@ -368,6 +368,10 @@ class CRDQEEngine:
         report = summary.generate()
         report["swapped_dates"] = len(swapped_rows)
 
+        self.logger.info(
+            f"Home deaths certified at Health Facility (MCH): "
+            f"{report['mch_cases']}"
+        )
         # -------------------------------------------------------
         # Write Final Excel Report
         # -------------------------------------------------------
@@ -389,8 +393,8 @@ class CRDQEEngine:
         return {
             "records": len(self.df),
             "issues": len(self.issues_df),
-            "current": report.get("current_cases", 0),
-            "late": report.get("late_cases", 0),
+            "current": report.get("current", 0),
+            "late": report.get("late", 0),
             "summary": report,
             "cleaned": self.df,
             "issues_df": self.issues_df,
