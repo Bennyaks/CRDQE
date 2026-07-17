@@ -17,10 +17,6 @@ Automated Birth & Death Registration Data Quality Validation
 <p align="center">
 <img src="assets/banner.png">
 </p>
-![Python](https://img.shields.io/badge/Python-3.13-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)
-![Status](https://img.shields.io/badge/Status-Stable-success.svg)
 
 ---
 
