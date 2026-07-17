@@ -5,6 +5,7 @@ CRDQE Splash Screen
 """
 
 import tkinter as tk
+from crdqe.utils.paths import ASSETS_DIR
 from PIL import Image, ImageTk
 
 
@@ -21,7 +22,7 @@ class SplashScreen(tk.Toplevel):
         width = 700
         height = 420
 
-        background = Image.open("assets/background.png")
+        background = Image.open(ASSETS_DIR / "background.png")
         background = background.resize((width, height), Image.LANCZOS)
 
         self.background = ImageTk.PhotoImage(background)
@@ -55,8 +56,8 @@ class SplashScreen(tk.Toplevel):
         # Logo
         # -------------------------
 
-        self.logo = tk.PhotoImage(
-            file="assets/logo.png"
+        self.logo = ImageTk.PhotoImage(
+            Image.open(ASSETS_DIR / "logo.png")
         )
 
         logo = tk.Label(
