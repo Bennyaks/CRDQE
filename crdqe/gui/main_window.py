@@ -24,6 +24,7 @@ from crdqe.gui.dialogs import Dialogs
 from crdqe.gui.menu import MenuBar
 from crdqe.gui.sidebar import Sidebar
 from crdqe.gui.status_bar import StatusBar
+from crdqe.gui.splash import SplashScreen
 from crdqe.gui.theme import Theme
 from crdqe.gui.toolbar import Toolbar
 from crdqe.gui.widgets import (
@@ -39,6 +40,14 @@ class MainWindow(tk.Tk):
     def __init__(self):
 
         super().__init__()
+        self.withdraw()
+
+        SplashScreen(self)
+
+        self.after(
+            2500,
+            self.deiconify
+        )
 
         self.initialize_window()
 
@@ -49,6 +58,9 @@ class MainWindow(tk.Tk):
         self.create_layout()
 
         self.connect_signals()
+        self.iconbitmap("assets/logo.ico")
+        self.update()
+        
 
 
     def initialize_window(self):

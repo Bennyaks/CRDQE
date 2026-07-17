@@ -1,7 +1,22 @@
+<p align="center">
+    <img src="assets/logo.png" width="180">
+</p>
+
+<h1 align="center">
+Civil Registration Data Quality Engine
+</h1>
+
+<p align="center">
+Automated Birth & Death Registration Data Quality Validation
+</p>
+
 # Civil Registration Data Quality Engine (CRDQE)
 
 > A professional desktop application for automated validation, cleaning, and quality assessment of Civil Registration and Vital Statistics (CRVS) data.
 
+<p align="center">
+<img src="assets/banner.png">
+</p>
 ![Python](https://img.shields.io/badge/Python-3.13-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)
@@ -104,7 +119,7 @@ Built using Tkinter with a modular architecture featuring:
 The interface is designed for simplicity while remaining scalable for future enhancements.
 
 ---
-
+![Dashboard](assets/dashboard.png)
 # Project Structure
 
 ```
