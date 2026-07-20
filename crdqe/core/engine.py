@@ -2,6 +2,7 @@ from pathlib import Path
 import pandas as pd
 import yaml
 
+from crdqe.utils.paths import CONFIG_DIR
 from crdqe.core.config_manager import ConfigManager
 from crdqe.core.logger import Logger
 from crdqe.core.file_manager import FileManager
@@ -131,10 +132,8 @@ class CRDQEEngine:
         # against each schema rather than a hardcoded keyword list)
         # -------------------------------------------------------
 
-        BASE_DIR = Path(__file__).parents[2]
-
-        birth_schema_file = BASE_DIR / "config" / "birth_schema.yaml"
-        death_schema_file = BASE_DIR / "config" / "death_schema.yaml"
+        birth_schema_file = CONFIG_DIR / "birth_schema.yaml"
+        death_schema_file = CONFIG_DIR / "death_schema.yaml"
 
         with open(birth_schema_file, "r", encoding="utf-8") as file:
             birth_schema = yaml.safe_load(file)
@@ -327,7 +326,7 @@ class CRDQEEngine:
             f"Issues found: {len(self.issues_df)}"
         )
 
-        # -------------------------------------------------------
+       # -------------------------------------------------------
         # Collect Issues
         # -------------------------------------------------------
 
@@ -368,10 +367,6 @@ class CRDQEEngine:
         report = summary.generate()
         report["swapped_dates"] = len(swapped_rows)
 
-        self.logger.info(
-            f"Home deaths certified at Health Facility (MCH): "
-            f"{report['mch_cases']}"
-        )
         # -------------------------------------------------------
         # Write Final Excel Report
         # -------------------------------------------------------
@@ -393,8 +388,8 @@ class CRDQEEngine:
         return {
             "records": len(self.df),
             "issues": len(self.issues_df),
-            "current": report.get("current", 0),
-            "late": report.get("late", 0),
+            "current": report.get("current_cases", 0),
+            "late": report.get("late_cases", 0),
             "summary": report,
             "cleaned": self.df,
             "issues_df": self.issues_df,

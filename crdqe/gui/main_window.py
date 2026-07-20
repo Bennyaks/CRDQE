@@ -16,6 +16,7 @@ from tkinter import filedialog
 
 from openpyxl import load_workbook
 
+from crdqe.utils.paths import BASE_DIR, ASSETS_DIR
 from crdqe.core.config_manager import ConfigManager
 from crdqe.core.engine import CRDQEEngine
 
@@ -37,6 +38,7 @@ OUTPUT_FOLDER = "output"
 
 
 class MainWindow(tk.Tk):
+
     def __init__(self):
 
         super().__init__()
@@ -58,9 +60,13 @@ class MainWindow(tk.Tk):
         self.create_layout()
 
         self.connect_signals()
-        self.iconbitmap("assets/logo.ico")
+        try:
+            self.iconbitmap(str(ASSETS_DIR / "logo.ico"))
+        except Exception as exc:
+            print(f"Could not load application icon: {exc}")
         self.update()
-        
+
+    
 
 
     def initialize_window(self):
@@ -88,20 +94,22 @@ class MainWindow(tk.Tk):
         (settings["output"]["folder"]) -- this is the same path
         FileManager/ExcelWriter actually write reports to, so the
         "Open Output Folder" button opens the right place instead
-        of a hardcoded guess.
+        of a hardcoded guess. Anchored to BASE_DIR (crdqe.utils.paths)
+        so it matches file_manager.py / excel_writer.py exactly,
+        regardless of the working directory the app was launched from.
         """
 
         try:
 
             settings = ConfigManager().load()
 
-            return settings["output"]["folder"]
+            return str(BASE_DIR / settings["output"]["folder"])
 
         except Exception as exc:
 
             print(f"Could not resolve output folder from config: {exc}")
 
-            return OUTPUT_FOLDER
+            return str(BASE_DIR / OUTPUT_FOLDER)
 
     # ------------------------------------------------------
     # Create_components
@@ -435,7 +443,7 @@ class MainWindow(tk.Tk):
         Opens the folder containing all generated outputs.
         """
 
-        folder = os.path.abspath(self.output_folder)
+        folder = self.output_folder
 
         print("Opening:", folder)
 

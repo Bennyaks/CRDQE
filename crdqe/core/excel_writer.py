@@ -11,12 +11,14 @@ from openpyxl import load_workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
+from crdqe.utils.paths import BASE_DIR
+
 
 class ExcelWriter:
 
     def __init__(self, settings):
 
-        output = Path(settings["output"]["folder"])
+        output = BASE_DIR / settings["output"]["folder"]
 
         self.report_path = (
             output /
@@ -50,13 +52,32 @@ class ExcelWriter:
 
         if "entry_number" in df.columns:
 
-            df["entry_number"] = (
-                pd.to_numeric(
-                    df["entry_number"],
-                    errors="coerce"
-                )
-                .astype("Int64")
+            numeric = pd.to_numeric(
+                df["entry_number"],
+                errors="coerce"
             )
+
+            non_null = numeric.dropna()
+
+            # entry_number is declared as a string field in the schema --
+            # only reformat it as a clean integer for display when every
+            # present value genuinely is a whole number. Forcing a hard
+            # Int64 cast on values with a fractional component (e.g. a
+            # typo like "2682500189.5") raises "cannot safely cast
+            # non-equivalent float64 to int64" and crashes report
+            # generation entirely -- a cosmetic formatting step should
+            # never be able to do that.
+
+            all_whole_numbers = (
+                non_null.empty
+                or (non_null % 1 == 0).all()
+            )
+
+            if all_whole_numbers:
+                df["entry_number"] = numeric.astype("Int64")
+
+            # else: leave df["entry_number"] as originally read --
+            # preserves the real values instead of losing/crashing on them
 
         return df
 

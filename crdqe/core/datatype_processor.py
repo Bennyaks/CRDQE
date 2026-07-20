@@ -29,10 +29,29 @@ class DataTypeProcessor:
 
             elif datatype == "integer":
 
-                df[field] = pd.to_numeric(
+                numeric = pd.to_numeric(
                     df[field],
                     errors="coerce"
-                ).astype("Int64")
+                )
+
+                non_null = numeric.dropna()
+
+                # Only force a clean Int64 cast when every present value
+                # genuinely is a whole number. A field with a fractional
+                # value (e.g. a data-entry typo like age "30.5") would
+                # otherwise raise "cannot safely cast non-equivalent
+                # float64 to int64" and crash the entire pipeline over
+                # what should just be a flaggable validation issue.
+
+                all_whole_numbers = (
+                    non_null.empty
+                    or (non_null % 1 == 0).all()
+                )
+
+                if all_whole_numbers:
+                    df[field] = numeric.astype("Int64")
+                else:
+                    df[field] = numeric
 
             elif datatype == "float":
 

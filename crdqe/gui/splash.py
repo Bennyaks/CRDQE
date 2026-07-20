@@ -31,14 +31,6 @@ class SplashScreen(tk.Toplevel):
         # Background
         # -------------------------
 
-        background = Image.open("assets/background.png")
-
-        background = background.resize(
-            (700, 420),
-            Image.LANCZOS
-        )
-
-        self.background = ImageTk.PhotoImage(background)
 
         bg = tk.Label(
             self,

@@ -9,3 +9,5 @@ else:
     BASE_DIR = Path(__file__).resolve().parents[2]
 
 ASSETS_DIR = BASE_DIR / "assets"
+CONFIG_DIR = BASE_DIR / "config"
+REFERENCE_DIR = BASE_DIR / "reference"
