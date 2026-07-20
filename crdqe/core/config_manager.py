@@ -16,11 +16,13 @@ Benard Mandera
 from pathlib import Path
 import yaml
 
+from crdqe.utils.paths import CONFIG_DIR
+
 
 class ConfigManager:
 
-    def __init__(self, config_path="config/settings.yaml"):
-        self.config_path = Path(config_path)
+    def __init__(self, config_path=None):
+        self.config_path = Path(config_path) if config_path else CONFIG_DIR / "settings.yaml"
         self.settings = None
 
     def load(self):
