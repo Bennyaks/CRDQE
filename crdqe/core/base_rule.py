@@ -27,7 +27,6 @@ class BaseRule:
         field,
         value,
         message,
-        severity="Error"
     ):
         """
         Add a standardized issue.
@@ -38,7 +37,6 @@ class BaseRule:
             "field": field,
             "value": value,
             "issue": message,
-            "severity": severity
         }
 
         issues.append(record)

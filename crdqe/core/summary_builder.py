@@ -53,25 +53,4 @@ class SummaryBuilder:
             }
         ]
 
-        if not issues.empty:
-
-            summary.extend([
-                {
-                    "Metric": "Errors",
-                    "Value": (
-                        issues["severity"]
-                        .eq("Error")
-                        .sum()
-                    )
-                },
-                {
-                    "Metric": "Warnings",
-                    "Value": (
-                        issues["severity"]
-                        .eq("Warning")
-                        .sum()
-                    )
-                }
-            ])
-
         return pd.DataFrame(summary)

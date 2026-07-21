@@ -19,6 +19,8 @@ class RegistrationDateRule(BaseRule):
         today = pd.Timestamp.today().normalize()
 
         for index, value in df[self.FIELD].items():
+            # get the full row so we can access other fields like entry_number
+            row = df.loc[index]
 
             parsed = pd.to_datetime(
                 value,
@@ -32,7 +34,8 @@ class RegistrationDateRule(BaseRule):
                     "row": index + 2,
                     "field": self.FIELD,
                     "issue": "Missing Registration Date",
-                    "value": value
+                    "value": value,
+                    "entry_number": row.get("entry_number", None)
                 })
 
                 continue
@@ -43,7 +46,8 @@ class RegistrationDateRule(BaseRule):
                     "row": index + 2,
                     "field": self.FIELD,
                     "issue": "Future Registration Date",
-                    "value": value
+                    "value": value,
+                    "entry_number": row.get("entry_number", None)
                 })
 
                 continue

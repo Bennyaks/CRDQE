@@ -28,6 +28,7 @@ class DateOfDeathRule(BaseRule):
         today = pd.Timestamp.today().normalize()
 
         for index, value in df[self.FIELD].items():
+            row = df.loc[index]
 
             parsed = pd.to_datetime(
                 value,
@@ -41,7 +42,8 @@ class DateOfDeathRule(BaseRule):
                     "row": index + 2,
                     "field": self.FIELD,
                     "issue": "Missing Date of Death",
-                    "value": value
+                    "value": value,
+                    "entry_number": row.get("entry_number", None)
                 })
 
                 continue
@@ -52,7 +54,8 @@ class DateOfDeathRule(BaseRule):
                     "row": index + 2,
                     "field": self.FIELD,
                     "issue": "Future Date of Death",
-                    "value": value
+                    "value": value,
+                    "entry_number": row.get("entry_number", None)
                 })
 
                 continue
