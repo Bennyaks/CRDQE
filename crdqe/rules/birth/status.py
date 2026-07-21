@@ -85,7 +85,8 @@ class StatusRule(BaseRule):
                         "field": "Status",
                         "issue": "Incorrect Status",
                         "current_value": existing,
-                        "expected_value": expected
+                        "expected_value": expected,
+                        "entry_number": row.get("entry_number", None)
                     })
         if "Status" in df.columns:
             df.drop(columns=["Status"], inplace=True)

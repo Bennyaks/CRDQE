@@ -7430,3 +7430,25 @@
 2026-07-21 13:23:30,254 | INFO | Rule Engine completed.
 2026-07-21 13:23:30,255 | INFO | Records processed: 59
 2026-07-21 13:23:30,256 | INFO | Issues found: 55
+2026-07-21 13:33:03,340 | INFO | ============================================================
+2026-07-21 13:33:03,341 | INFO | Civil Registration Data Quality Engine Started
+2026-07-21 13:33:03,342 | INFO | Workbook found.
+2026-07-21 13:33:03,342 | INFO | C:/Users/Admin/Downloads/DEATH TEMPLATE 2026.xlsx
+2026-07-21 13:33:03,351 | INFO | Available worksheets: ['JANUARY 2026', 'FEBRUARY 2026', 'MARCH 2026']
+2026-07-21 13:33:03,365 | INFO | Detected Header Row: 0
+2026-07-21 13:33:03,379 | INFO | Workbook loaded successfully.
+2026-07-21 13:33:03,380 | INFO | Rows: 59
+2026-07-21 13:33:03,380 | INFO | Columns: 15
+2026-07-21 13:33:03,380 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Age \n(Indicate number eg 1,2,3)', 'Unit of age \n(Days, Months or Years)', 'Marital status', 'Place of death \n(Indicate the name of exact place of death)', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'Cause of death certification\n(state whether medically certified or lay reporting)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Serial No']
+2026-07-21 13:33:03,380 | INFO | Standardized Columns:
+2026-07-21 13:33:03,381 | INFO | ['name of deceased(indicate full names of the deceased)', 'id number(indicate the id number where applicable and available)', 'date of death(dd-mm-yy)', 'sex(indicate whether male or female)', 'age(indicate number eg 1,2,3)', 'unit of age(days, months or years)', 'marital status', 'place of death(indicate the name of exact place of death)', 'type of place(indicate whether home or health institution)', 'place of usual residence', 'cause of death(indicate the underlying cause of death)', 'cause of death certification(state whether medically certified or lay reporting)', 'date of registration(dd-mm-yy)', 'entry number', 'serial no']
+2026-07-21 13:33:03,433 | INFO | Detected Dataset: Death
+2026-07-21 13:33:03,462 | INFO | Schema Valid: True
+2026-07-21 13:33:03,462 | INFO | Rows: 59
+2026-07-21 13:33:03,462 | INFO | Columns: 14
+2026-07-21 13:33:03,462 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number']
+2026-07-21 13:33:03,512 | INFO | Rule Engine completed.
+2026-07-21 13:33:03,513 | INFO | Records processed: 59
+2026-07-21 13:33:03,513 | INFO | Issues found: 55
+2026-07-21 13:33:13,796 | INFO | Workbook received : C:/Users/Admin/Downloads/DEATH TEMPLATE 2026.xlsx
+2026-07-21 13:33:13,797 | INFO | Worksheet received: MARCH 2026

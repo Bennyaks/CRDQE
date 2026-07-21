@@ -34,7 +34,8 @@ class IDNumberRule(BaseRule):
                     "row": index + 2,
                     "field": self.FIELD,
                     "issue": "Missing ID Number",
-                    "value": ""
+                    "value": "",
+                    "entry_number": df.at[index, "entry_number"] if "entry_number" in df.columns else None
                 })
 
                 continue
@@ -66,6 +67,7 @@ class IDNumberRule(BaseRule):
                 "field": self.FIELD,
                 "issue": "Invalid ID/Passport Number",
                 "value": value
+                ,"entry_number": df.at[index, "entry_number"] if "entry_number" in df.columns else None
             })
 
             df.at[index, self.FIELD] = cleaned
