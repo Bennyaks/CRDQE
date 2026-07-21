@@ -91,7 +91,7 @@ class StatusProcessor:
     
 
     @staticmethod
-    def validate_status(df, event_column, registration_month=None):
+    def validate_status(df, event_column, registration_month=None, registration_year=None):
 
         issues = []
         corrections = []
@@ -108,6 +108,12 @@ class StatusProcessor:
             target_month_number = MONTH_NAME_TO_NUMBER.get(
                 str(registration_month).strip().lower()
             )
+
+            target_year = None
+
+            if registration_year:
+
+                target_year = int(registration_year)
 
         for index, row in df.iterrows():
 
@@ -126,6 +132,36 @@ class StatusProcessor:
                 dayfirst=True,
                 errors="coerce"
             )
+            # -----------------------------------------
+            # Correct Registration Year
+            # -----------------------------------------
+
+            if (
+                target_year is not None
+                and not pd.isna(registration_date)
+                and registration_date.year != target_year
+            ):
+
+                old_date = registration_date
+
+                registration_date = registration_date.replace(
+                    year=target_year
+                )
+
+                df.at[index, "registration_date"] = (
+                    registration_date.strftime("%d/%m/%Y")
+                )
+
+                corrections.append({
+
+                    "entry_number": row.get("entry_number", None),
+
+                    "old_value": old_date.strftime("%d/%m/%Y"),
+
+                    "new_value": registration_date.strftime("%d/%m/%Y"),
+
+                    "reason": "Registration year corrected"
+                })
 
             if pd.isna(event_date) or pd.isna(registration_date):
                 continue
@@ -154,9 +190,7 @@ class StatusProcessor:
                         f"({registration_date.strftime('%B')}) does not "
                         f"match the selected registration month "
                         f"({registration_month})"
-                    ),
-
-                    "severity": "Warning"
+                    )
                 })
 
             # -----------------------------------------
@@ -310,9 +344,7 @@ class StatusProcessor:
                         f"and/or {event_column} could not be swapped "
                         "(day component > 12, so no alternate d/m/y "
                         "interpretation exists). Please review manually."
-                    ),
-
-                    "severity": "Error"
+                    )
                 })
 
                 continue
@@ -331,9 +363,7 @@ class StatusProcessor:
                 "value": original_status,
 
                 "issue":
-                    f"Expected {calculated_status} but found {original_status}",
-
-                "severity": "Error"
+                    f"Expected {calculated_status} but found {original_status}"
             })
 
         return df, issues, corrections

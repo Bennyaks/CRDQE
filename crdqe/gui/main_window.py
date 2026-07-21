@@ -66,7 +66,7 @@ class MainWindow(tk.Tk):
             print(f"Could not load application icon: {exc}")
         self.update()
 
-    
+     
 
 
     def initialize_window(self):
@@ -218,6 +218,13 @@ class MainWindow(tk.Tk):
 
     def browse_workbook(self):
 
+        if load_workbook is None:
+            Dialogs.error(
+                "Missing Dependency",
+                "The openpyxl package is required to open Excel workbooks."
+            )
+            return
+
         path = filedialog.askopenfilename(
             title="Select Workbook",
             filetypes=[("Excel Workbook", "*.xlsx *.xlsm")]
@@ -228,8 +235,8 @@ class MainWindow(tk.Tk):
 
         self.workbook_path = path
 
+        workbook = None
         try:
-
             workbook = load_workbook(
                 path,
                 read_only=True
@@ -244,9 +251,15 @@ class MainWindow(tk.Tk):
 
                 self.on_worksheet_changed()
 
+        except Exception as exc:
+            Dialogs.error(
+                "Workbook Error",
+                f"Could not open workbook: {exc}"
+            )
+            return
         finally:
-
-            workbook.close()
+            if workbook is not None:
+                workbook.close()
         self.sidebar.set_workbook(
             os.path.basename(path)
         )
@@ -278,6 +291,10 @@ class MainWindow(tk.Tk):
         Detect whether the selected worksheet
         contains Birth or Death registrations.
         """
+
+        if load_workbook is None:
+            self.sidebar.dataset_combo.set("Auto Detect")
+            return
 
         try:
             # Fallback implementation using openpyxl to avoid
@@ -341,6 +358,13 @@ class MainWindow(tk.Tk):
                 "Please select the registration month."
             )
             return
+        year = self.sidebar.get_selected_year()
+
+        if not year:
+            Dialogs.warning(
+                "Registration year",
+                "please select the registration year."
+            )
 
         self.status_bar.set_status("Validating...")
         self.progress.start()
@@ -353,13 +377,13 @@ class MainWindow(tk.Tk):
 
         thread = threading.Thread(
             target=self._run_validation_thread,
-            args=(worksheet, month),
+            args=(worksheet, month, year),
             daemon=True
         )
 
         thread.start()
 
-    def _run_validation_thread(self, worksheet, month):
+    def _run_validation_thread(self, worksheet, month, year):
 
         try:
             print("Worksheet:", self.sidebar.get_selected_worksheet())
@@ -369,6 +393,7 @@ class MainWindow(tk.Tk):
                 workbook_path=self.workbook_path,
                 worksheet=worksheet,
                 registration_month=month,
+                registration_year=year,
                 callback=lambda msg: self.after(0, self.log.append, msg),
             )
 

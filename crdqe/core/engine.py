@@ -45,11 +45,13 @@ class CRDQEEngine:
         workbook_path,
         worksheet,
         registration_month=None,
+        registration_year=None,
         callback=None
     ):
         self.log(f"Workbook received : {workbook_path}")
         self.log(f"Worksheet received: {worksheet}")
         self.registration_month = registration_month
+        self.registration_year = registration_year
 
         self.callback = callback
         self.workbook_path = Path(workbook_path)
@@ -288,7 +290,8 @@ class CRDQEEngine:
             StatusProcessor.validate_status(
                 self.df,
                 event_column,
-                registration_month=self.registration_month
+                registration_month=self.registration_month,
+                registration_year=self.registration_year
             )
         )
 
