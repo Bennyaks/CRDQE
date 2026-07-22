@@ -59,6 +59,7 @@ class SchemaMapper:
 
     def __init__(self, schema):
 
+
         self.schema = {}
 
         # ------------------------------------------
@@ -103,20 +104,57 @@ class SchemaMapper:
     # ===========================================================
     # Header Matching
     # ===========================================================
-
     def header_match(self, column):
         """
-        Returns (best_field, best_score) where best_score is 0-1.
+        Returns the best matching schema field for a column header.
+
+        Returns:
+            (best_field, best_score)
+
+        where:
+            best_field -> schema field name
+            best_score -> similarity score (0.0 - 1.0)
         """
 
         best_field = None
-        best_score = 0
+        best_score = 0.0
+
+        column_norm = normalize(column)
 
         for field, details in self.schema.items():
 
             for alias in details.get("aliases", []):
 
-                score = self.similarity(column, alias)
+                alias_norm = normalize(alias)
+
+                # -----------------------------------------
+                # Exact / containment match
+                # -----------------------------------------
+
+                if (
+                    column_norm == alias_norm
+                    or column_norm.startswith(alias_norm)
+                    or alias_norm.startswith(column_norm)
+                    or column_norm in alias_norm
+                    or alias_norm in column_norm
+                ):
+
+                    score = 1.0
+
+                # -----------------------------------------
+                # Fuzzy match
+                # -----------------------------------------
+
+                else:
+
+                    score = self.similarity(
+                        column_norm,
+                        alias_norm
+                    )
+
+                # -----------------------------------------
+                # Keep best match
+                # -----------------------------------------
 
                 if score > best_score:
 
@@ -131,83 +169,95 @@ class SchemaMapper:
 
     def _decide_column(self, column, series):
         """
-        Combines header and value evidence for a single column
-        into one decision. Returns a dict describing the outcome,
-        or None if neither signal was strong enough to map it.
+        Decide the most likely destination field for a column by combining
+        header similarity and value analysis.
+
+        Priority:
+            1. Header + Value agree.
+            2. Strong Header match.
+            3. Strong Value match.
+            4. Otherwise, reject the mapping.
         """
 
+        # ----------------------------------------------------------
+        # Gather evidence
+        # ----------------------------------------------------------
+
         header_field, header_score = self.header_match(column)
-        header_pct = header_score * 100
+        header_score *= 100
 
         value_field, value_score = self.value_matcher.match(series)
 
-        both_agree = (
-            header_field is not None
-            and value_field is not None
-            and header_field == value_field
-        )
+        # ----------------------------------------------------------
+        # Header and values agree
+        # ----------------------------------------------------------
 
-        if both_agree:
+        if (
+            header_field
+            and value_field
+            and header_field == value_field
+        ):
 
             return {
                 "column": column,
                 "field": header_field,
-                "confidence": max(header_pct, value_score),
+                "confidence": max(header_score, value_score),
                 "double_confirmed": True,
                 "reason": "Header + Value Match",
                 "header_field": header_field,
-                "header_score": header_pct,
+                "header_score": header_score,
                 "value_field": value_field,
                 "value_score": value_score,
             }
 
-        # Header and value disagree (or only one signal exists).
-        # A header can look superficially plausible -- e.g. "Type of
-        # Registration" fuzzy-matching "Time of Registration" at 90%
-        # -- while the column's actual values clearly belong to a
-        # different field entirely. Let the stronger, better-evidenced
-        # signal win instead of automatically trusting the header just
-        # because it crossed a similarity threshold.
+        # ----------------------------------------------------------
+        # Strong Header Match
+        # Useful for date columns where value matching cannot
+        # distinguish between different date fields.
+        # ----------------------------------------------------------
 
-        candidates = []
-
-        if header_field is not None:
-            candidates.append((header_pct, header_field, "Header Match"))
-
-        if value_field is not None:
-            # ValueMatcher already enforces its own MIN_CONFIDENCE
-            # internally before ever returning a non-None field, so
-            # any value_field here is already a reasonably trustworthy
-            # signal on its own.
-            candidates.append((value_score, value_field, "Value Match"))
-
-        if not candidates:
-            return None
-
-        candidates.sort(key=lambda c: c[0], reverse=True)
-
-        top_score, top_field, top_reason = candidates[0]
-
-        # A header-only guess still needs to clear the trust
-        # threshold on its own if there's no value corroboration.
         if (
-            top_reason == "Header Match"
-            and top_score < HEADER_TRUST_THRESHOLD * 100
+            header_field
+            and header_score >= HEADER_TRUST_THRESHOLD * 100
         ):
-            return None
 
-        return {
-            "column": column,
-            "field": top_field,
-            "confidence": top_score,
-            "double_confirmed": False,
-            "reason": top_reason,
-            "header_field": header_field,
-            "header_score": header_pct,
-            "value_field": value_field,
-            "value_score": value_score,
-        }
+            return {
+                "column": column,
+                "field": header_field,
+                "confidence": header_score,
+                "double_confirmed": False,
+                "reason": "Header Match",
+                "header_field": header_field,
+                "header_score": header_score,
+                "value_field": value_field,
+                "value_score": value_score,
+            }
 
+        # ----------------------------------------------------------
+        # Strong Value Match
+        # Used when the header is incorrect but the column values
+        # clearly identify the correct field.
+        # ----------------------------------------------------------
+
+        if value_field:
+
+            return {
+                "column": column,
+                "field": value_field,
+                "confidence": value_score,
+                "double_confirmed": False,
+                "reason": "Value Match",
+                "header_field": header_field,
+                "header_score": header_score,
+                "value_field": value_field,
+                "value_score": value_score,
+            }
+
+        # ----------------------------------------------------------
+        # No reliable mapping
+        # ----------------------------------------------------------
+
+        return None
     # ===========================================================
     # Map Columns
     # ===========================================================

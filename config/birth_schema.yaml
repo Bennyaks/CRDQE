@@ -4,7 +4,9 @@ source_columns:
 
   date_of_birth:
     aliases:
-      - "Date of Birth (dd-mm-yy)"
+      - Date of Birth
+      - Birth Date
+      - DOB
     datatype: date
     required: true
     output: true

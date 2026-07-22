@@ -29,23 +29,28 @@ class DuplicateEntryNumberRule(BaseRule):
             .str.strip()
         )
 
-        mask = (
-            values.ne("") &
-            values.duplicated(keep=False)
+        duplicates = (
+            values.ne("")
+            & values.duplicated(keep=False)
         )
 
         for index, row in df.iterrows():
 
-            value = row[self.FIELD]
+            value = values.iloc[index]
 
+            # Ignore missing values
             if self.is_missing(value):
+                continue
 
-                self.add_issue(
-                    row=index,
+            # Duplicate Entry Number
+            if duplicates.iloc[index]:
+
+                self.add_issues(
+                    issues=self.issues,
+                    row=row,
                     field=self.FIELD,
                     value=value,
-                    issue=f"Missing {self.TITLE}"
+                    message="Duplicate Entry Number"
                 )
 
-                continue
         return df, self.get_issues()

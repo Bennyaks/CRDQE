@@ -26,7 +26,9 @@ source_columns:
     datatype: date
     required: true
     aliases:
-      - "Date of Death(dd-mm-yy)"
+      - Date of Death
+      - DOD
+      - Death Date
 
   sex:
     aliases:
