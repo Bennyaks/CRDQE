@@ -5,8 +5,22 @@ a = Analysis(
     ['run_gui.py'],
     pathex=[],
     binaries=[],
-    datas=[('config', 'config'), ('reference', 'reference'), ('assets', 'assets')],
-    hiddenimports=[],
+    datas=[
+        ('assets', 'assets'),
+        ('config', 'config'),
+        ('crdqe/rules', 'crdqe/rules'),
+        ('data', 'data'),
+    ],
+    hiddenimports=[
+        'yaml',
+        'rapidfuzz',
+        'PIL',
+        'PIL.Image',
+        'PIL.ImageTk',
+        'openpyxl',
+        'pandas',
+        'numpy',
+    ],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -32,6 +46,7 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=['assets\\logo.ico'],
 )
 coll = COLLECT(
     exe,

@@ -23,12 +23,11 @@ class TextRule(BaseRule):
 
             if self.is_missing(value):
 
-                self.add_issues(
-                    issues=self.issues,
-                    row=row,
+                self.add_issue(
+                    row=row.name,
                     field=self.FIELD,
                     value=value,
-                    message=f"Missing {self.TITLE}"
+                    issue=f"Missing {self.TITLE}"
                 )
                 continue
 

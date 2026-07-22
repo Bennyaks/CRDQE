@@ -24,11 +24,10 @@ class DateConsistencyRule(CrossFieldRule):
 
         if registration_date < event_date:
 
-            self.add_issues(
-                issues=self.issues,
-                row=row,
+            self.add_issue(
+                row=row.name,
                 field="registration_date",
                 value=registration_date,
-                message="Registration date before death date"
+                issue="Registration date before death date"
             )
             

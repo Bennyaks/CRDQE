@@ -37,12 +37,11 @@ class CategoricalRule(BaseRule):
 
             if self.is_missing(value):
 
-                self.add_issues(
-                    issues=self.issues,
-                    row=row,
+                self.add_issue(
+                    row=row.name,
                     field=self.FIELD,
                     value=value,
-                    message=f"Missing {self.TITLE}"
+                    issue=f"Missing {self.TITLE}"
                 )
                 continue
 
@@ -51,12 +50,11 @@ class CategoricalRule(BaseRule):
             if cleaned in valid_values:
                 df.at[index, self.FIELD] = valid_values[cleaned]
             else:
-                self.add_issues(
-                    issues=self.issues,
-                    row=row,
+                self.add_issue(
+                    row=row.name,
                     field=self.FIELD,
                     value=value,
-                    message=f"Invalid {self.TITLE}"
+                    issue=f"Invalid {self.TITLE}"
                 )
 
         return df, self.get_issues()

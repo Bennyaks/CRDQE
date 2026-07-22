@@ -7452,3 +7452,130 @@
 2026-07-21 13:33:03,513 | INFO | Issues found: 55
 2026-07-21 13:33:13,796 | INFO | Workbook received : C:/Users/Admin/Downloads/DEATH TEMPLATE 2026.xlsx
 2026-07-21 13:33:13,797 | INFO | Worksheet received: MARCH 2026
+2026-07-21 13:38:50,601 | INFO | ============================================================
+2026-07-21 13:38:50,601 | INFO | Civil Registration Data Quality Engine Started
+2026-07-21 13:38:50,602 | INFO | Workbook found.
+2026-07-21 13:38:50,602 | INFO | C:/Users/Admin/Downloads/2026 Isiolo March birth template.xlsx
+2026-07-21 13:38:50,632 | INFO | Available worksheets: ['Jan', 'Feb', 'March', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+2026-07-21 13:38:50,660 | INFO | Detected Header Row: 1
+2026-07-21 13:38:50,759 | INFO | Workbook loaded successfully.
+2026-07-21 13:38:50,759 | INFO | Rows: 441
+2026-07-21 13:38:50,759 | INFO | Columns: 24
+2026-07-21 13:38:50,759 | INFO | ['Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight of birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Unnamed: 14', 'Unnamed: 15', 'Unnamed: 16', 'Unnamed: 17', 'Unnamed: 18', 'Unnamed: 19', 'Unnamed: 20', 'Unnamed: 21', 'Unnamed: 22', 'Unnamed: 23']
+2026-07-21 13:38:50,759 | INFO | Standardized Columns:
+2026-07-21 13:38:50,759 | INFO | ['date of birth(dd-mm-yy)', 'sex(indicate whether male or female)', 'nature of birth(indicate whether born alive or dead)', 'weight of birth(kgs)', 'place of birth(indicate the name of facility or sublocation of birth)', 'type of place(indicate whether home or health facility)', 'age of the mother(indicate the age of the mother at the birth of the child)', 'marital status', 'nationality of the mother', 'ocupation of the mother', "mother's level of education", 'place of residence(indicate the sub county where the mother residence)', 'date of registration(dd-mm-yy)', 'entry number', 'unnamed: 14', 'unnamed: 15', 'unnamed: 16', 'unnamed: 17', 'unnamed: 18', 'unnamed: 19', 'unnamed: 20', 'unnamed: 21', 'unnamed: 22', 'unnamed: 23']
+2026-07-21 13:38:50,821 | INFO | Detected Dataset: Birth
+2026-07-21 13:41:21,720 | INFO | Workbook received : C:/Users/Admin/Downloads/birth data  2026.xlsx
+2026-07-21 13:41:21,722 | INFO | Worksheet received: June
+2026-07-22 08:59:03,659 | INFO | ============================================================
+2026-07-22 08:59:03,659 | INFO | Civil Registration Data Quality Engine Started
+2026-07-22 08:59:03,660 | INFO | Workbook found.
+2026-07-22 08:59:03,660 | INFO | C:/Users/Admin/Downloads/BUNGOMA SOUTH DEATH TEMP 2026.xlsx
+2026-07-22 08:59:03,667 | INFO | Available worksheets: ['JAN']
+2026-07-22 08:59:03,691 | INFO | Detected Header Row: 0
+2026-07-22 08:59:03,726 | INFO | Workbook loaded successfully.
+2026-07-22 08:59:03,726 | INFO | Rows: 245
+2026-07-22 08:59:03,726 | INFO | Columns: 15
+2026-07-22 08:59:03,726 | INFO | ['Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Age \n(Indicate number eg 1,2,3)', 'Unit of age \n(Days, Months or Years)', 'Marital status', 'Place of death \n(Indicate the name of exact place of death)', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'Cause of death certification (medically certified or lay reported)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Unnamed: 14']
+2026-07-22 08:59:03,726 | INFO | Standardized Columns:
+2026-07-22 08:59:03,727 | INFO | ['name of deceased(indicate full names of the deceased)', 'id number(indicate the id number where applicable and available)', 'date of death(dd-mm-yy)', 'sex(indicate whether male or female)', 'age(indicate number eg 1,2,3)', 'unit of age(days, months or years)', 'marital status', 'place of death(indicate the name of exact place of death)', 'type of place(indicate whether home or health institution)', 'place of usual residence', 'cause of death(indicate the underlying cause of death)', 'cause of death certification(medically certified or lay reported)', 'date of registration(dd-mm-yy)', 'entry number', 'unnamed: 14']
+2026-07-22 08:59:03,782 | INFO | Detected Dataset: Death
+2026-07-22 09:01:31,003 | INFO | ============================================================
+2026-07-22 09:01:31,021 | INFO | Civil Registration Data Quality Engine Started
+2026-07-22 09:01:31,022 | INFO | Workbook found.
+2026-07-22 09:01:31,023 | INFO | C:/Users/Admin/Desktop/UGENYA/UGENYA DEATH TEMPLATE JUNE 2026.xlsx
+2026-07-22 09:01:31,046 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC', 'Sheet4', 'Sheet2', 'Drop Down']
+2026-07-22 09:01:31,078 | INFO | Detected Header Row: 1
+2026-07-22 09:01:31,198 | INFO | Workbook loaded successfully.
+2026-07-22 09:01:31,198 | INFO | Rows: 59
+2026-07-22 09:01:31,198 | INFO | Columns: 16
+2026-07-22 09:01:31,199 | INFO | ['Serial No.', 'Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Age \n(Indicate number eg 1,2,3)', 'Unit of age \n(Days, Months or Years)', 'Marital status', 'Place of death \n(Indicate the name of exact place of death)', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'Type of Registration', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Type of Registration.1']
+2026-07-22 09:01:31,199 | INFO | Standardized Columns:
+2026-07-22 09:01:31,199 | INFO | ['serial no', 'name of deceased(indicate full names of the deceased)', 'id number(indicate the id number where applicable and available)', 'date of death(dd-mm-yy)', 'sex(indicate whether male or female)', 'age(indicate number eg 1,2,3)', 'unit of age(days, months or years)', 'marital status', 'place of death(indicate the name of exact place of death)', 'type of place(indicate whether home or health institution)', 'place of usual residence', 'cause of death(indicate the underlying cause of death)', 'type of registration', 'date of registration(dd-mm-yy)', 'entry number', 'type of registration1']
+2026-07-22 09:01:31,254 | INFO | Detected Dataset: Death
+2026-07-22 09:12:08,469 | INFO | ============================================================
+2026-07-22 09:12:08,469 | INFO | Civil Registration Data Quality Engine Started
+2026-07-22 09:12:08,470 | INFO | Workbook found.
+2026-07-22 09:12:08,470 | INFO | C:/Users/Admin/Desktop/UGENYA/UGENYA DEATH TEMPLATE JUNE 2026.xlsx
+2026-07-22 09:12:08,496 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC', 'Sheet4', 'Sheet2', 'Drop Down']
+2026-07-22 09:12:08,521 | INFO | Detected Header Row: 1
+2026-07-22 09:12:08,644 | INFO | Workbook loaded successfully.
+2026-07-22 09:12:08,645 | INFO | Rows: 59
+2026-07-22 09:12:08,645 | INFO | Columns: 16
+2026-07-22 09:12:08,645 | INFO | ['Serial No.', 'Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Age \n(Indicate number eg 1,2,3)', 'Unit of age \n(Days, Months or Years)', 'Marital status', 'Place of death \n(Indicate the name of exact place of death)', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'Type of Registration', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Type of Registration.1']
+2026-07-22 09:12:08,645 | INFO | Standardized Columns:
+2026-07-22 09:12:08,645 | INFO | ['serial no', 'name of deceased(indicate full names of the deceased)', 'id number(indicate the id number where applicable and available)', 'date of death(dd-mm-yy)', 'sex(indicate whether male or female)', 'age(indicate number eg 1,2,3)', 'unit of age(days, months or years)', 'marital status', 'place of death(indicate the name of exact place of death)', 'type of place(indicate whether home or health institution)', 'place of usual residence', 'cause of death(indicate the underlying cause of death)', 'type of registration', 'date of registration(dd-mm-yy)', 'entry number', 'type of registration1']
+2026-07-22 09:12:08,698 | INFO | Detected Dataset: Death
+2026-07-22 09:17:28,093 | INFO | ============================================================
+2026-07-22 09:17:28,093 | INFO | Civil Registration Data Quality Engine Started
+2026-07-22 09:17:28,093 | INFO | Workbook found.
+2026-07-22 09:17:28,094 | INFO | C:/Users/Admin/Desktop/UGENYA/UGENYA DEATH TEMPLATE JUNE 2026.xlsx
+2026-07-22 09:17:28,116 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC', 'Sheet4', 'Sheet2', 'Drop Down']
+2026-07-22 09:17:28,143 | INFO | Detected Header Row: 1
+2026-07-22 09:17:28,267 | INFO | Workbook loaded successfully.
+2026-07-22 09:17:28,267 | INFO | Rows: 59
+2026-07-22 09:17:28,267 | INFO | Columns: 16
+2026-07-22 09:17:28,268 | INFO | ['Serial No.', 'Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Age \n(Indicate number eg 1,2,3)', 'Unit of age \n(Days, Months or Years)', 'Marital status', 'Place of death \n(Indicate the name of exact place of death)', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'Type of Registration', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Type of Registration.1']
+2026-07-22 09:17:28,268 | INFO | Standardized Columns:
+2026-07-22 09:17:28,268 | INFO | ['serial no', 'name of deceased(indicate full names of the deceased)', 'id number(indicate the id number where applicable and available)', 'date of death(dd-mm-yy)', 'sex(indicate whether male or female)', 'age(indicate number eg 1,2,3)', 'unit of age(days, months or years)', 'marital status', 'place of death(indicate the name of exact place of death)', 'type of place(indicate whether home or health institution)', 'place of usual residence', 'cause of death(indicate the underlying cause of death)', 'type of registration', 'date of registration(dd-mm-yy)', 'entry number', 'type of registration1']
+2026-07-22 09:17:28,323 | INFO | Detected Dataset: Death
+2026-07-22 09:23:24,332 | INFO | ============================================================
+2026-07-22 09:23:24,332 | INFO | Civil Registration Data Quality Engine Started
+2026-07-22 09:23:24,332 | INFO | Workbook found.
+2026-07-22 09:23:24,332 | INFO | C:/Users/Admin/Desktop/UGENYA/UGENYA DEATH TEMPLATE JUNE 2026.xlsx
+2026-07-22 09:23:24,359 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC', 'Sheet4', 'Sheet2', 'Drop Down']
+2026-07-22 09:23:24,383 | INFO | Detected Header Row: 1
+2026-07-22 09:23:24,506 | INFO | Workbook loaded successfully.
+2026-07-22 09:23:24,506 | INFO | Rows: 59
+2026-07-22 09:23:24,506 | INFO | Columns: 16
+2026-07-22 09:23:24,506 | INFO | ['Serial No.', 'Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Age \n(Indicate number eg 1,2,3)', 'Unit of age \n(Days, Months or Years)', 'Marital status', 'Place of death \n(Indicate the name of exact place of death)', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'Type of Registration', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Type of Registration.1']
+2026-07-22 09:23:24,507 | INFO | Standardized Columns:
+2026-07-22 09:23:24,507 | INFO | ['serial no', 'name of deceased(indicate full names of the deceased)', 'id number(indicate the id number where applicable and available)', 'date of death(dd-mm-yy)', 'sex(indicate whether male or female)', 'age(indicate number eg 1,2,3)', 'unit of age(days, months or years)', 'marital status', 'place of death(indicate the name of exact place of death)', 'type of place(indicate whether home or health institution)', 'place of usual residence', 'cause of death(indicate the underlying cause of death)', 'type of registration', 'date of registration(dd-mm-yy)', 'entry number', 'type of registration1']
+2026-07-22 09:23:24,561 | INFO | Detected Dataset: Death
+2026-07-22 09:31:17,757 | INFO | ============================================================
+2026-07-22 09:31:17,757 | INFO | Civil Registration Data Quality Engine Started
+2026-07-22 09:31:17,758 | INFO | Workbook found.
+2026-07-22 09:31:17,758 | INFO | C:/Users/Admin/Desktop/UGENYA/UGENYA DEATH TEMPLATE JUNE 2026.xlsx
+2026-07-22 09:31:17,782 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC', 'Sheet4', 'Sheet2', 'Drop Down']
+2026-07-22 09:31:17,807 | INFO | Detected Header Row: 1
+2026-07-22 09:31:17,929 | INFO | Workbook loaded successfully.
+2026-07-22 09:31:17,929 | INFO | Rows: 59
+2026-07-22 09:31:17,929 | INFO | Columns: 16
+2026-07-22 09:31:17,929 | INFO | ['Serial No.', 'Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Age \n(Indicate number eg 1,2,3)', 'Unit of age \n(Days, Months or Years)', 'Marital status', 'Place of death \n(Indicate the name of exact place of death)', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'Type of Registration', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Type of Registration.1']
+2026-07-22 09:31:17,929 | INFO | Standardized Columns:
+2026-07-22 09:31:17,930 | INFO | ['serial no', 'name of deceased(indicate full names of the deceased)', 'id number(indicate the id number where applicable and available)', 'date of death(dd-mm-yy)', 'sex(indicate whether male or female)', 'age(indicate number eg 1,2,3)', 'unit of age(days, months or years)', 'marital status', 'place of death(indicate the name of exact place of death)', 'type of place(indicate whether home or health institution)', 'place of usual residence', 'cause of death(indicate the underlying cause of death)', 'type of registration', 'date of registration(dd-mm-yy)', 'entry number', 'type of registration1']
+2026-07-22 09:31:17,984 | INFO | Detected Dataset: Death
+2026-07-22 10:00:38,084 | INFO | ============================================================
+2026-07-22 10:00:38,085 | INFO | Civil Registration Data Quality Engine Started
+2026-07-22 10:00:38,085 | INFO | Workbook found.
+2026-07-22 10:00:38,085 | INFO | C:/Users/Admin/Desktop/UGENYA/UGENYA DEATH TEMPLATE JUNE 2026.xlsx
+2026-07-22 10:00:38,109 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC', 'Sheet4', 'Sheet2', 'Drop Down']
+2026-07-22 10:00:38,135 | INFO | Detected Header Row: 1
+2026-07-22 10:00:38,255 | INFO | Workbook loaded successfully.
+2026-07-22 10:00:38,255 | INFO | Rows: 59
+2026-07-22 10:00:38,255 | INFO | Columns: 16
+2026-07-22 10:00:38,255 | INFO | ['Serial No.', 'Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Age \n(Indicate number eg 1,2,3)', 'Unit of age \n(Days, Months or Years)', 'Marital status', 'Place of death \n(Indicate the name of exact place of death)', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'Type of Registration', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Type of Registration.1']
+2026-07-22 10:00:38,256 | INFO | Standardized Columns:
+2026-07-22 10:00:38,256 | INFO | ['serial no', 'name of deceased(indicate full names of the deceased)', 'id number(indicate the id number where applicable and available)', 'date of death(dd-mm-yy)', 'sex(indicate whether male or female)', 'age(indicate number eg 1,2,3)', 'unit of age(days, months or years)', 'marital status', 'place of death(indicate the name of exact place of death)', 'type of place(indicate whether home or health institution)', 'place of usual residence', 'cause of death(indicate the underlying cause of death)', 'type of registration', 'date of registration(dd-mm-yy)', 'entry number', 'type of registration1']
+2026-07-22 10:00:38,310 | INFO | Detected Dataset: Death
+2026-07-22 10:11:23,507 | INFO | ============================================================
+2026-07-22 10:11:23,507 | INFO | Civil Registration Data Quality Engine Started
+2026-07-22 10:11:23,508 | INFO | Workbook found.
+2026-07-22 10:11:23,508 | INFO | C:/Users/Admin/Desktop/UGENYA/UGENYA DEATH TEMPLATE JUNE 2026.xlsx
+2026-07-22 10:11:23,532 | INFO | Available worksheets: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC', 'Sheet4', 'Sheet2', 'Drop Down']
+2026-07-22 10:11:23,556 | INFO | Detected Header Row: 1
+2026-07-22 10:11:23,680 | INFO | Workbook loaded successfully.
+2026-07-22 10:11:23,680 | INFO | Rows: 59
+2026-07-22 10:11:23,680 | INFO | Columns: 16
+2026-07-22 10:11:23,681 | INFO | ['Serial No.', 'Name of Deceased \n(Indicate full names of the deceased)', 'ID Number \n(Indicate the ID number where applicable and available)', 'Date of Death\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Age \n(Indicate number eg 1,2,3)', 'Unit of age \n(Days, Months or Years)', 'Marital status', 'Place of death \n(Indicate the name of exact place of death)', 'Type of place\n(Indicate whether Home or Health Institution)', 'Place of usual residence', 'Cause of death \n(Indicate the underlying cause of death)', 'Type of Registration', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Type of Registration.1']
+2026-07-22 10:11:23,681 | INFO | Standardized Columns:
+2026-07-22 10:11:23,681 | INFO | ['serial no', 'name of deceased(indicate full names of the deceased)', 'id number(indicate the id number where applicable and available)', 'date of death(dd-mm-yy)', 'sex(indicate whether male or female)', 'age(indicate number eg 1,2,3)', 'unit of age(days, months or years)', 'marital status', 'place of death(indicate the name of exact place of death)', 'type of place(indicate whether home or health institution)', 'place of usual residence', 'cause of death(indicate the underlying cause of death)', 'type of registration', 'date of registration(dd-mm-yy)', 'entry number', 'type of registration1']
+2026-07-22 10:11:23,733 | INFO | Detected Dataset: Death
+2026-07-22 10:11:23,769 | INFO | Schema Valid: True
+2026-07-22 10:11:23,769 | INFO | Extra Columns: ['status']
+2026-07-22 10:11:23,769 | INFO | Rows: 59
+2026-07-22 10:11:23,770 | INFO | Columns: 15
+2026-07-22 10:11:23,770 | INFO | ['deceased_name', 'id_number', 'date_of_death', 'sex', 'age', 'age_unit', 'marital_status', 'place_of_death', 'place_type', 'residence', 'cause_of_death', 'death_certification', 'registration_date', 'entry_number', 'status']
+2026-07-22 10:11:23,857 | INFO | Rule Engine completed.
+2026-07-22 10:11:23,858 | INFO | Records processed: 59
+2026-07-22 10:11:23,859 | INFO | Issues found: 51

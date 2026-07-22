@@ -13,50 +13,69 @@ Base class for all validation and cleaning rules.
 import pandas as pd
 
 
+import pandas as pd
+
+
 class BaseRule:
 
     def __init__(self, schema=None):
 
         self.schema = schema
+        self.reset()
+
+    def reset(self):
+
         self.issues = []
 
-    def add_issues(
+    def start(self, dataframe):
+
+        self.reset()
+
+        return dataframe.copy()
+
+    def add_issue(
         self,
-        issues,
-        row,
-        field,
-        value,
-        message,
+        row=None,
+        field="",
+        value=None,
+        issue=""
     ):
-        """
-        Add a standardized issue.
-        """
 
-        record = {
-            "entry_number": row.get("entry_number", None),
+        self.issues.append({
+
+            "row": row,
+
             "field": field,
-            "value": value,
-            "issue": message,
-        }
 
-        issues.append(record)
+            "value": value,
+
+            "issue": issue
+
+        })
 
     def is_missing(self, value):
 
         if pd.isna(value):
             return True
 
-        if str(value).strip() == "":
-            return True
-        return False
+        return str(value).strip() == ""
+
     def field_schema(self):
-        return self.schema["source_columns"].get(self.FIELD, {})
+
+        if self.schema is None:
+            return {}
+
+        return self.schema["source_columns"].get(
+            self.FIELD,
+            {}
+        )
 
     def get_issues(self):
 
         return pd.DataFrame(self.issues)
 
     def run(self, dataframe):
+
         raise NotImplementedError
     
     def reset(self):

@@ -35,12 +35,11 @@ class NumericRule(BaseRule):
 
             if self.is_missing(value):
 
-                self.add_issues(
-                    issues=self.issues,
-                    row=row,
+                self.add_issue(
+                    row=row.name,
                     field=self.FIELD,
                     value=value,
-                    message=f"Missing {self.TITLE}"
+                    issue=f"Missing {self.TITLE}"
                 )
                 continue
 
@@ -50,33 +49,30 @@ class NumericRule(BaseRule):
 
             except Exception:
 
-                self.add_issues(
-                    issues=self.issues,
-                    row=row,
+                self.add_issue(
+                    row=row.name,
                     field=self.FIELD,
                     value=value,
-                    message=f"Invalid {self.TITLE}"
+                    issue=f"Invalid {self.TITLE}"
                 )
                 continue
 
             if minimum is not None and number < minimum:
 
-                self.add_issues(
-                    issues=self.issues,
-                    row=row,
+                self.add_issue(
+                    row=row.name,
                     field=self.FIELD,
                     value=value,
-                    message=f"Invalid {self.TITLE}"
+                    issue=f"Invalid {self.TITLE}"
                 )
 
             elif maximum is not None and number > maximum:
 
-                self.add_issues(
-                    issues=self.issues,
-                    row=row,
+                self.add_issue(
+                    row=row.name,
                     field=self.FIELD,
                     value=value,
-                    message=f"Invalid {self.TITLE}"
+                    issue=f"Invalid {self.TITLE}"
                 )
 
             else:

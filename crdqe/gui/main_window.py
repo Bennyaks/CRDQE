@@ -11,6 +11,7 @@ together with the validation engine.
 import os
 import threading
 import tkinter as tk
+import traceback
 
 from tkinter import filedialog
 
@@ -400,7 +401,16 @@ class MainWindow(tk.Tk):
             self.after(0, self._on_validation_complete, result)
 
         except Exception as exc:
-            self.after(0, self._on_validation_error, exc)
+
+            print("\n========== FULL TRACEBACK ==========")
+            traceback.print_exc()
+            print("====================================\n")
+
+            self.after(
+                0,
+                self._on_validation_error,
+                exc
+            )
 
     def _on_validation_complete(self, result):
 
@@ -455,13 +465,29 @@ class MainWindow(tk.Tk):
     def _on_validation_error(self, exc):
 
         self.progress.stop()
-        self.toolbar.run_button.configure(state="normal")
+
+        self.toolbar.run_button.configure(
+            state="normal"
+        )
+
         self.validation_running = False
-        self.status_bar.set_status("Validation failed")
 
-        self.log.append(f"ERROR: {exc}")
+        self.status_bar.set_status(
+            "Validation Failed"
+        )
 
-        Dialogs.error("Validation Error", str(exc))
+        self.log.append(
+            f"ERROR: {exc}"
+        )
+
+        Dialogs.error(
+            "Validation Failed",
+            (
+                "An unexpected error occurred while validating the workbook.\n\n"
+                "Please contact the system administrator if the problem persists.\n\n"
+                "Technical details have been recorded in the application log."
+            )
+        )
 
     def open_output_folder(self):
         """

@@ -33,12 +33,23 @@ class PlaceholderProcessor:
 
         replacements = 0
 
-        for field, properties in schema["source_columns"].items():
+        # Cover both source_columns and derived_columns (e.g. "status")
+        # -- a raw placeholder can show up in either.
+        fields = {}
+        fields.update(schema.get("source_columns", {}) or {})
+        fields.update(schema.get("derived_columns", {}) or {})
+
+        for field, properties in fields.items():
 
             if field not in df.columns:
                 continue
 
-            dtype = properties.get("type", "string")
+            # The schema declares each field's type under "datatype",
+            # not "type" -- using the wrong key here meant every field
+            # silently fell back to "string", so numeric/date fields
+            # were getting the text "Not Stated" instead of a real
+            # missing value (pd.NA).
+            dtype = properties.get("datatype", "string")
 
             for index, value in df[field].items():
 
@@ -67,6 +78,7 @@ class PlaceholderProcessor:
                         df.at[index, field] = pd.NA
 
                     replacements += 1
+                    continue
 
         print(f"Placeholder replacements: {replacements}")
 

@@ -56,12 +56,11 @@ class StatusRule(BaseRule):
                 and "health" in place
             ):
 
-                self.add_issues(
-                    issues=issues,
-                    row=row,
+                self.add_issue(
+                    row=row.name,
                     field="Status",
                     value=expected,
-                    message=(
+                    issue=(
                         "Late registration recorded at a Health Facility. "
                         "Verify registration date format."
                     )

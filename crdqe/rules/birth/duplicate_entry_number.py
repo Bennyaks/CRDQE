@@ -40,13 +40,12 @@ class DuplicateEntryNumberRule(BaseRule):
 
             if self.is_missing(value):
 
-                self.add_issues(
-                    issue="Duplicate Entry Number",
-                    row=row,
+                self.add_issue(
+                    row=index,
                     field=self.FIELD,
-                    value=df.at[index, self.FIELD],
-                    message=f"Missing {self.TITLE}"
+                    value=value,
+                    issue=f"Missing {self.TITLE}"
                 )
-                continue
 
+                continue
         return df, self.get_issues()

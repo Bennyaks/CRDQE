@@ -88,18 +88,17 @@ class StatusProcessor:
     # ===========================================================
     # Validate Registration Status
     # ===========================================================
-    
 
     @staticmethod
-    def validate_status(df, event_column, registration_month=None, registration_year=None):
+    def validate_status(
+        df,
+        event_column,
+        registration_month=None,
+        registration_year=None
+    ):
 
         issues = []
         corrections = []
-
-        has_status_column = "status" in df.columns
-
-        if not has_status_column:
-            df["status"] = ""
 
         target_month_number = None
 
@@ -109,11 +108,14 @@ class StatusProcessor:
                 str(registration_month).strip().lower()
             )
 
-            target_year = None
+        target_year_number = None
 
-            if registration_year:
+        if registration_year:
 
-                target_year = int(registration_year)
+            try:
+                target_year_number = int(str(registration_year).strip())
+            except (TypeError, ValueError):
+                target_year_number = None
 
         for index, row in df.iterrows():
 
@@ -132,36 +134,6 @@ class StatusProcessor:
                 dayfirst=True,
                 errors="coerce"
             )
-            # -----------------------------------------
-            # Correct Registration Year
-            # -----------------------------------------
-
-            if (
-                target_year is not None
-                and not pd.isna(registration_date)
-                and registration_date.year != target_year
-            ):
-
-                old_date = registration_date
-
-                registration_date = registration_date.replace(
-                    year=target_year
-                )
-
-                df.at[index, "registration_date"] = (
-                    registration_date.strftime("%d/%m/%Y")
-                )
-
-                corrections.append({
-
-                    "entry_number": row.get("entry_number", None),
-
-                    "old_value": old_date.strftime("%d/%m/%Y"),
-
-                    "new_value": registration_date.strftime("%d/%m/%Y"),
-
-                    "reason": "Registration year corrected"
-                })
 
             if pd.isna(event_date) or pd.isna(registration_date):
                 continue
@@ -190,7 +162,38 @@ class StatusProcessor:
                         f"({registration_date.strftime('%B')}) does not "
                         f"match the selected registration month "
                         f"({registration_month})"
-                    )
+                    ),
+
+                    "severity": "Warning"
+                })
+
+            # -----------------------------------------
+            # Registration Year Consistency Check
+            # (independent of the status logic below --
+            # runs regardless of whether status matches)
+            # -----------------------------------------
+
+            if (
+                target_year_number is not None
+                and registration_date.year != target_year_number
+            ):
+
+                issues.append({
+
+                    "entry_number": row.get("entry_number", None),
+
+                    "field": "registration_date",
+
+                    "value": registration_date.strftime("%d/%m/%Y"),
+
+                    "issue": (
+                        f"Registration date year "
+                        f"({registration_date.year}) does not "
+                        f"match the selected registration year "
+                        f"({registration_year})"
+                    ),
+
+                    "severity": "Warning"
                 })
 
             # -----------------------------------------
@@ -202,38 +205,29 @@ class StatusProcessor:
                 registration_date
             )
 
-            original_status = (
-                str(row["status"]).strip().title()
-                if has_status_column
-                else ""
-            )
-
-            # -----------------------------------------
-            # Status is Correct
-            # -----------------------------------------
-
-            # No Status column supplied by the workbook.
-            # Simply generate one.
-            if not has_status_column:
-                df.at[index, "status"] = calculated_status
-                continue
-
-            # Workbook already contained Status.
-            # Validate it.
-            if calculated_status == original_status:
-                continue
-
-            # -----------------------------------------
-            # Health Facility Smart Correction
-            # -----------------------------------------
+            original_status = str(
+                row["status"]
+            ).strip().title()
 
             place = str(
                 row["place_type"]
             ).strip().lower()
 
+            # -----------------------------------------
+            # Health Facility Smart Correction
+            #
+            # IMPORTANT: this runs whenever a Health Facility
+            # record calculates as Late -- regardless of what
+            # the document's own status column says. A Health
+            # Facility record can never plausibly be Late, so
+            # even a record where the document already (wrongly)
+            # agrees with a Late calculation still needs this
+            # check; it isn't limited to disagreements between
+            # the document and the calculation.
+            # -----------------------------------------
+
             if (
                 place == "health facility"
-                and original_status == "Current"
                 and calculated_status == "Late"
             ):
 
@@ -344,15 +338,21 @@ class StatusProcessor:
                         f"and/or {event_column} could not be swapped "
                         "(day component > 12, so no alternate d/m/y "
                         "interpretation exists). Please review manually."
-                    )
+                    ),
+
+                    "severity": "Error"
                 })
 
                 continue
 
             # -----------------------------------------
             # Record Validation Issue
-            # (Home records, and any other unresolved mismatch)
+            # (Home records, and any other unresolved mismatch --
+            # Health Facility Late is handled entirely above)
             # -----------------------------------------
+
+            if calculated_status == original_status:
+                continue
 
             issues.append({
 
@@ -363,7 +363,9 @@ class StatusProcessor:
                 "value": original_status,
 
                 "issue":
-                    f"Expected {calculated_status} but found {original_status}"
+                    f"Expected {calculated_status} but found {original_status}",
+
+                "severity": "Error"
             })
 
         return df, issues, corrections

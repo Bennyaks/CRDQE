@@ -19,12 +19,11 @@ class PlaceConsistencyRule(BaseRule):
 
             if place == "":
 
-                self.add_issues(
-                    issues=self.issues,
-                    row=row,
+                self.add_issue(
+                    row=row.name,
                     field="place_of_death",
                     value=row["place_of_death"],
-                    message="Missing Place of Death"
+                    issue="Missing Place of Death"
                 )
 
                 continue
@@ -34,12 +33,11 @@ class PlaceConsistencyRule(BaseRule):
                 "health facility"
             ]:
 
-                self.add_issues(
-                    issues=self.issues,
-                    row=row,
+                self.add_issue(
+                    row=row.name,
                     field="place_type",
                     value=row["place_type"],
-                    message="Invalid Place Type"
+                    issue="Invalid Place Type"
                 )
 
         return df, self.get_issues()

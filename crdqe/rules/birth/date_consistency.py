@@ -31,10 +31,10 @@ class DateConsistencyRule(CrossFieldRule):
             return
 
         if registration_date < birth_date:
-            self.add_issues(
-                issues=self.issues,
-                row=row,
+
+            self.add_issue(
+                row=row.name,
                 field="registration_date",
                 value=row["registration_date"],
-                message="Registration date before birth date"
+                issue="Registration date before birth date"
             )
