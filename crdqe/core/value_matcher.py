@@ -36,6 +36,14 @@ class ValueMatcher:
         Returns
         -------
         (field_name, confidence)
+
+        field_name is None if no field scored high enough, OR if
+        multiple fields tied for the best score -- a tie means the
+        values themselves can't discriminate between those fields
+        (e.g. every date-typed field scores identically against a
+        plausible-looking date string), so it isn't confident,
+        field-specific evidence and shouldn't be trusted over a
+        header.
         """
 
         values = (
@@ -49,21 +57,33 @@ class ValueMatcher:
         if not values:
             return None, 0
 
-        best_field = None
-        best_score = 0
+        scores = {}
 
         for field, rules in self.schema.items():
 
             score = self._score(values, rules)
 
-            if score > best_score:
-                best_score = score
-                best_field = field
+            if score > 0:
+                scores[field] = score
 
-        if best_score >= self.MIN_CONFIDENCE:
-            return best_field, best_score
+        if not scores:
+            return None, 0
 
-        return None, best_score
+        best_score = max(scores.values())
+
+        if best_score < self.MIN_CONFIDENCE:
+            return None, best_score
+
+        top_fields = [
+            field
+            for field, score in scores.items()
+            if score == best_score
+        ]
+
+        if len(top_fields) > 1:
+            return None, best_score
+
+        return top_fields[0], best_score
     def _score(self, values, rules):
 
         datatype = rules.get("datatype")

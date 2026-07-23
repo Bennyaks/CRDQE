@@ -167,8 +167,6 @@ source_columns:
     aliases:
       - "Entry Number"
 
-derived_columns:
-
   status:
     aliases:
       - "Status"

@@ -147,4 +147,4 @@ source_columns:
       - Time of Registration
     valid_values:
       current: "Current"
-      late: "late"
+      late: "Late"

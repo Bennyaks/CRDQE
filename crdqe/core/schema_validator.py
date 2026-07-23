@@ -16,10 +16,22 @@ class SchemaValidator:
     @staticmethod
     def validate(dataframe, schema):
 
+        # Source columns (expected straight from the workbook) and
+        # derived columns (e.g. "status") are both real, expected
+        # fields -- a field being "derived" describes where it's
+        # computed/cross-checked from, not whether it needs to be
+        # present. Whether a field is actually required is driven
+        # by each field's own "required" flag in the schema, not
+        # by which section it lives in or a hardcoded field name.
+
+        fields = {}
+        fields.update(schema.get("source_columns", {}) or {})
+        fields.update(schema.get("derived_columns", {}) or {})
+
         required = [
-            column
-            for column in schema["source_columns"].keys()
-            if column != "status"
+            field
+            for field, details in fields.items()
+            if details.get("required")
         ]
 
         missing = [
@@ -31,7 +43,7 @@ class SchemaValidator:
         extra = [
             column
             for column in dataframe.columns
-            if column not in required
+            if column not in fields
         ]
 
         return {

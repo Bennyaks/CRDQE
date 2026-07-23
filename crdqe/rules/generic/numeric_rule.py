@@ -10,6 +10,7 @@ in the schema.
 from dataclasses import field
 
 import pandas as pd
+import re
 
 from crdqe.core.base_rule import BaseRule
 
@@ -45,7 +46,22 @@ class NumericRule(BaseRule):
 
             try:
 
-                number = float(value)
+                cleaned = str(value).strip().lower()
+
+                # Only Birth Weight needs unit stripping
+                if self.FIELD == "birth_weight":
+
+                    cleaned = cleaned.replace(",", "")
+
+                    match = re.search(
+                        r"\d+(?:\.\d+)?",
+                        cleaned
+                    )
+
+                    if match:
+                        cleaned = match.group(0)
+
+                number = float(cleaned)
 
             except Exception:
 
@@ -76,6 +92,16 @@ class NumericRule(BaseRule):
                 )
 
             else:
+
+                # Birth weight specific cleaning
+                if self.FIELD == "birth_weight":
+
+                    # Convert grams to kilograms
+                    if number > 100:
+                        number /= 1000
+
+                    # Standardize to 1 decimal place
+                    number = round(number, 1)
 
                 df.at[index, self.FIELD] = number
 

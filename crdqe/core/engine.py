@@ -202,36 +202,6 @@ class CRDQEEngine:
             self.schema
         )
 
-        # -------------------------------------------------------
-        # Birth Weight: convert grams to kilograms
-        # -------------------------------------------------------
-        # No child is born weighing more than 100 (kg), so any
-        # value above 100 is assumed to be in grams and is
-        # converted: weight / 1000.
-        # Matches: =IF(CELL REF>100, CELL REF/1000, CELL REF)
-
-        if self.dataset == "Birth":
-
-            weight_column = next(
-                (c for c in self.df.columns if "weight" in c.lower()),
-                None
-            )
-
-            if weight_column:
-
-                self.df[weight_column] = pd.to_numeric(
-                    self.df[weight_column],
-                    errors="coerce"
-                )
-
-                self.df[weight_column] = self.df[weight_column].apply(
-                    lambda w: w / 1000 if pd.notna(w) and w > 100 else w
-                )
-
-                self.logger.info(
-                    f"Converted values in '{weight_column}' above 100 "
-                    "from grams to kilograms."
-                )
 
         # -------------------------------------------------------
         # Validate schema

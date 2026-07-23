@@ -50,7 +50,7 @@ def normalize(text):
         return ""
 
     try:
-        return ColumnStandardizer().standardize(text)
+        return ColumnStandardizer.standardize(text)
     except Exception:
         return str(text).strip().lower()
 
@@ -128,18 +128,62 @@ class SchemaMapper:
                 alias_norm = normalize(alias)
 
                 # -----------------------------------------
-                # Exact / containment match
+                # Exact match
                 # -----------------------------------------
 
-                if (
-                    column_norm == alias_norm
-                    or column_norm.startswith(alias_norm)
+                if column_norm == alias_norm:
+
+                    score = 1.0
+
+                # -----------------------------------------
+                # Containment match (one fully contains the
+                # other, but they aren't equal). Score by how
+                # much of the longer string the shorter one
+                # covers, instead of a flat 1.0 -- otherwise a
+                # short alias that merely happens to be a
+                # substring of an unrelated, longer column
+                # (e.g. "status" inside "marital status", or
+                # "cause of death" inside "cause of death
+                # certification...") would tie with, and can
+                # never be beaten by, the alias that is the
+                # true, complete match for that column.
+                # -----------------------------------------
+
+                elif (
+                    column_norm.startswith(alias_norm)
                     or alias_norm.startswith(column_norm)
                     or column_norm in alias_norm
                     or alias_norm in column_norm
                 ):
 
-                    score = 1.0
+                    remainder = None
+
+                    if column_norm.startswith(alias_norm):
+                        remainder = column_norm[len(alias_norm):]
+
+                    elif alias_norm.startswith(column_norm):
+                        remainder = alias_norm[len(column_norm):]
+
+                    if remainder is not None and remainder.startswith("("):
+
+                        # Just a trailing format/instruction hint
+                        # tacked on to an otherwise complete match,
+                        # e.g. alias "Date of Death" against header
+                        # "Date of Death(dd-mm-yy)" -- still the
+                        # same field, so trust it almost as much as
+                        # an exact match.
+
+                        score = 0.97
+
+                    else:
+
+                        shorter_len = min(len(column_norm), len(alias_norm))
+                        longer_len = max(len(column_norm), len(alias_norm))
+
+                        score = (
+                            shorter_len / longer_len
+                            if longer_len else 0.0
+                        )
 
                 # -----------------------------------------
                 # Fuzzy match
@@ -174,9 +218,11 @@ class SchemaMapper:
 
         Priority:
             1. Header + Value agree.
-            2. Strong Header match.
-            3. Strong Value match.
-            4. Otherwise, reject the mapping.
+            2. Value confidently disagrees with header -- trust the
+               data over the label (mislabeled-header correction).
+            3. Strong Header match (no competing value evidence).
+            4. Weak/Strong Value match on its own.
+            5. Otherwise, reject the mapping.
         """
 
         # ----------------------------------------------------------
@@ -211,9 +257,44 @@ class SchemaMapper:
             }
 
         # ----------------------------------------------------------
+        # Value confidently disagrees with the header
+        #
+        # ValueMatcher only ever returns a field here when the data
+        # unambiguously identifies exactly one field (ties -- e.g.
+        # every date-typed field looking equally plausible against a
+        # generic date string -- are already reported as no match).
+        # That makes a returned value_field genuinely discriminating
+        # evidence, so when it disagrees with the header we trust
+        # what's actually in the column over what the header merely
+        # claims. This is the case the module exists for: a column
+        # titled "Marital Status" that is full of numbers 0-130 is an
+        # age column, not a marital-status column, no matter how
+        # closely the header text reads like one.
+        # ----------------------------------------------------------
+
+        if value_field and value_field != header_field:
+
+            return {
+                "column": column,
+                "field": value_field,
+                "confidence": value_score,
+                "double_confirmed": False,
+                "reason": (
+                    f"Value Match (overrides header '{header_field}')"
+                    if header_field else "Value Match"
+                ),
+                "header_field": header_field,
+                "header_score": header_score,
+                "value_field": value_field,
+                "value_score": value_score,
+            }
+
+        # ----------------------------------------------------------
         # Strong Header Match
-        # Useful for date columns where value matching cannot
-        # distinguish between different date fields.
+        # Used when there's no competing value evidence -- e.g. date
+        # columns, where every date-typed field looks equally valid
+        # against the same values and ValueMatcher can't discriminate
+        # between them (so value_field is None here).
         # ----------------------------------------------------------
 
         if (
@@ -234,9 +315,9 @@ class SchemaMapper:
             }
 
         # ----------------------------------------------------------
-        # Strong Value Match
-        # Used when the header is incorrect but the column values
-        # clearly identify the correct field.
+        # Weak Value Match
+        # Used when the header is incorrect/inconclusive but the
+        # column values clearly identify the correct field.
         # ----------------------------------------------------------
 
         if value_field:
