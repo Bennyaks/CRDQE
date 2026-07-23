@@ -134,7 +134,7 @@ source_columns:
     required: true
     aliases:
       - "Entry Number"
-
+derived_columns:
   status:
     datatype: string
     required: true

@@ -202,6 +202,17 @@ class CRDQEEngine:
             self.schema
         )
 
+        # Ensure derived columns exist before schema validation
+        if self.dataset == "Birth":
+
+            if "status" not in self.df.columns:
+                self.df["status"] = None
+
+        elif self.dataset == "Death":
+
+            if "status" not in self.df.columns:
+                self.df["status"] = None
+
 
         # -------------------------------------------------------
         # Validate schema

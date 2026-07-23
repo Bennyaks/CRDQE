@@ -7877,3 +7877,38 @@
 2026-07-23 10:32:52,555 | INFO | Rule Engine completed.
 2026-07-23 10:32:52,557 | INFO | Records processed: 305
 2026-07-23 10:32:52,558 | INFO | Issues found: 54
+2026-07-23 11:37:15,851 | INFO | ============================================================
+2026-07-23 11:37:15,852 | INFO | Civil Registration Data Quality Engine Started
+2026-07-23 11:37:15,853 | INFO | Workbook found.
+2026-07-23 11:37:15,853 | INFO | C:/Users/Admin/Desktop/DESKTOP BERNARD/March 2026 Birth Template tool.xlsx
+2026-07-23 11:37:15,881 | INFO | Available worksheets: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Drop Down', 'Sheet1']
+2026-07-23 11:37:15,920 | INFO | Detected Header Row: 1
+2026-07-23 11:37:16,209 | INFO | Workbook loaded successfully.
+2026-07-23 11:37:16,211 | INFO | Rows: 667
+2026-07-23 11:37:16,211 | INFO | Columns: 16
+2026-07-23 11:37:16,211 | INFO | ['Serial No.', 'Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight at birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'Unnamed: 15']
+2026-07-23 11:37:16,212 | INFO | Standardized Columns:
+2026-07-23 11:37:16,212 | INFO | ['serial no', 'date of birth(dd-mm-yy)', 'sex(indicate whether male or female)', 'nature of birth(indicate whether born alive or dead)', 'weight at birth(kgs)', 'place of birth(indicate the name of facility or sublocation of birth)', 'type of place(indicate whether home or health facility)', 'age of the mother(indicate the age of the mother at the birth of the child)', 'marital status', 'nationality of the mother', 'ocupation of the mother', "mother's level of education", 'place of residence(indicate the sub county where the mother residence)', 'date of registration(dd-mm-yy)', 'entry number', 'unnamed: 15']
+2026-07-23 11:37:16,266 | INFO | Detected Dataset: Birth
+2026-07-23 11:59:09,287 | INFO | ============================================================
+2026-07-23 11:59:09,291 | INFO | Civil Registration Data Quality Engine Started
+2026-07-23 11:59:09,292 | INFO | Workbook found.
+2026-07-23 11:59:09,292 | INFO | C:/Users/Admin/Desktop/DESKTOP BERNARD/1. 2023 DATA/Central Region/GATANGA/01 - January/Birth Template 2023.xlsx
+2026-07-23 11:59:09,314 | INFO | Available worksheets: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Drop Down', 'Sheet1']
+2026-07-23 11:59:09,338 | INFO | Detected Header Row: 1
+2026-07-23 11:59:09,462 | INFO | Workbook loaded successfully.
+2026-07-23 11:59:09,462 | INFO | Rows: 305
+2026-07-23 11:59:09,462 | INFO | Columns: 17
+2026-07-23 11:59:09,463 | INFO | ['Date of Birth\n(dd-mm-yy)', 'Sex\n(Indicate whether male or female)', 'Nature of birth\n(Indicate whether born alive or dead)', 'Weight of birth (Kgs)', 'Place of birth \n(Indicate the name of facility or Sublocation of birth)', 'Type of place\n(Indicate whether Home or Health Facility)', 'Age of the mother  ( indicate the age of the mother at the birth of the child)', 'Marital status', 'Nationality of the mother    ', 'Ocupation of the mother', "Mother's level of Education", 'Place of Residence    (indicate the sub county where the mother residence)', 'Date of Registration\n(dd-mm-yy)', 'Entry Number', 'T.O.R', 'Unnamed: 15', 'Unnamed: 16']
+2026-07-23 11:59:09,463 | INFO | Standardized Columns:
+2026-07-23 11:59:09,463 | INFO | ['date of birth(dd-mm-yy)', 'sex(indicate whether male or female)', 'nature of birth(indicate whether born alive or dead)', 'weight of birth(kgs)', 'place of birth(indicate the name of facility or sublocation of birth)', 'type of place(indicate whether home or health facility)', 'age of the mother(indicate the age of the mother at the birth of the child)', 'marital status', 'nationality of the mother', 'ocupation of the mother', "mother's level of education", 'place of residence(indicate the sub county where the mother residence)', 'date of registration(dd-mm-yy)', 'entry number', 'tor', 'unnamed: 15', 'unnamed: 16']
+2026-07-23 11:59:09,516 | INFO | Detected Dataset: Birth
+2026-07-23 11:59:09,559 | INFO | Schema Valid: True
+2026-07-23 11:59:09,560 | INFO | Rows: 305
+2026-07-23 11:59:09,560 | INFO | Columns: 15
+2026-07-23 11:59:09,560 | INFO | ['date_of_birth', 'sex', 'nature_of_birth', 'birth_weight', 'place_of_birth', 'place_type', 'mother_age', 'marital_status', 'nationality', 'occupation', 'education', 'residence', 'registration_date', 'entry_number', 'status']
+2026-07-23 11:59:10,353 | INFO | Rule Engine completed.
+2026-07-23 11:59:10,353 | INFO | Records processed: 305
+2026-07-23 11:59:10,356 | INFO | Issues found: 54
+2026-07-23 12:00:07,198 | INFO | Workbook received : C:/Users/Admin/Desktop/DESKTOP BERNARD/March 2026 Birth Template tool.xlsx
+2026-07-23 12:00:07,199 | INFO | Worksheet received: March
